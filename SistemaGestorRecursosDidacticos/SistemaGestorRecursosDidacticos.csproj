@@ -182,6 +182,9 @@
     <EmbeddedResource Include="TecnicasDidacticas.resx">
       <DependentUpon>TecnicasDidacticas.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Archivos.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

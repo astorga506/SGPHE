@@ -1,9 +1,11 @@
 ﻿using LibreriaSistema.domain;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 using System.Xml.Linq;
 
 namespace LibreriaSistema
@@ -88,5 +90,14 @@ namespace LibreriaSistema
             return false;
         }
 
+
+        public DataSet GetRecursosDidacticos()
+        {
+            DataSet dsRecursos = new DataSet();
+            XmlDataDocument xmldata = new XmlDataDocument();
+            xmldata.DataSet.ReadXml(path);
+
+            return xmldata.DataSet;
+        }
     }
 }

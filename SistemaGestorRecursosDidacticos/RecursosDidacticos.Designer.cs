@@ -28,60 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gridViewRecDidacticos = new System.Windows.Forms.DataGridView();
+            this.Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Enlace = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewRecDidacticos)).BeginInit();
             this.SuspendLayout();
             // 
             // gridViewRecDidacticos
             // 
-            this.gridViewRecDidacticos.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridViewRecDidacticos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.gridViewRecDidacticos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gridViewRecDidacticos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.gridViewRecDidacticos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.gridViewRecDidacticos.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
-            this.gridViewRecDidacticos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridViewRecDidacticos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gridViewRecDidacticos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridViewRecDidacticos.DefaultCellStyle = dataGridViewCellStyle3;
-            this.gridViewRecDidacticos.EnableHeadersVisualStyles = false;
-            this.gridViewRecDidacticos.Location = new System.Drawing.Point(0, 86);
+            this.gridViewRecDidacticos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Autor,
+            this.Titulo,
+            this.Enlace});
+            this.gridViewRecDidacticos.Location = new System.Drawing.Point(121, 145);
+            this.gridViewRecDidacticos.MultiSelect = false;
             this.gridViewRecDidacticos.Name = "gridViewRecDidacticos";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridViewRecDidacticos.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.gridViewRecDidacticos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.gridViewRecDidacticos.Size = new System.Drawing.Size(1021, 208);
+            this.gridViewRecDidacticos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridViewRecDidacticos.Size = new System.Drawing.Size(746, 318);
             this.gridViewRecDidacticos.TabIndex = 0;
-            this.gridViewRecDidacticos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // Autor
+            // 
+            this.Autor.DataPropertyName = "Autor";
+            this.Autor.HeaderText = "Autor";
+            this.Autor.Name = "Autor";
+            // 
+            // Titulo
+            // 
+            this.Titulo.DataPropertyName = "Titulo";
+            this.Titulo.HeaderText = "Titulo";
+            this.Titulo.Name = "Titulo";
+            // 
+            // Enlace
+            // 
+            this.Enlace.DataPropertyName = "Enlace";
+            this.Enlace.HeaderText = "Enlace";
+            this.Enlace.Name = "Enlace";
             // 
             // RecursosDidacticos
             // 
@@ -89,12 +73,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackgroundImage = global::SistemaGestorRecursosDidacticos.Properties.Resources.fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1021, 581);
+            this.ClientSize = new System.Drawing.Size(1008, 601);
             this.Controls.Add(this.gridViewRecDidacticos);
             this.DoubleBuffered = true;
             this.Name = "RecursosDidacticos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RecursosDidacticos";
+            this.Text = "Recursos Didacticos";
             this.Load += new System.EventHandler(this.RecursosDidacticos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridViewRecDidacticos)).EndInit();
             this.ResumeLayout(false);
@@ -104,6 +88,10 @@
         #endregion
 
         private System.Windows.Forms.DataGridView gridViewRecDidacticos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Autor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Titulo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Enlace;
+
 
     }
 }
