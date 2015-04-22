@@ -1,8 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<RecursosDidacticos>
+<RecursosDidacticos Index="8">
   <Recurso>
-    <Autor>Ministerio</Autor>
-    <Titulo>MEP</Titulo>
-    <Enlace>www.mep.go.cr</Enlace>
+    <Indice>7</Indice>
+    <Nombre>www.mep.go.cr</Nombre>
+  </Recurso>
+  <Recurso>
+    <Indice>8</Indice>
+    <Nombre>www.wikipedia.com</Nombre>
   </Recurso>
 </RecursosDidacticos>

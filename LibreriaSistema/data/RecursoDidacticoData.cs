@@ -33,21 +33,21 @@ namespace LibreriaSistema
                     using (XmlWriter writer = XmlWriter.Create(path, settings))
                     {
                         writer.WriteStartElement("RecursosDidacticos");
+                        writer.WriteAttributeString("Index", "0");
                         writer.WriteStartElement("Recurso");
-                        writer.WriteElementString("Autor", recurso.Autor);
-                        writer.WriteElementString("Titulo", recurso.Titulo);
-                        writer.WriteElementString("Enlace", recurso.Enlace);
-                        writer.WriteEndElement();
+                        writer.WriteElementString("Indice", ActualizarContador().ToString());
+                        writer.WriteElementString("Nombre", recurso.Nombre);
+                        writer.WriteEndElement();                        
                         writer.Flush();
                     }
+                    //ActualizarContador();
                 }
                 else 
                 {
                     document = XDocument.Load(path);
                     XElement nuevoRecurso = new XElement("Recurso",
-                            new XElement("Autor", recurso.Autor),
-                            new XElement("Titulo", recurso.Titulo),
-                            new XElement("Enlace", recurso.Enlace)
+                            new XElement("Indice", ActualizarContador().ToString()),
+                            new XElement("Nombre", recurso.Nombre)
                         
                     );
                     document.Root.Add(nuevoRecurso);
@@ -66,8 +66,8 @@ namespace LibreriaSistema
                 var recursoDel = document.Root.Descendants("Recursos");
                 foreach (var item in recursoDel)
                 {
-                    String tmp = item.Element("Enlace").Value.ToString();
-                    if (recurso.Enlace.Equals(tmp))
+                    int tmp = Convert.ToInt32(item.Element("Indice").Value);
+                    if (recurso.Indice.Equals(tmp))
                     {
                         item.Remove();
                         break;
@@ -77,27 +77,25 @@ namespace LibreriaSistema
             }
         }
 
-        //public void actualizarRecursoDidactico(RecursoDidactico recurso)
-        //{
-        //    if (existeRecurso(recurso))
-        //    {
-        //        document = XDocument.Load(path);
-        //        var estrategiaDelete = document.Root.Descendants("recurso");
-        //        foreach (var item in estrategiaDelete)
-        //        {
-        //            int indice = Convert.ToInt32(item.Element("indice").Value);
-        //            if (recurso.getIndice().Equals(indice))
-        //            {
-        //                item.SetElementValue("indice", recurso.getIndice().ToString());
-        //                item.SetElementValue("nombre", recurso.getNombre());
-        //                break;
-        //            }
-        //        }
+        public void ActualizarRecursoDidactico(RecursoDidactico recurso)
+        {
+            if (ExisteRecurso(recurso))
+            {
+                document = XDocument.Load(path);                
+                foreach (XElement item in document.Root.Elements())
+                {
+                    int indice = Convert.ToInt32(item.Element("Indice").Value);
+                    if (recurso.Indice.Equals(indice))
+                    {
+                        item.SetElementValue("Nombre", recurso.Nombre);
+                        break;
+                    }
+                }
 
-        //        document.Save(path);
-        //    }
+                document.Save(path);
+            }
 
-        //}
+        }
 
         public Boolean ExisteRecurso(RecursoDidactico recurso)
         {
@@ -106,10 +104,10 @@ namespace LibreriaSistema
                 document = XDocument.Load(path);
                 foreach (XElement item in document.Root.Elements())
                 {
-                    String tmp = item.Element("Enlace").Value.ToString();
-                    if (tmp.Equals(recurso.Enlace))
-                    {                        
-                        item.Remove();                
+                    int tmp = Convert.ToInt32(item.Element("Indice").Value);
+                    if (tmp.Equals(recurso.Indice))
+                    {
+                        return true;        
                     }
                 }
                 document.Save(path);
@@ -118,8 +116,23 @@ namespace LibreriaSistema
             return false;
         }
 
+        private int ActualizarContador()
+        {
+            document = XDocument.Load(path);
+            int i = Convert.ToInt32(document.Root.Attribute("Index").Value);
+            i += 1;
+            document.Root.SetAttributeValue("Index", i);
+            document.Save(path);
 
-        
+            return i;
+        }
+
+        public int ObtenerIndice()
+        {
+            document = XDocument.Load(path);
+            int i = Convert.ToInt32(document.Root.Attribute("Index").Value);
+            return ++i;
+        }
 
         public DataSet GetRecursosDidacticos() 
         {

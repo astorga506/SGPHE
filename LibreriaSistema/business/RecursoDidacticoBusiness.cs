@@ -32,5 +32,15 @@ namespace LibreriaSistema.business
         {
             rsData.EliminarRecursoDidactico(recurso);
         }
+
+        public int ObtenerIndice()
+        {
+            return rsData.ObtenerIndice();
+        }
+
+        public void ActualizarRecursoDidactico(RecursoDidactico recurso)
+        {
+            rsData.ActualizarRecursoDidactico(recurso);
+        }
     }
 }

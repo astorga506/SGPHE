@@ -8,39 +8,32 @@ namespace LibreriaSistema.domain
 {
     public class RecursoDidactico
     {
-        private String autor;
-        private String titulo;
-        private String enlace;
-
+        private int indice;
+        private String nombre;
+        
         public RecursoDidactico()
         {
 
         }
 
-        public RecursoDidactico(String enlace, String titulo, String autor)
+        public RecursoDidactico(int indice, String nombre)
         {
-            this.enlace = enlace;
-            this.titulo = titulo;
-            this.autor = autor;
+            this.indice = indice;
+            this.nombre = nombre;
+            
         }
-        public String Enlace
+
+        public String Nombre
         {
-            get { return enlace; }
-            set { enlace = value; }
+            get { return nombre; }
+            set { nombre = value; }
         }
         
 
-        public String Titulo
+        public int Indice
         {
-            get { return titulo; }
-            set { titulo = value; }
-        }
-        
-
-        public String Autor
-        {
-            get { return autor; }
-            set { autor = value; }
+            get { return indice; }
+            set { indice = value; }
         }
         
     }

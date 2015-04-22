@@ -34,7 +34,7 @@ namespace SistemaGestorRecursosDidacticos
                 DataTable datos = rdBus.GetRecursosDidacticos().Tables["Recurso"];
                 foreach (DataRow fila in datos.Rows)
                 {
-                    gridViewRecDidacticos.Rows.Add(fila[0], fila[1], fila[2], "Guardar", "Borrar");
+                    gridViewRecDidacticos.Rows.Add(fila[0], fila[1]);
                 }
             }
             catch (FileNotFoundException fnfe)
@@ -45,17 +45,16 @@ namespace SistemaGestorRecursosDidacticos
             { 
             
             }
-            
-            gridViewRecDidacticos.Rows.Add("", "", "", "Guardar", "Borrar");
-            
+            gridViewRecDidacticos.Rows.Add(rdBus.ObtenerIndice().ToString(), "", "Guardar", "Borrar");  
+                        
         }
 
         private void gridViewRecDidacticos_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
             DataGridView dgv = (DataGridView)sender;
             DataGridViewRow fila = dgv.Rows[dgv.Rows.Count-1];
-            fila.Cells[3].Value = "Guardar";
-            fila.Cells[4].Value = "Borrar";
+            fila.Cells[2].Value = "Guardar";
+            fila.Cells[3].Value = "Borrar";
         }
 
         private void gridViewRecDidacticos_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -76,9 +75,8 @@ namespace SistemaGestorRecursosDidacticos
                     {
                         RecursoDidacticoBusiness rdBus = new RecursoDidacticoBusiness(Application.StartupPath + "\\RecursosDidacticos.xml");
                         RecursoDidactico recurso = new RecursoDidactico();
-                        recurso.Autor = fila.Cells[0].Value.ToString();
-                        recurso.Titulo = fila.Cells[1].Value.ToString();
-                        recurso.Enlace = fila.Cells[2].Value.ToString();
+                        recurso.Indice = Int32.Parse(fila.Cells[0].Value.ToString());
+                        recurso.Nombre = fila.Cells[1].Value.ToString();
                         rdBus.EliminarRecursoDidactico(recurso);
                         gridViewRecDidacticos.Rows.RemoveAt(e.RowIndex);
                     }
@@ -112,20 +110,22 @@ namespace SistemaGestorRecursosDidacticos
                         {
                             RecursoDidacticoBusiness rdBus = new RecursoDidacticoBusiness(Application.StartupPath + "\\RecursosDidacticos.xml");
                             RecursoDidactico recurso = new RecursoDidactico();
-                            recurso.Autor = fila.Cells[0].Value.ToString();
-                            recurso.Titulo = fila.Cells[1].Value.ToString();
-                            recurso.Enlace = fila.Cells[2].Value.ToString();
+                            recurso.Indice = Int32.Parse(fila.Cells[0].Value.ToString());
+                            recurso.Nombre = fila.Cells[1].Value.ToString();
                             rdBus.InsertarRecursoDidactico(recurso);
                             MessageBox.Show("Información almacenada con exito.");
-                            gridViewRecDidacticos.Rows.Add("", "", "", "Guardar", "Borrar");
+                            gridViewRecDidacticos.Rows.Add(rdBus.ObtenerIndice().ToString(), "", "Guardar", "Borrar");
                         }
                         else
                         {
                             DialogResult dialogResult = MessageBox.Show("¿Desea guardar los cambios?", "Guardar cambios", MessageBoxButtons.YesNo);
                             if (dialogResult == DialogResult.Yes)
-                            {
-                                /*------------Codigo para llamar función para modificar el registro------------*/
-
+                            {                                
+                                RecursoDidacticoBusiness rdBus = new RecursoDidacticoBusiness(Application.StartupPath + "\\RecursosDidacticos.xml");
+                                RecursoDidactico recurso = new RecursoDidactico();
+                                recurso.Indice = Int32.Parse(fila.Cells[0].Value.ToString());
+                                recurso.Nombre = fila.Cells[1].Value.ToString();
+                                rdBus.ActualizarRecursoDidactico(recurso);
                                 MessageBox.Show("Información almacenada con exito.");
                             }
                         }
@@ -145,7 +145,8 @@ namespace SistemaGestorRecursosDidacticos
         {
             if (gridViewRecDidacticos.Rows.Count == 0)
             {
-                gridViewRecDidacticos.Rows.Add("", "", "", "Guardar", "Borrar");
+                RecursoDidacticoBusiness rdBus = new RecursoDidacticoBusiness(Application.StartupPath + "\\RecursosDidacticos.xml");
+                gridViewRecDidacticos.Rows.Add(rdBus.ObtenerIndice().ToString(), "", "Guardar", "Borrar");
             }
         }
 
