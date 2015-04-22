@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{20E1495D-E5F6-4892-ADD1-3D2F1AC04156}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SistemaGestorRecursosDidacticos</RootNamespace>
+    <AssemblyName>SistemaGestorRecursosDidacticos</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcercaDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AcercaDe.Designer.cs">
+      <DependentUpon>AcercaDe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoRecordatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevoRecordatorio.Designer.cs">
+      <DependentUpon>NuevoRecordatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contactos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contactos.Designer.cs">
+      <DependentUpon>Contactos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DistribucionObjetivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DistribucionObjetivos.Designer.cs">
+      <DependentUpon>DistribucionObjetivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EstrategiasDidacticas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EstrategiasDidacticas.Designer.cs">
+      <DependentUpon>EstrategiasDidacticas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EstrategiasEvaluativas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EstrategiasEvaluativas.Designer.cs">
+      <DependentUpon>EstrategiasEvaluativas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HistoriaEscuela.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistoriaEscuela.Designer.cs">
+      <DependentUpon>HistoriaEscuela.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemsPruebaEscrita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemsPruebaEscrita.Designer.cs">
+      <DependentUpon>ItemsPruebaEscrita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjetivosContenidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ObjetivosContenidos.Designer.cs">
+      <DependentUpon>ObjetivosContenidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recordatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recordatorio.Designer.cs">
+      <DependentUpon>Recordatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecursosDidacticos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecursosDidacticos.Designer.cs">
+      <DependentUpon>RecursosDidacticos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TecnicasDidacticas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TecnicasDidacticas.Designer.cs">
+      <DependentUpon>TecnicasDidacticas.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AcercaDe.resx">
+      <DependentUpon>AcercaDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoRecordatorio.resx">
+      <DependentUpon>NuevoRecordatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contactos.resx">
+      <DependentUpon>Contactos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DistribucionObjetivos.resx">
+      <DependentUpon>DistribucionObjetivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EstrategiasDidacticas.resx">
+      <DependentUpon>EstrategiasDidacticas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EstrategiasEvaluativas.resx">
+      <DependentUpon>EstrategiasEvaluativas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistoriaEscuela.resx">
+      <DependentUpon>HistoriaEscuela.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemsPruebaEscrita.resx">
+      <DependentUpon>ItemsPruebaEscrita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ObjetivosContenidos.resx">
+      <DependentUpon>ObjetivosContenidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Recordatorio.resx">
+      <DependentUpon>Recordatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecursosDidacticos.resx">
+      <DependentUpon>RecursosDidacticos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TecnicasDidacticas.resx">
+      <DependentUpon>TecnicasDidacticas.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splash_pintura2_amarillo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splash_pintura2_asd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splash_pintura2_blanco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splash_pintura2_celeste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splash_pintura2_morado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splash_pintura2_negro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splash_pintura2_rojo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splash_pintura2_verde.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Actions-contact-new.ico" />
+    <None Include="Resources\Aha-Soft-Large-Calendar-Calendar.ico" />
+    <Content Include="bin\Debug\prueba.xml" />
+    <Content Include="bin\Debug\RecursosDidacticos.xml" />
+    <Content Include="Resources\Circle1.png" />
+    <Content Include="Resources\Circle2.png" />
+    <None Include="Resources\Dapino-Summer-Blue-Holiday-Diary-Book.ico" />
+    <Content Include="Resources\download_blue.ico" />
+    <None Include="Resources\Graphicloads-Filetype-Pdf.ico" />
+    <None Include="Resources\Graphicloads-100-Flat-Close.ico" />
+    <None Include="Resources\Escudo 2.jpg" />
+    <None Include="Resources\icono-información-general-blanco-azul.png" />
+    <Content Include="Resources\interfaz.png" />
+    <Content Include="Resources\interfaz1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibreriaSistema\LibreriaSistema.csproj">
+      <Project>{8e223287-372a-43aa-ac27-93102c9f43d5}</Project>
+      <Name>LibreriaSistema</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
