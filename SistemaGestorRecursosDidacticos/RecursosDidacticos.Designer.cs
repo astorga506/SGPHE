@@ -39,6 +39,8 @@
             // 
             // gridViewRecDidacticos
             // 
+            this.gridViewRecDidacticos.AllowUserToAddRows = false;
+            this.gridViewRecDidacticos.AllowUserToDeleteRows = false;
             this.gridViewRecDidacticos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridViewRecDidacticos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Autor,
@@ -54,6 +56,7 @@
             this.gridViewRecDidacticos.TabIndex = 0;
             this.gridViewRecDidacticos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridViewRecDidacticos_CellContentClick);
             this.gridViewRecDidacticos.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.gridViewRecDidacticos_RowsAdded);
+            this.gridViewRecDidacticos.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.gridViewRecDidacticos_RowsRemoved);
             // 
             // Autor
             // 
