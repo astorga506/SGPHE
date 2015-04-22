@@ -10,6 +10,7 @@ namespace LibreriaSistema.domain
     {
         private int indice;
         private String nombre;
+
         public RecursoDidactico()
         {
 
