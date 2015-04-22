@@ -1,9 +1,11 @@
 ﻿using LibreriaSistema.business;
+using LibreriaSistema.domain;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,12 +29,23 @@ namespace SistemaGestorRecursosDidacticos
             RecursoDidacticoBusiness rdBus = new RecursoDidacticoBusiness(Application.StartupPath + "\\RecursosDidacticos.xml");
             //gridViewRecDidacticos.DataSource = rdBus.GetRecursosDidacticos();
             //gridViewRecDidacticos.DataMember = "Informacion";
-            DataTable datos = rdBus.GetRecursosDidacticos().Tables["Informacion"];
-
-            foreach (DataRow fila in datos.Rows)
+            try
             {
-                gridViewRecDidacticos.Rows.Add(fila[0], fila[1], fila[2], "Guardar", "Borrar");
+                DataTable datos = rdBus.GetRecursosDidacticos().Tables["Recurso"];
+                foreach (DataRow fila in datos.Rows)
+                {
+                    gridViewRecDidacticos.Rows.Add(fila[0], fila[1], fila[2], "Guardar", "Borrar");
+                }
             }
+            catch (FileNotFoundException fnfe)
+            {
+
+            }
+            catch (NullReferenceException nre)
+            { 
+            
+            }
+            
             gridViewRecDidacticos.Rows.Add("", "", "", "Guardar", "Borrar");
             
         }
@@ -61,6 +74,12 @@ namespace SistemaGestorRecursosDidacticos
                     DialogResult dialogResult = MessageBox.Show("¿Realmente desea borrar este recurso didactico? Esta operación es irreversible", "Eliminar recurso", MessageBoxButtons.YesNo);
                     if (dialogResult == DialogResult.Yes)
                     {
+                        RecursoDidacticoBusiness rdBus = new RecursoDidacticoBusiness(Application.StartupPath + "\\RecursosDidacticos.xml");
+                        RecursoDidactico recurso = new RecursoDidactico();
+                        recurso.Autor = fila.Cells[0].Value.ToString();
+                        recurso.Titulo = fila.Cells[1].Value.ToString();
+                        recurso.Enlace = fila.Cells[2].Value.ToString();
+                        rdBus.EliminarRecursoDidactico(recurso);
                         gridViewRecDidacticos.Rows.RemoveAt(e.RowIndex);
                     }
                 }
@@ -91,6 +110,12 @@ namespace SistemaGestorRecursosDidacticos
                     {
                         if (e.RowIndex == senderGrid.Rows.Count - 1)
                         {
+                            RecursoDidacticoBusiness rdBus = new RecursoDidacticoBusiness(Application.StartupPath + "\\RecursosDidacticos.xml");
+                            RecursoDidactico recurso = new RecursoDidactico();
+                            recurso.Autor = fila.Cells[0].Value.ToString();
+                            recurso.Titulo = fila.Cells[1].Value.ToString();
+                            recurso.Enlace = fila.Cells[2].Value.ToString();
+                            rdBus.InsertarRecursoDidactico(recurso);
                             MessageBox.Show("Información almacenada con exito.");
                             gridViewRecDidacticos.Rows.Add("", "", "", "Guardar", "Borrar");
                         }
@@ -99,6 +124,8 @@ namespace SistemaGestorRecursosDidacticos
                             DialogResult dialogResult = MessageBox.Show("¿Desea guardar los cambios?", "Guardar cambios", MessageBoxButtons.YesNo);
                             if (dialogResult == DialogResult.Yes)
                             {
+                                /*------------Codigo para llamar función para modificar el registro------------*/
+
                                 MessageBox.Show("Información almacenada con exito.");
                             }
                         }

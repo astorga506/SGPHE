@@ -1,16 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-
+﻿<?xml version="1.0" encoding="utf-8"?>
 <RecursosDidacticos>
-  <Informacion>
-    <Autor>Ministerio de Educacion Publica</Autor>
+  <Recurso>
+    <Autor>Ministerio</Autor>
     <Titulo>MEP</Titulo>
-    <Enlace>http://www.mep.go.cr/</Enlace>
-  </Informacion>
-  
-  <Informacion>
-    <Autor>Wikymapia</Autor>
-    <Titulo>Localizacion</Titulo>
-    <Enlace>http://wikimapia.org/22117781/Escuela-Rep%C3%BAblica-Francesa</Enlace>
-  </Informacion>
-  
+    <Enlace>www.mep.go.cr</Enlace>
+  </Recurso>
 </RecursosDidacticos>
