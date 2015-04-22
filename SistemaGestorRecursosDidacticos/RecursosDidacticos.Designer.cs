@@ -46,11 +46,11 @@
             this.Nombre,
             this.btnGuardar,
             this.btnEliminar});
-            this.gridViewRecDidacticos.Location = new System.Drawing.Point(121, 145);
+            this.gridViewRecDidacticos.Location = new System.Drawing.Point(113, 146);
             this.gridViewRecDidacticos.MultiSelect = false;
             this.gridViewRecDidacticos.Name = "gridViewRecDidacticos";
             this.gridViewRecDidacticos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridViewRecDidacticos.Size = new System.Drawing.Size(746, 318);
+            this.gridViewRecDidacticos.Size = new System.Drawing.Size(744, 318);
             this.gridViewRecDidacticos.TabIndex = 0;
             this.gridViewRecDidacticos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridViewRecDidacticos_CellContentClick);
             this.gridViewRecDidacticos.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.gridViewRecDidacticos_RowsAdded);
@@ -66,6 +66,7 @@
             // 
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
+            this.Nombre.Width = 400;
             // 
             // btnGuardar
             // 
