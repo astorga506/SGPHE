@@ -18,13 +18,13 @@ namespace LibreriaSistema.data
         {
             this.path = path;
         }
-        public void insertarEstrategia(EstrategiaDidactica estrategia) {
-            if (!existeEstrategia(estrategia))
+        public void insertarItem(ItemPrueba item) {
+            if (!existeItem(item))
             {
                 document = XDocument.Load(path);
-                XElement elementEstrategia = new XElement("estrategia",
-                    new XElement("indice", estrategia.getIndice().ToString()),
-                    new XElement("nombre", estrategia.getNombre())
+                XElement elementEstrategia = new XElement("item",
+                    new XElement("indice", item.getIndice().ToString()),
+                    new XElement("nombre", item.getNombre())
                     );
                 document.Root.Add(elementEstrategia);
                 document.Save(path);
@@ -32,51 +32,51 @@ namespace LibreriaSistema.data
             else { throw new FormatException();}
 
         }
-        public void eliminarEstrategiaDidactica(EstrategiaDidactica estrategia)
+        public void eliminarItem(ItemPrueba item)
         {
-            if (existeEstrategia(estrategia))
+            if (existeItem(item))
             {
                 document = XDocument.Load(path);
-                var estrategiaDelete = document.Root.Descendants("estrategia");
-                foreach (var item in estrategiaDelete)
+                var estrategiaDelete = document.Root.Descendants("item");
+                foreach (var tmp in estrategiaDelete)
                 {
-                    int indice = Convert.ToInt32(item.Element("indice").Value);
-                    if (estrategia.getIndice().Equals(indice))
+                    int indice = Convert.ToInt32(tmp.Element("indice").Value);
+                    if (item.getIndice().Equals(indice))
                     {
-                        item.Remove();
+                        tmp.Remove();
                         break;
                     }
                 }
                 document.Save(path);
             }
         }
-        public LinkedList<EstrategiaDidactica> getEstrategiasDidacticas()
+        public LinkedList<ItemPrueba> getEItem()
         {
             document = XDocument.Load(path);
-            LinkedList<EstrategiaDidactica> estrategias = new LinkedList<EstrategiaDidactica>();
-            foreach (XElement item in document.Nodes())
+            LinkedList<ItemPrueba> estrategias = new LinkedList<ItemPrueba>();
+            foreach (XElement tmp in document.Nodes())
             {
-                EstrategiaDidactica nuevaEstrategia = new EstrategiaDidactica();
-                nuevaEstrategia.setIndice(Convert.ToInt32(item.Attribute("indice").Value));
-                nuevaEstrategia.setNombre(item.Element("nombre").Value);
-                estrategias.AddLast(nuevaEstrategia);
+                ItemPrueba item = new ItemPrueba();
+                item.setIndice(Convert.ToInt32(tmp.Attribute("indice").Value));
+                item.setNombre(tmp.Element("nombre").Value);
+                estrategias.AddLast(item);
             }
             return estrategias;
         
         }
-        public void actualizarEstrategiaDidactica(EstrategiaDidactica estrategia)
+        public void actualizarItem(ItemPrueba item)
         {
-            if (existeEstrategia(estrategia))
+            if (existeItem(item))
             {
                 document = XDocument.Load(path);
-                var estrategiaDelete = document.Root.Descendants("estrategia");
-                foreach (var item in estrategiaDelete)
+                var estrategiaDelete = document.Root.Descendants("item");
+                foreach (var tmp in estrategiaDelete)
                 {
-                    int indice = Convert.ToInt32(item.Element("indice").Value);
-                    if (estrategia.getIndice().Equals(indice))
+                    int indice = Convert.ToInt32(tmp.Element("indice").Value);
+                    if (item.getIndice().Equals(indice))
                     {
                         //item.SetElementValue("indice", estrategia.getIndice().ToString());
-                        item.SetElementValue("nombre", estrategia.getNombre());
+                        tmp.SetElementValue("nombre", item.getNombre());
                         break;
                     }
                 }
@@ -85,18 +85,35 @@ namespace LibreriaSistema.data
             }
         
         }
-        public Boolean existeEstrategia(EstrategiaDidactica estrategia) {
+        public Boolean existeItem(ItemPrueba item) {
             document = XDocument.Load(path);
-            var estrategiaDelete = document.Root.Descendants("estrategia");
-            foreach (var item in estrategiaDelete)
+            var estrategiaDelete = document.Root.Descendants("item");
+            foreach (var tmp in estrategiaDelete)
             {
-                int indice = Convert.ToInt32(item.Element("indice").Value);
-                if (estrategia.getIndice().Equals(indice))
+                int indice = Convert.ToInt32(tmp.Element("indice").Value);
+                if (item.getIndice().Equals(indice))
                 {
                     return true;
                 }
             }
             return false;
+        }
+        private int ActualizarContador()
+        {
+            document = XDocument.Load(path);
+            int i = Convert.ToInt32(document.Root.Attribute("Index").Value);
+            i += 1;
+            document.Root.SetAttributeValue("Index", i);
+            document.Save(path);
+
+            return i;
+        }
+
+        public int ObtenerIndice()
+        {
+            document = XDocument.Load(path);
+            int i = Convert.ToInt32(document.Root.Attribute("Index").Value);
+            return ++i;
         }
     }
 }
