@@ -65,8 +65,8 @@ namespace LibreriaSistema.data
             if (ExisteTecnica(tecnica))
             {
                 document = XDocument.Load(path);
-                var recursoDel = document.Root.Descendants("Tecnica");
-                foreach (var item in recursoDel)
+                var tecnicaDel = document.Root.Descendants("Tecnica");
+                foreach (var item in tecnicaDel)
                 {
                     int tmp = Convert.ToInt32(item.Element("Indice").Value);
                     if (tecnica.Indice.Equals(tmp))
@@ -146,7 +146,7 @@ namespace LibreriaSistema.data
 
         public DataSet GetTecnicasDidacticos()
         {
-            DataSet dsRecursos = new DataSet();
+            DataSet dsTecnicas = new DataSet();
             XmlDataDocument xmldata = new XmlDataDocument();
             try
             {

@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="business\EstrategiaDidacticaBusiness.cs" />
+    <Compile Include="business\ItemPruebaBusiness.cs" />
     <Compile Include="business\RecursoDidacticoBusiness.cs" />
     <Compile Include="business\TecnicaDidacticaBusiness.cs" />
     <Compile Include="data\EstrategiaDidacticaData.cs" />
