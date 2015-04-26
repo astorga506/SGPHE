@@ -8,8 +8,9 @@ namespace LibreriaSistema.domain
 {
     public class EstrategiasEvaluativas
     {
-         private int indice;
+        private int indice;
         private String nombre;
+
         public EstrategiasEvaluativas()
         {
 
@@ -19,20 +20,18 @@ namespace LibreriaSistema.domain
             this.indice = indice;
             this.nombre = nombre;
         }
-        public void setIndice(int indice){
-            this.indice=indice;
-        }
-        public int getIndice()
+
+        public String Nombre
         {
-           return this.indice;
+            get { return nombre; }
+            set { nombre = value; }
         }
-        public void setNombre(String nombre)
+
+
+        public int Indice
         {
-            this.nombre = nombre;
-        }
-        public String getNombre()
-        {
-           return this.nombre;
+            get { return indice; }
+            set { indice = value; }
         }
     }
 }

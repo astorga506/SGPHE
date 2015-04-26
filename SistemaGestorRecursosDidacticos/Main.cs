@@ -42,9 +42,9 @@ namespace SistemaGestorRecursosDidacticos
                 //nuevaEst.setIndice(5);
                 //nuevaEst.setNombre("Modificacion");
                 //estrategia.actualizarEstrategiaDidactica(nuevaEst);
-                nuevaEst.setIndice(5);
-                nuevaEst.setNombre("Leer");
-                estrategia.eliminarEstrategiaDidactica(nuevaEst);
+                //nuevaEst.setIndice(5);
+                //nuevaEst.setNombre("Leer");
+                //estrategia.eliminarEstrategiaDidactica(nuevaEst);
             }catch(FormatException ex){
                 MessageBox.Show("La estrategia a insertar ya existe");
             }

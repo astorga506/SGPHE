@@ -2,9 +2,12 @@
 using LibreriaSistema.domain;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 using System.Xml.Linq;
 
 namespace LibreriaSistema.data
@@ -19,31 +22,54 @@ namespace LibreriaSistema.data
         {
             this.path = path;
         }
-        public void insertarTecnicaDidactica(TecnicaDidactica tecnica)
+        public void InsertarTecnicaDidactica(TecnicaDidactica tecnica)
         {
-            if (!existeTecnica(tecnica))
+            if (!ExisteTecnica(tecnica))
             {
-                document = XDocument.Load(path);
-                XElement elementEstrategia = new XElement("estrategia",
-                    new XElement("indice", tecnica.getIndice().ToString()),
-                    new XElement("nombre", tecnica.getNombre())
+                if (!File.Exists(path))
+                {
+                    XmlWriterSettings settings = new XmlWriterSettings();
+                    settings.Indent = true;
+
+                    using (XmlWriter writer = XmlWriter.Create(path, settings))
+                    {
+                        writer.WriteStartElement("TecnicasDidacticas");
+                        writer.WriteAttributeString("Index", "0");
+                        writer.WriteStartElement("Tecnica");
+                        writer.WriteElementString("Indice", tecnica.Indice.ToString());
+                        writer.WriteElementString("Nombre", tecnica.Nombre);
+                        writer.WriteEndElement();
+                        writer.Flush();
+                    }
+                    //ActualizarContador();
+                }
+                else
+                {
+                    document = XDocument.Load(path);
+                    XElement nuevoRecurso = new XElement("Tecnica",
+                            new XElement("Indice", tecnica.Indice.ToString()),
+                            new XElement("Nombre", tecnica.Nombre)
+
                     );
-                document.Root.Add(elementEstrategia);
-                document.Save(path);
+                    document.Root.Add(nuevoRecurso);
+                    document.Save(path);
+                }
+                this.ActualizarContador();
+
             }
-            else { throw new FormatException();}
+            else { throw new FormatException(); }
 
         }
-        public void eliminarTecnicaDidacticaa(TecnicaDidactica tecnica)
+        public void EliminarTecnicaDidactico(TecnicaDidactica tecnica)
         {
-            if (existeTecnica(tecnica))
+            if (ExisteTecnica(tecnica))
             {
                 document = XDocument.Load(path);
-                var estrategiaDelete = document.Root.Descendants("estrategia");
-                foreach (var item in estrategiaDelete)
+                var recursoDel = document.Root.Descendants("Tecnica");
+                foreach (var item in recursoDel)
                 {
-                    int indice = Convert.ToInt32(item.Element("indice").Value);
-                    if (tecnica.getIndice().Equals(indice))
+                    int tmp = Convert.ToInt32(item.Element("Indice").Value);
+                    if (tecnica.Indice.Equals(tmp))
                     {
                         item.Remove();
                         break;
@@ -52,40 +78,86 @@ namespace LibreriaSistema.data
                 document.Save(path);
             }
         }
-       
-        public void actualizarTecnicaDidactica(TecnicaDidactica tecnica)
+
+        public void ActualizarTecnicaDidactico(TecnicaDidactica tecnica)
         {
-            if (existeTecnica(tecnica))
+            if (ExisteTecnica(tecnica))
             {
                 document = XDocument.Load(path);
-                var estrategiaDelete = document.Root.Descendants("estrategia");
-                foreach (var item in estrategiaDelete)
+                foreach (XElement item in document.Root.Elements())
                 {
-                    int indice = Convert.ToInt32(item.Element("indice").Value);
-                    if (tecnica.getIndice().Equals(indice))
+                    int indice = Convert.ToInt32(item.Element("Indice").Value);
+                    if (tecnica.Indice.Equals(indice))
                     {
-                        //item.SetElementValue("indice", estrategia.getIndice().ToString());
-                        item.SetElementValue("nombre", tecnica.getNombre());
+                        item.SetElementValue("Nombre", tecnica.Nombre);
                         break;
                     }
                 }
 
                 document.Save(path);
             }
-        
+
         }
-        public Boolean existeTecnica(TecnicaDidactica tecnica) {
-            document = XDocument.Load(path);
-            var estrategiaDelete = document.Root.Descendants("estrategia");
-            foreach (var item in estrategiaDelete)
+
+        private Boolean ExisteTecnica(TecnicaDidactica tecnica)
+        {
+            if (File.Exists(path))
             {
-                int indice = Convert.ToInt32(item.Element("indice").Value);
-                if (tecnica.getIndice().Equals(indice))
+                document = XDocument.Load(path);
+                foreach (XElement item in document.Root.Elements())
                 {
-                    return true;
+                    int tmp = Convert.ToInt32(item.Element("Indice").Value);
+                    if (tmp.Equals(tecnica.Indice))
+                    {
+                        return true;
+                    }
                 }
+                document.Save(path);
             }
+
             return false;
+        }
+
+        private int ActualizarContador()
+        {
+            document = XDocument.Load(path);
+            int i = Convert.ToInt32(document.Root.Attribute("Index").Value);
+            i += 1;
+            document.Root.SetAttributeValue("Index", i);
+            document.Save(path);
+
+            return i;
+        }
+
+        public int ObtenerIndice()
+        {
+            if (!File.Exists(path))
+            {
+                return 1;
+            }
+            else
+            {
+                document = XDocument.Load(path);
+                int i = Convert.ToInt32(document.Root.Attribute("Index").Value);
+                return ++i;
+
+            }
+        }
+
+        public DataSet GetTecnicasDidacticos()
+        {
+            DataSet dsRecursos = new DataSet();
+            XmlDataDocument xmldata = new XmlDataDocument();
+            try
+            {
+                xmldata.DataSet.ReadXml(path);
+            }
+            catch (FileNotFoundException fnfe)
+            {
+                throw fnfe;
+            }
+
+            return xmldata.DataSet;
         }
     }
 }

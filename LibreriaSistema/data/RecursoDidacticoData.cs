@@ -21,6 +21,7 @@ namespace LibreriaSistema
         {
             this.path = path;
         }
+
         public void InsertarRecursoDidactico(RecursoDidactico recurso)
         {
             if (!ExisteRecurso(recurso))
@@ -35,7 +36,7 @@ namespace LibreriaSistema
                         writer.WriteStartElement("RecursosDidacticos");
                         writer.WriteAttributeString("Index", "0");
                         writer.WriteStartElement("Recurso");
-                        writer.WriteElementString("Indice", ActualizarContador().ToString());
+                        writer.WriteElementString("Indice", recurso.Indice.ToString());
                         writer.WriteElementString("Nombre", recurso.Nombre);
                         writer.WriteEndElement();                        
                         writer.Flush();
@@ -46,13 +47,15 @@ namespace LibreriaSistema
                 {
                     document = XDocument.Load(path);
                     XElement nuevoRecurso = new XElement("Recurso",
-                            new XElement("Indice", ActualizarContador().ToString()),
+                            new XElement("Indice", recurso.Indice),
                             new XElement("Nombre", recurso.Nombre)
                         
                     );
                     document.Root.Add(nuevoRecurso);
-                    document.Save(path);                
+                    document.Save(path);       
                 }
+
+                this.ActualizarContador();
                 
             }
             else { throw new FormatException(); }
@@ -129,9 +132,17 @@ namespace LibreriaSistema
 
         public int ObtenerIndice()
         {
-            document = XDocument.Load(path);
-            int i = Convert.ToInt32(document.Root.Attribute("Index").Value);
-            return ++i;
+            if (!File.Exists(path))
+            {
+                return 1;
+            }
+            else
+            {
+                document = XDocument.Load(path);
+                int i = Convert.ToInt32(document.Root.Attribute("Index").Value);
+                return ++i;
+            
+            }            
         }
 
         public DataSet GetRecursosDidacticos() 

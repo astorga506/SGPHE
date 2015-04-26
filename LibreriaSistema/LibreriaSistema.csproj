@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="business\EstrategiaDidacticaBusiness.cs" />
     <Compile Include="business\RecursoDidacticoBusiness.cs" />
+    <Compile Include="business\TecnicaDidacticaBusiness.cs" />
     <Compile Include="data\EstrategiaDidacticaData.cs" />
     <Compile Include="data\EstrategiaEvaluativaData.cs" />
     <Compile Include="data\ItemPruebaData.cs" />

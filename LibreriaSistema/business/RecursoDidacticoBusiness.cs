@@ -11,36 +11,36 @@ namespace LibreriaSistema.business
     public class RecursoDidacticoBusiness
     {
 
-        private RecursoDidacticoData rsData;
+        private RecursoDidacticoData rdData;
 
         public RecursoDidacticoBusiness(String path)
         {
-            rsData = new RecursoDidacticoData(path);
+            rdData = new RecursoDidacticoData(path);
         }
 
         public DataSet GetRecursosDidacticos()
         {
-            return rsData.GetRecursosDidacticos();
+            return rdData.GetRecursosDidacticos();
         }
 
         public void InsertarRecursoDidactico(RecursoDidactico recurso)
         {
-            rsData.InsertarRecursoDidactico(recurso);
+            rdData.InsertarRecursoDidactico(recurso);
         }
 
         public void EliminarRecursoDidactico(RecursoDidactico recurso)
         {
-            rsData.EliminarRecursoDidactico(recurso);
+            rdData.EliminarRecursoDidactico(recurso);
         }
 
         public int ObtenerIndice()
         {
-            return rsData.ObtenerIndice();
+            return rdData.ObtenerIndice();
         }
 
         public void ActualizarRecursoDidactico(RecursoDidactico recurso)
         {
-            rsData.ActualizarRecursoDidactico(recurso);
+            rdData.ActualizarRecursoDidactico(recurso);
         }
     }
 }

@@ -10,23 +10,23 @@ namespace LibreriaSistema.business
 
   public  class EstrategiaDidacticaBusiness
     {
-      EstrategiaDidacticaData estrategiaDidacticaData ;
+      //EstrategiaDidacticaData estrategiaDidacticaData ;
       
-      public EstrategiaDidacticaBusiness(String path)
-      {
-          estrategiaDidacticaData = new EstrategiaDidacticaData(path);
-      }
+      //public EstrategiaDidacticaBusiness(String path)
+      //{
+      //    estrategiaDidacticaData = new EstrategiaDidacticaData(path);
+      //}
 
-      public void insertarEstrategia(EstrategiaDidactica estrategia) {
-          estrategiaDidacticaData.insertarEstrategia(estrategia);
-      }
-      public void eliminarEstrategiaDidactica(EstrategiaDidactica estrategia)
-      {
-          estrategiaDidacticaData.eliminarEstrategiaDidactica(estrategia);
-      }
-      public void actualizarEstrategiaDidactica(EstrategiaDidactica estrategia)
-      {
-          estrategiaDidacticaData.actualizarEstrategiaDidactica(estrategia);
-      }
+      //public void insertarEstrategia(EstrategiaDidactica estrategia) {
+      //    estrategiaDidacticaData.insertarEstrategia(estrategia);
+      //}
+      //public void eliminarEstrategiaDidactica(EstrategiaDidactica estrategia)
+      //{
+      //    estrategiaDidacticaData.eliminarEstrategiaDidactica(estrategia);
+      //}
+      //public void actualizarEstrategiaDidactica(EstrategiaDidactica estrategia)
+      //{
+      //    estrategiaDidacticaData.actualizarEstrategiaDidactica(estrategia);
+      //}
     }
 }

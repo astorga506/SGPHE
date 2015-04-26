@@ -1,11 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<RecursosDidacticos Index="8">
+<RecursosDidacticos Index="3">
   <Recurso>
-    <Indice>7</Indice>
-    <Nombre>www.mep.go.cr</Nombre>
+    <Indice>1</Indice>
+    <Nombre>MEP</Nombre>
   </Recurso>
   <Recurso>
-    <Indice>8</Indice>
-    <Nombre>www.wikipedia.com</Nombre>
+    <Indice>2</Indice>
+    <Nombre>google</Nombre>
+  </Recurso>
+  <Recurso>
+    <Indice>3</Indice>
+    <Nombre>rincon del vago</Nombre>
   </Recurso>
 </RecursosDidacticos>

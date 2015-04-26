@@ -70,15 +70,22 @@ namespace SistemaGestorRecursosDidacticos
                 {
                     DataGridViewRow fila = (DataGridViewRow)senderGrid.Rows[e.RowIndex];
                     //MessageBox.Show(fila.Cells[0].Value.ToString());
-                    DialogResult dialogResult = MessageBox.Show("¿Realmente desea borrar este recurso didactico? Esta operación es irreversible", "Eliminar recurso", MessageBoxButtons.YesNo);
-                    if (dialogResult == DialogResult.Yes)
+                    if (fila.Cells[1].Value.ToString() == "")
                     {
-                        RecursoDidacticoBusiness rdBus = new RecursoDidacticoBusiness(Application.StartupPath + "\\RecursosDidacticos.xml");
-                        RecursoDidactico recurso = new RecursoDidactico();
-                        recurso.Indice = Int32.Parse(fila.Cells[0].Value.ToString());
-                        recurso.Nombre = fila.Cells[1].Value.ToString();
-                        rdBus.EliminarRecursoDidactico(recurso);
-                        gridViewRecDidacticos.Rows.RemoveAt(e.RowIndex);
+                        MessageBox.Show("Debe de seleccionar un campo no vacío");
+                    }
+                    else
+                    {
+                        DialogResult dialogResult = MessageBox.Show("¿Realmente desea borrar este recurso didactico? Esta operación es irreversible", "Eliminar recurso", MessageBoxButtons.YesNo);
+                        if (dialogResult == DialogResult.Yes)
+                        {
+                            RecursoDidacticoBusiness rdBus = new RecursoDidacticoBusiness(Application.StartupPath + "\\RecursosDidacticos.xml");
+                            RecursoDidactico recurso = new RecursoDidactico();
+                            recurso.Indice = Int32.Parse(fila.Cells[0].Value.ToString());
+                            recurso.Nombre = fila.Cells[1].Value.ToString();
+                            rdBus.EliminarRecursoDidactico(recurso);
+                            gridViewRecDidacticos.Rows.RemoveAt(e.RowIndex);
+                        }
                     }
                 }
                 if (columna.Name.Equals("btnGuardar"))
