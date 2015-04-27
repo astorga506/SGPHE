@@ -76,7 +76,7 @@ namespace SistemaGestorRecursosDidacticos
                         if (dialogResult == DialogResult.Yes)
                         {
                             ItemPruebaBusiness ipBus = new ItemPruebaBusiness(Application.StartupPath + "\\ItemsPruebas.xml");
-                            EstrategiaDidactica item = new EstrategiaDidactica();
+                            ItemPrueba item = new ItemPrueba();
                             item.Indice = Int32.Parse(fila.Cells[0].Value.ToString());
                             item.Nombre = fila.Cells[1].Value.ToString();
                             ipBus.EliminarRecursoPrueba(item);
@@ -112,7 +112,7 @@ namespace SistemaGestorRecursosDidacticos
                         if (e.RowIndex == senderGrid.Rows.Count - 1)
                         {
                             ItemPruebaBusiness ipBus = new ItemPruebaBusiness(Application.StartupPath + "\\ItemsPruebas.xml");
-                            EstrategiaDidactica item = new EstrategiaDidactica();
+                            ItemPrueba item = new ItemPrueba();
                             item.Indice = Int32.Parse(fila.Cells[0].Value.ToString());
                             item.Nombre = fila.Cells[1].Value.ToString();
                             ipBus.InsertarItemPrueba(item);
@@ -125,7 +125,7 @@ namespace SistemaGestorRecursosDidacticos
                             if (dialogResult == DialogResult.Yes)
                             {
                                 ItemPruebaBusiness ipBus = new ItemPruebaBusiness(Application.StartupPath + "\\ItemsPruebas.xml");
-                                EstrategiaDidactica item = new EstrategiaDidactica();
+                                ItemPrueba item = new ItemPrueba();
                                 item.Indice = Int32.Parse(fila.Cells[0].Value.ToString());
                                 item.Nombre = fila.Cells[1].Value.ToString();
                                 ipBus.ActualizarItemPrueba(item);

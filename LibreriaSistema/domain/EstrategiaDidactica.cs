@@ -6,17 +6,16 @@ using System.Threading.Tasks;
 
 namespace LibreriaSistema.domain
 {
-    public class ItemPrueba
+    public class EstrategiaDidactica
     {
         private int indice;
         private String nombre;
 
-        public ItemPrueba()
+        public EstrategiaDidactica()
         {
 
         }
-
-        public ItemPrueba(int indice, String nombre)
+        public EstrategiaDidactica(int indice, String nombre)
         {
             this.indice = indice;
             this.nombre = nombre;
@@ -27,14 +26,12 @@ namespace LibreriaSistema.domain
             get { return nombre; }
             set { nombre = value; }
         }
-        
+
 
         public int Indice
         {
             get { return indice; }
             set { indice = value; }
         }
-        
-
     }
 }

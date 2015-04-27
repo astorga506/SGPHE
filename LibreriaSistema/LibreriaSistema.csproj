@@ -49,6 +49,7 @@
     <Compile Include="data\ItemPruebaData.cs" />
     <Compile Include="data\RecursoDidacticoData.cs" />
     <Compile Include="data\TecnicaDidacticaData.cs" />
+    <Compile Include="domain\EstrategiaDidactica.cs" />
     <Compile Include="domain\EstrategiaEvaluativa.cs" />
     <Compile Include="domain\ItemPrueba.cs" />
     <Compile Include="domain\RecursoDidactico.cs" />
