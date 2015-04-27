@@ -61,7 +61,7 @@ namespace LibreriaSistema.data
             else { throw new FormatException(); }
 
         }
-        public void EliminarRecursoPrueba(ItemPrueba item)
+        public void EliminarItemPrueba(ItemPrueba item)
         {
             if (ExisteItem(item))
             {

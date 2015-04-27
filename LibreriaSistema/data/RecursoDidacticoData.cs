@@ -66,7 +66,7 @@ namespace LibreriaSistema
             if (ExisteRecurso(recurso))
             {
                 document = XDocument.Load(path);
-                var recursoDel = document.Root.Descendants("Recursos");
+                var recursoDel = document.Root.Descendants("Recurso");
                 foreach (var item in recursoDel)
                 {
                     int tmp = Convert.ToInt32(item.Element("Indice").Value);

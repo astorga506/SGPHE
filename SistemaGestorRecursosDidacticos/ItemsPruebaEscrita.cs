@@ -79,7 +79,7 @@ namespace SistemaGestorRecursosDidacticos
                             ItemPrueba item = new ItemPrueba();
                             item.Indice = Int32.Parse(fila.Cells[0].Value.ToString());
                             item.Nombre = fila.Cells[1].Value.ToString();
-                            ipBus.EliminarRecursoPrueba(item);
+                            ipBus.EliminarItemPrueba(item);
                             dgvItems.Rows.RemoveAt(e.RowIndex);
                         }
                     }

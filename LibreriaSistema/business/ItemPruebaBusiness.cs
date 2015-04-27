@@ -28,9 +28,9 @@ namespace LibreriaSistema.business
             ipData.InsertarItemPrueba(item);
         }
 
-         public void EliminarRecursoPrueba(ItemPrueba item)
+         public void EliminarItemPrueba(ItemPrueba item)
         {
-            ipData.EliminarRecursoPrueba(item);
+            ipData.EliminarItemPrueba(item);
         }
 
         public int ObtenerIndice()

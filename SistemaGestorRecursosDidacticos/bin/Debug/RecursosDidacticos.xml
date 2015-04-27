@@ -1,7 +1,2 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<RecursosDidacticos Index="1">
-  <Recurso>
-    <Indice>1</Indice>
-    <Nombre>Wikipedia</Nombre>
-  </Recurso>
-</RecursosDidacticos>
+<RecursosDidacticos Index="1" />
