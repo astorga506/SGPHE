@@ -1,15 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<RecursosDidacticos Index="3">
+<RecursosDidacticos Index="1">
   <Recurso>
     <Indice>1</Indice>
-    <Nombre>MEP</Nombre>
-  </Recurso>
-  <Recurso>
-    <Indice>2</Indice>
-    <Nombre>google</Nombre>
-  </Recurso>
-  <Recurso>
-    <Indice>3</Indice>
-    <Nombre>rincon del vago</Nombre>
+    <Nombre>Wikipedia</Nombre>
   </Recurso>
 </RecursosDidacticos>

@@ -72,11 +72,11 @@ namespace SistemaGestorRecursosDidacticos
                     }
                     else
                     {
-                        DialogResult dialogResult = MessageBox.Show("¿Realmente desea borrar este Item de Prueba Escrita? Esta operación es irreversible", "Eliminar item", MessageBoxButtons.YesNo);
+                        DialogResult dialogResult = MessageBox.Show("¿Realmente desea borrar este Ïtem de Prueba Escrita? Esta operación es irreversible", "Eliminar Ïtem de Prueba Escrita", MessageBoxButtons.YesNo);
                         if (dialogResult == DialogResult.Yes)
                         {
                             ItemPruebaBusiness ipBus = new ItemPruebaBusiness(Application.StartupPath + "\\ItemsPruebas.xml");
-                            ItemPrueba item = new ItemPrueba();
+                            EstrategiaDidactica item = new EstrategiaDidactica();
                             item.Indice = Int32.Parse(fila.Cells[0].Value.ToString());
                             item.Nombre = fila.Cells[1].Value.ToString();
                             ipBus.EliminarRecursoPrueba(item);
@@ -112,11 +112,11 @@ namespace SistemaGestorRecursosDidacticos
                         if (e.RowIndex == senderGrid.Rows.Count - 1)
                         {
                             ItemPruebaBusiness ipBus = new ItemPruebaBusiness(Application.StartupPath + "\\ItemsPruebas.xml");
-                            ItemPrueba item = new ItemPrueba();
+                            EstrategiaDidactica item = new EstrategiaDidactica();
                             item.Indice = Int32.Parse(fila.Cells[0].Value.ToString());
                             item.Nombre = fila.Cells[1].Value.ToString();
                             ipBus.InsertarItemPrueba(item);
-                            MessageBox.Show("Información almacenada con exito.");
+                            MessageBox.Show("Información almacenada con éxito.");
                             dgvItems.Rows.Add(ipBus.ObtenerIndice().ToString(), "", "Guardar", "Borrar");
                         }
                         else
@@ -125,18 +125,18 @@ namespace SistemaGestorRecursosDidacticos
                             if (dialogResult == DialogResult.Yes)
                             {
                                 ItemPruebaBusiness ipBus = new ItemPruebaBusiness(Application.StartupPath + "\\ItemsPruebas.xml");
-                                ItemPrueba item = new ItemPrueba();
+                                EstrategiaDidactica item = new EstrategiaDidactica();
                                 item.Indice = Int32.Parse(fila.Cells[0].Value.ToString());
                                 item.Nombre = fila.Cells[1].Value.ToString();
                                 ipBus.ActualizarItemPrueba(item);
-                                MessageBox.Show("Información almacenada con exito.");
+                                MessageBox.Show("Información almacenada con éxito.");
                             }
                         }
 
                     }
                     else
                     {
-                        MessageBox.Show("Debe de completar la información solicitada para cada espacio.");
+                        MessageBox.Show("Debe de completar la información solicitada.");
                     }
 
                 }

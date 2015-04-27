@@ -73,7 +73,7 @@ namespace SistemaGestorRecursosDidacticos
                     }
                     else
                     {
-                        DialogResult dialogResult = MessageBox.Show("¿Realmente desea borrar este tecnica didactica? Esta operación es irreversible", "Eliminar tecnica", MessageBoxButtons.YesNo);
+                        DialogResult dialogResult = MessageBox.Show("¿Realmente desea borrar este Técnica Didáctica? Esta operación es irreversible", "Eliminar Técnica Didáctica", MessageBoxButtons.YesNo);
                         if (dialogResult == DialogResult.Yes)
                         {
                             TecnicaDidacticaBusiness tdBus = new TecnicaDidacticaBusiness(Application.StartupPath + "\\TecnicasDidacticas.xml");
@@ -119,7 +119,7 @@ namespace SistemaGestorRecursosDidacticos
                             tecnica.Indice = Int32.Parse(fila.Cells[0].Value.ToString());
                             tecnica.Nombre = fila.Cells[1].Value.ToString();
                             tdBus.InsertarTecnicaDidactica(tecnica);
-                            MessageBox.Show("Información almacenada con exito.");
+                            MessageBox.Show("Información almacenada con éxito.");
                             dgvTecDidactica.Rows.Add(tdBus.ObtenerIndice().ToString(), "", "Guardar", "Borrar");
                         }
                         else
@@ -132,14 +132,14 @@ namespace SistemaGestorRecursosDidacticos
                                 tecnica.Indice = Int32.Parse(fila.Cells[0].Value.ToString());
                                 tecnica.Nombre = fila.Cells[1].Value.ToString();
                                 tdBus.ActualizarTecnicaDidactico(tecnica);
-                                MessageBox.Show("Información almacenada con exito.");
+                                MessageBox.Show("Información almacenada con éxito.");
                             }
                         }
 
                     }
                     else
                     {
-                        MessageBox.Show("Debe de completar la información solicitada para cada espacio.");
+                        MessageBox.Show("Debe de completar la información solicitada.");
                     }
 
                 }

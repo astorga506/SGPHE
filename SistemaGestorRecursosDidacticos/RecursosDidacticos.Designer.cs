@@ -58,7 +58,7 @@
             // 
             // Indice
             // 
-            this.Indice.HeaderText = "Indice";
+            this.Indice.HeaderText = "Índice";
             this.Indice.Name = "Indice";
             this.Indice.ReadOnly = true;
             // 

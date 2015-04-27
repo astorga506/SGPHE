@@ -1,6 +1,7 @@
 ﻿using LibreriaSistema.domain;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,23 +11,36 @@ namespace LibreriaSistema.business
 
   public  class EstrategiaDidacticaBusiness
     {
-      //EstrategiaDidacticaData estrategiaDidacticaData ;
-      
-      //public EstrategiaDidacticaBusiness(String path)
-      //{
-      //    estrategiaDidacticaData = new EstrategiaDidacticaData(path);
-      //}
+  private EstrategiaDidacticaData edData;
 
-      //public void insertarEstrategia(EstrategiaDidactica estrategia) {
-      //    estrategiaDidacticaData.insertarEstrategia(estrategia);
-      //}
-      //public void eliminarEstrategiaDidactica(EstrategiaDidactica estrategia)
-      //{
-      //    estrategiaDidacticaData.eliminarEstrategiaDidactica(estrategia);
-      //}
-      //public void actualizarEstrategiaDidactica(EstrategiaDidactica estrategia)
-      //{
-      //    estrategiaDidacticaData.actualizarEstrategiaDidactica(estrategia);
-      //}
+        public EstrategiaDidacticaBusiness(String path)
+        {
+            edData = new EstrategiaDidacticaData(path);
+        }
+
+        public DataSet GetEstrategias()
+        {
+            return edData.GetEstrategias();
+        }
+
+        public void InsertarEstrategia(EstrategiaDidactica estrategia)
+        {
+            edData.InsertarEstrategia(estrategia);
+        }
+
+        public void EliminarEstrategia(EstrategiaDidactica estrategia)
+        {
+            edData.EliminarEstrategia(estrategia);
+        }
+
+        public int ObtenerIndice()
+        {
+            return edData.ObtenerIndice();
+        }
+
+        public void ActualizarEstrategia(EstrategiaDidactica estrategia)
+        {
+            edData.ActualizarEstrategia(estrategia);
+        }
     }
 }

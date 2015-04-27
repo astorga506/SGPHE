@@ -23,12 +23,12 @@ namespace LibreriaSistema.business
             return ipData.GetItemsPrueba();
         }
 
-         public void InsertarItemPrueba(ItemPrueba item)
+         public void InsertarItemPrueba(EstrategiaDidactica item)
         {
             ipData.InsertarItemPrueba(item);
         }
 
-         public void EliminarRecursoPrueba(ItemPrueba item)
+         public void EliminarRecursoPrueba(EstrategiaDidactica item)
         {
             ipData.EliminarRecursoPrueba(item);
         }
@@ -38,7 +38,7 @@ namespace LibreriaSistema.business
             return ipData.ObtenerIndice();
         }
 
-        public void ActualizarItemPrueba(ItemPrueba item)
+        public void ActualizarItemPrueba(EstrategiaDidactica item)
         {
             ipData.ActualizarItemPrueba(item);
         }

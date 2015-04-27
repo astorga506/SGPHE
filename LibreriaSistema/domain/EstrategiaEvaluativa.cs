@@ -6,17 +6,16 @@ using System.Threading.Tasks;
 
 namespace LibreriaSistema.domain
 {
-    public class EstrategiaDidactica
+    public class EstrategiaEvaluativa
     {
         private int indice;
         private String nombre;
 
-        public EstrategiaDidactica()
+        public EstrategiaEvaluativa()
         {
 
         }
-
-        public EstrategiaDidactica(int indice, String nombre)
+        public EstrategiaEvaluativa(int indice, String nombre)
         {
             this.indice = indice;
             this.nombre = nombre;

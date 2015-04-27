@@ -61,6 +61,7 @@
             this.btnEliminar});
             this.dgvItems.Location = new System.Drawing.Point(137, 197);
             this.dgvItems.Name = "dgvItems";
+            this.dgvItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvItems.Size = new System.Drawing.Size(745, 312);
             this.dgvItems.TabIndex = 7;
             this.dgvItems.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvItems_CellContentClick);
@@ -69,7 +70,7 @@
             // 
             // Indice
             // 
-            this.Indice.HeaderText = "Indice";
+            this.Indice.HeaderText = "Índice";
             this.Indice.Name = "Indice";
             this.Indice.ReadOnly = true;
             // 

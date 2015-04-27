@@ -61,6 +61,7 @@
             this.btnEliminar});
             this.dgvTecDidactica.Location = new System.Drawing.Point(144, 192);
             this.dgvTecDidactica.Name = "dgvTecDidactica";
+            this.dgvTecDidactica.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTecDidactica.Size = new System.Drawing.Size(743, 314);
             this.dgvTecDidactica.TabIndex = 5;
             this.dgvTecDidactica.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTecDidactica_CellContentClick);
@@ -69,7 +70,7 @@
             // 
             // Indice
             // 
-            this.Indice.HeaderText = "Indice";
+            this.Indice.HeaderText = "Índice";
             this.Indice.Name = "Indice";
             this.Indice.ReadOnly = true;
             // 

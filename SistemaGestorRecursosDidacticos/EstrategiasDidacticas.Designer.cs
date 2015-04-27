@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvEstrategias = new System.Windows.Forms.DataGridView();
             this.Indice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Guadar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnGuardar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnEliminar = new System.Windows.Forms.DataGridViewButtonColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEstrategias)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -50,22 +50,27 @@
     "s de enseñanza \r\nque tiene por objeto alcanzar los objetivos de aprendizaje. ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dataGridView1
+            // dgvEstrategias
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvEstrategias.AllowUserToAddRows = false;
+            this.dgvEstrategias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEstrategias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Indice,
             this.Nombre,
-            this.Guadar,
-            this.Eliminar});
-            this.dataGridView1.Location = new System.Drawing.Point(135, 163);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(745, 242);
-            this.dataGridView1.TabIndex = 8;
+            this.btnGuardar,
+            this.btnEliminar});
+            this.dgvEstrategias.Location = new System.Drawing.Point(135, 163);
+            this.dgvEstrategias.Name = "dgvEstrategias";
+            this.dgvEstrategias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvEstrategias.Size = new System.Drawing.Size(745, 325);
+            this.dgvEstrategias.TabIndex = 8;
+            this.dgvEstrategias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEstrategias_CellContentClick);
+            this.dgvEstrategias.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvEstrategias_RowsAdded);
+            this.dgvEstrategias.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dgvEstrategias_RowsRemoved);
             // 
             // Indice
             // 
-            this.Indice.HeaderText = "Indice";
+            this.Indice.HeaderText = "Índice";
             this.Indice.Name = "Indice";
             this.Indice.ReadOnly = true;
             // 
@@ -75,16 +80,16 @@
             this.Nombre.Name = "Nombre";
             this.Nombre.Width = 400;
             // 
-            // Guadar
+            // btnGuardar
             // 
-            this.Guadar.HeaderText = "Guadar";
-            this.Guadar.Name = "Guadar";
-            this.Guadar.Text = "Guardar";
+            this.btnGuardar.HeaderText = "Guardar";
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Text = "Guardar";
             // 
-            // Eliminar
+            // btnEliminar
             // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Name = "Eliminar";
+            this.btnEliminar.HeaderText = "Eliminar";
+            this.btnEliminar.Name = "btnEliminar";
             // 
             // EstrategiasDidacticas
             // 
@@ -93,14 +98,14 @@
             this.BackgroundImage = global::SistemaGestorRecursosDidacticos.Properties.Resources.fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1021, 581);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvEstrategias);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.Name = "EstrategiasDidacticas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EstrategiasDidacticas";
             this.Load += new System.EventHandler(this.EstrategiasDidacticas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEstrategias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,11 +114,11 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvEstrategias;
         private System.Windows.Forms.DataGridViewTextBoxColumn Indice;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewButtonColumn Guadar;
-        private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
+        private System.Windows.Forms.DataGridViewButtonColumn btnGuardar;
+        private System.Windows.Forms.DataGridViewButtonColumn btnEliminar;
 
     }
 }

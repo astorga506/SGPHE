@@ -22,7 +22,7 @@ namespace LibreriaSistema.data
             this.path = path;
         }
 
-        public void InsertarItemPrueba(ItemPrueba item)
+        public void InsertarItemPrueba(EstrategiaDidactica item)
         {
             if (!ExisteItem(item))
             {
@@ -61,7 +61,7 @@ namespace LibreriaSistema.data
             else { throw new FormatException(); }
 
         }
-        public void EliminarRecursoPrueba(ItemPrueba item)
+        public void EliminarRecursoPrueba(EstrategiaDidactica item)
         {
             if (ExisteItem(item))
             {
@@ -80,7 +80,7 @@ namespace LibreriaSistema.data
             }
         }
 
-        public void ActualizarItemPrueba(ItemPrueba item)
+        public void ActualizarItemPrueba(EstrategiaDidactica item)
         {
             if (ExisteItem(item))
             {
@@ -100,7 +100,7 @@ namespace LibreriaSistema.data
 
         }
 
-        public Boolean ExisteItem(ItemPrueba item)
+        public Boolean ExisteItem(EstrategiaDidactica item)
         {
             if (File.Exists(path))
             {
