@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ObjetivosContenidos));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.iCicloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.iICicloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.españolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.matemáticaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estudiosSocialesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,6 +38,7 @@
             this.músicaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.francésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.religiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iICicloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.españolIIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.matemáticaIIToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estudiosSocialesIIToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,20 +75,6 @@
             this.iCicloToolStripMenuItem.Name = "iCicloToolStripMenuItem";
             this.iCicloToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.iCicloToolStripMenuItem.Text = "I Ciclo";
-            // 
-            // iICicloToolStripMenuItem
-            // 
-            this.iICicloToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.españolIIToolStripMenuItem,
-            this.matemáticaIIToolStripMenuItem,
-            this.estudiosSocialesIIToolStripMenuItem1,
-            this.cienciasIIToolStripMenuItem,
-            this.músicaIIToolStripMenuItem,
-            this.francésIIToolStripMenuItem,
-            this.religiónIIToolStripMenuItem});
-            this.iICicloToolStripMenuItem.Name = "iICicloToolStripMenuItem";
-            this.iICicloToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
-            this.iICicloToolStripMenuItem.Text = "II Ciclo";
             // 
             // españolToolStripMenuItem
             // 
@@ -138,6 +124,20 @@
             this.religiónToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.religiónToolStripMenuItem.Text = "Religión";
             this.religiónToolStripMenuItem.Click += new System.EventHandler(this.religiónToolStripMenuItem_Click);
+            // 
+            // iICicloToolStripMenuItem
+            // 
+            this.iICicloToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.españolIIToolStripMenuItem,
+            this.matemáticaIIToolStripMenuItem,
+            this.estudiosSocialesIIToolStripMenuItem1,
+            this.cienciasIIToolStripMenuItem,
+            this.músicaIIToolStripMenuItem,
+            this.francésIIToolStripMenuItem,
+            this.religiónIIToolStripMenuItem});
+            this.iICicloToolStripMenuItem.Name = "iICicloToolStripMenuItem";
+            this.iICicloToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.iICicloToolStripMenuItem.Text = "II Ciclo";
             // 
             // españolIIToolStripMenuItem
             // 
@@ -190,11 +190,12 @@
             // 
             // axAcroPDF1
             // 
+            this.axAcroPDF1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.axAcroPDF1.Enabled = true;
-            this.axAcroPDF1.Location = new System.Drawing.Point(0, 27);
+            this.axAcroPDF1.Location = new System.Drawing.Point(0, 24);
             this.axAcroPDF1.Name = "axAcroPDF1";
             this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
-            this.axAcroPDF1.Size = new System.Drawing.Size(1021, 554);
+            this.axAcroPDF1.Size = new System.Drawing.Size(1021, 557);
             this.axAcroPDF1.TabIndex = 1;
             // 
             // ObjetivosContenidos
