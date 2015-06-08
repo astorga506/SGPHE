@@ -37,9 +37,9 @@
             this.calendarFin = new System.Windows.Forms.MonthCalendar();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.txbTitulo = new System.Windows.Forms.TextBox();
-            this.txbLugar = new System.Windows.Forms.TextBox();
-            this.txbDescrip = new System.Windows.Forms.TextBox();
+            this.txtTitulo = new System.Windows.Forms.TextBox();
+            this.txtLugar = new System.Windows.Forms.TextBox();
+            this.txtDescrip = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -96,13 +96,17 @@
             // 
             this.calendarInicio.Location = new System.Drawing.Point(187, 332);
             this.calendarInicio.Name = "calendarInicio";
+            this.calendarInicio.ShowToday = false;
             this.calendarInicio.TabIndex = 5;
+            this.calendarInicio.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.calendarInicio_DateChanged);
             // 
             // calendarFin
             // 
             this.calendarFin.Location = new System.Drawing.Point(526, 332);
             this.calendarFin.Name = "calendarFin";
+            this.calendarFin.ShowToday = false;
             this.calendarFin.TabIndex = 6;
+            this.calendarFin.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.calendarFin_DateChanged);
             // 
             // btnAceptar
             // 
@@ -116,34 +120,34 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(577, 525);
+            this.btnCancelar.Location = new System.Drawing.Point(356, 525);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 8;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // txbTitulo
+            // txtTitulo
             // 
-            this.txbTitulo.Location = new System.Drawing.Point(242, 97);
-            this.txbTitulo.Name = "txbTitulo";
-            this.txbTitulo.Size = new System.Drawing.Size(168, 20);
-            this.txbTitulo.TabIndex = 9;
+            this.txtTitulo.Location = new System.Drawing.Point(242, 97);
+            this.txtTitulo.Name = "txtTitulo";
+            this.txtTitulo.Size = new System.Drawing.Size(168, 20);
+            this.txtTitulo.TabIndex = 9;
             // 
-            // txbLugar
+            // txtLugar
             // 
-            this.txbLugar.Location = new System.Drawing.Point(242, 250);
-            this.txbLugar.Name = "txbLugar";
-            this.txbLugar.Size = new System.Drawing.Size(168, 20);
-            this.txbLugar.TabIndex = 10;
+            this.txtLugar.Location = new System.Drawing.Point(242, 250);
+            this.txtLugar.Name = "txtLugar";
+            this.txtLugar.Size = new System.Drawing.Size(168, 20);
+            this.txtLugar.TabIndex = 10;
             // 
-            // txbDescrip
+            // txtDescrip
             // 
-            this.txbDescrip.Location = new System.Drawing.Point(242, 163);
-            this.txbDescrip.Multiline = true;
-            this.txbDescrip.Name = "txbDescrip";
-            this.txbDescrip.Size = new System.Drawing.Size(168, 47);
-            this.txbDescrip.TabIndex = 11;
+            this.txtDescrip.Location = new System.Drawing.Point(242, 163);
+            this.txtDescrip.Multiline = true;
+            this.txtDescrip.Name = "txtDescrip";
+            this.txtDescrip.Size = new System.Drawing.Size(168, 47);
+            this.txtDescrip.TabIndex = 11;
             // 
             // NuevoRecordatorio
             // 
@@ -152,9 +156,9 @@
             this.BackgroundImage = global::SistemaGestorRecursosDidacticos.Properties.Resources.fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1021, 581);
-            this.Controls.Add(this.txbDescrip);
-            this.Controls.Add(this.txbLugar);
-            this.Controls.Add(this.txbTitulo);
+            this.Controls.Add(this.txtDescrip);
+            this.Controls.Add(this.txtLugar);
+            this.Controls.Add(this.txtTitulo);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.calendarFin);
@@ -184,8 +188,8 @@
         private System.Windows.Forms.MonthCalendar calendarFin;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.TextBox txbTitulo;
-        private System.Windows.Forms.TextBox txbLugar;
-        private System.Windows.Forms.TextBox txbDescrip;
+        private System.Windows.Forms.TextBox txtTitulo;
+        private System.Windows.Forms.TextBox txtLugar;
+        private System.Windows.Forms.TextBox txtDescrip;
     }
 }

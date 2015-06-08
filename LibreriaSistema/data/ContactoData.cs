@@ -67,6 +67,7 @@ namespace LibreriaSistema.data
             else { throw new Exception(); }
 
         }
+
         public void EliminarContacto(int codigo)
         {
             if (ExisteContacto(codigo))
