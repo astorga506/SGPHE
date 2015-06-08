@@ -1,2 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<RecursosDidacticos Index="1" />
+<RecursosDidacticos Index="2">
+  <Recurso>
+    <Indice>2</Indice>
+    <Nombre>waka waka</Nombre>
+  </Recurso>
+</RecursosDidacticos>

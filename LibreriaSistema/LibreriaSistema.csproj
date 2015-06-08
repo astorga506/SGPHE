@@ -41,16 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="business\ContactoBusiness.cs" />
     <Compile Include="business\EstrategiaDidacticaBusiness.cs" />
     <Compile Include="business\EstrategiaEvaluativaBusiness.cs" />
     <Compile Include="business\ItemPruebaBusiness.cs" />
     <Compile Include="business\RecursoDidacticoBusiness.cs" />
     <Compile Include="business\TecnicaDidacticaBusiness.cs" />
+    <Compile Include="data\ContactoData.cs" />
     <Compile Include="data\EstrategiaDidacticaData.cs" />
     <Compile Include="data\EstrategiaEvaluativaData.cs" />
     <Compile Include="data\ItemPruebaData.cs" />
     <Compile Include="data\RecursoDidacticoData.cs" />
     <Compile Include="data\TecnicaDidacticaData.cs" />
+    <Compile Include="domain\Contacto.cs" />
     <Compile Include="domain\EstrategiaDidactica.cs" />
     <Compile Include="domain\EstrategiaEvaluativa.cs" />
     <Compile Include="domain\ItemPrueba.cs" />
