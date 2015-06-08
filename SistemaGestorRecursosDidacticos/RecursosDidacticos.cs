@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -59,6 +60,13 @@ namespace SistemaGestorRecursosDidacticos
 
         private void gridViewRecDidacticos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+
+
+            string sUrl = gridViewRecDidacticos.Rows[e.RowIndex].Cells[1].Value.ToString();
+            ProcessStartInfo sInfo = new ProcessStartInfo(sUrl);
+           // Process.Start(sInfo);
+
             var senderGrid = (DataGridView)sender;
 
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
@@ -81,8 +89,13 @@ namespace SistemaGestorRecursosDidacticos
                         {
                             RecursoDidacticoBusiness rdBus = new RecursoDidacticoBusiness(Application.StartupPath + "\\RecursosDidacticos.xml");
                             RecursoDidactico recurso = new RecursoDidactico();
+
+
+
                             recurso.Indice = Int32.Parse(fila.Cells[0].Value.ToString());
                             recurso.Nombre = fila.Cells[1].Value.ToString();
+                            
+                                                  
                             rdBus.EliminarRecursoDidactico(recurso);
                             gridViewRecDidacticos.Rows.RemoveAt(e.RowIndex);
                         }
@@ -117,6 +130,7 @@ namespace SistemaGestorRecursosDidacticos
                         {
                             RecursoDidacticoBusiness rdBus = new RecursoDidacticoBusiness(Application.StartupPath + "\\RecursosDidacticos.xml");
                             RecursoDidactico recurso = new RecursoDidactico();
+
                             recurso.Indice = Int32.Parse(fila.Cells[0].Value.ToString());
                             recurso.Nombre = fila.Cells[1].Value.ToString();
                             rdBus.InsertarRecursoDidactico(recurso);
@@ -155,6 +169,11 @@ namespace SistemaGestorRecursosDidacticos
                 RecursoDidacticoBusiness rdBus = new RecursoDidacticoBusiness(Application.StartupPath + "\\RecursosDidacticos.xml");
                 gridViewRecDidacticos.Rows.Add(rdBus.ObtenerIndice().ToString(), "", "Guardar", "Borrar");
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
 
     }

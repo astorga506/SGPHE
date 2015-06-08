@@ -63,6 +63,16 @@ namespace SistemaGestorRecursosDidacticos.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2587191_orig {
+            get {
+                object obj = ResourceManager.GetObject("2587191_orig", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Aha_Soft_Large_Calendar_Calendar {
             get {
                 object obj = ResourceManager.GetObject("Aha-Soft-Large-Calendar-Calendar", resourceCulture);

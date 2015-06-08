@@ -137,7 +137,7 @@
             this.btnTecnicasDid.Name = "btnTecnicasDid";
             this.btnTecnicasDid.Size = new System.Drawing.Size(337, 309);
             this.btnTecnicasDid.TabIndex = 13;
-            this.btnTecnicasDid.Text = "\r\n Técnicas \r\n Didácticos";
+            this.btnTecnicasDid.Text = "\r\n Técnicas \r\n Didácticas";
             this.btnTecnicasDid.UseVisualStyleBackColor = false;
             this.btnTecnicasDid.Click += new System.EventHandler(this.btnTecnicasDid_Click);
             this.btnTecnicasDid.MouseHover += new System.EventHandler(this.btnTecnicasDid_MouseHover);
@@ -177,7 +177,7 @@
             this.btnPruebaEscr.Name = "btnPruebaEscr";
             this.btnPruebaEscr.Size = new System.Drawing.Size(337, 301);
             this.btnPruebaEscr.TabIndex = 15;
-            this.btnPruebaEscr.Text = " \r\nItems de\r\n Prueba \r\n Escrita";
+            this.btnPruebaEscr.Text = " \r\nÍtems de\r\n Prueba \r\n Escrita";
             this.btnPruebaEscr.UseVisualStyleBackColor = false;
             this.btnPruebaEscr.Click += new System.EventHandler(this.btnPruebaEscr_Click);
             this.btnPruebaEscr.MouseHover += new System.EventHandler(this.btnPruebaEscr_MouseHover);
@@ -217,7 +217,7 @@
             this.btnEstratEva.Name = "btnEstratEva";
             this.btnEstratEva.Size = new System.Drawing.Size(327, 309);
             this.btnEstratEva.TabIndex = 17;
-            this.btnEstratEva.Text = "\r\n      Estratégias \r\n      Evaluativas\r\n";
+            this.btnEstratEva.Text = "\r\n      Estrategias \r\n      Evaluativas\r\n";
             this.btnEstratEva.UseVisualStyleBackColor = false;
             this.btnEstratEva.Click += new System.EventHandler(this.btnEstratEva_Click);
             this.btnEstratEva.MouseHover += new System.EventHandler(this.btnEstratEva_MouseHover);
@@ -257,7 +257,7 @@
             this.btnEstratDid.Name = "btnEstratDid";
             this.btnEstratDid.Size = new System.Drawing.Size(327, 309);
             this.btnEstratDid.TabIndex = 19;
-            this.btnEstratDid.Text = "\r\n      \r\n     Estrátegias \r\n     Didácticas\r\n\r\n";
+            this.btnEstratDid.Text = "\r\n      \r\n     Estrategias \r\n     Didácticas\r\n\r\n";
             this.btnEstratDid.UseVisualStyleBackColor = false;
             this.btnEstratDid.Click += new System.EventHandler(this.btnEstratDid_Click);
             this.btnEstratDid.MouseHover += new System.EventHandler(this.btnEstratDid_MouseHover);
@@ -269,7 +269,7 @@
             this.AutoSize = true;
             this.BackgroundImage = global::SistemaGestorRecursosDidacticos.Properties.Resources.fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.ClientSize = new System.Drawing.Size(1354, 733);
             this.Controls.Add(this.btnEstratDid);
             this.Controls.Add(this.btnDistObj);
             this.Controls.Add(this.btnEstratEva);

@@ -286,7 +286,7 @@ namespace SistemaGestorRecursosDidacticos
 
         private void btnPruebaEscr_MouseHover(object sender, EventArgs e)
         {
-            buttonToolTip.ToolTipTitle = "Items de Prueba Escrita";
+            buttonToolTip.ToolTipTitle = "Ítems de Prueba Escrita";
             buttonToolTip.UseFading = true;
             buttonToolTip.UseAnimation = true;
             buttonToolTip.IsBalloon = true;
@@ -297,7 +297,7 @@ namespace SistemaGestorRecursosDidacticos
             buttonToolTip.InitialDelay = 1000;
             buttonToolTip.ReshowDelay = 500;
 
-            buttonToolTip.SetToolTip(btnPruebaEscr, "Muestra los Items de Prueba Escrita");
+            buttonToolTip.SetToolTip(btnPruebaEscr, "Muestra los Ítems de Prueba Escrita");
         }
 
         private void btnHistoria_Click(object sender, EventArgs e)
@@ -447,7 +447,7 @@ namespace SistemaGestorRecursosDidacticos
             buttonToolTip.InitialDelay = 1000;
             buttonToolTip.ReshowDelay = 500;
 
-            buttonToolTip.SetToolTip(btnExit, "Salir de la Aplicacion");
+            buttonToolTip.SetToolTip(btnExit, "Salir de la Aplicación");
         }
 
         private void btnCalendar_Click(object sender, EventArgs e)

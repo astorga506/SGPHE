@@ -237,6 +237,7 @@
     <None Include="Resources\Aha-Soft-Large-Calendar-Calendar.ico" />
     <Content Include="bin\Debug\prueba.xml" />
     <Content Include="bin\Debug\RecursosDidacticos.xml" />
+    <None Include="Resources\2587191_orig.jpg" />
     <Content Include="Resources\Circle1.png" />
     <Content Include="Resources\Circle2.png" />
     <None Include="Resources\Dapino-Summer-Blue-Holiday-Diary-Book.ico" />

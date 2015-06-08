@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.btnAcercaDe = new System.Windows.Forms.Button();
+            this.panelImage = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // btnAcercaDe
@@ -41,6 +42,19 @@
             this.btnAcercaDe.UseVisualStyleBackColor = true;
             this.btnAcercaDe.Click += new System.EventHandler(this.btnAcercaDe_Click);
             // 
+            // panelImage
+            // 
+            this.panelImage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelImage.AutoSize = true;
+            this.panelImage.BackgroundImage = global::SistemaGestorRecursosDidacticos.Properties.Resources._2587191_orig;
+            this.panelImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelImage.Location = new System.Drawing.Point(136, 110);
+            this.panelImage.Name = "panelImage";
+            this.panelImage.Size = new System.Drawing.Size(472, 300);
+            this.panelImage.TabIndex = 1;
+            // 
             // HistoriaEscuela
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -48,6 +62,7 @@
             this.BackgroundImage = global::SistemaGestorRecursosDidacticos.Properties.Resources.fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1021, 581);
+            this.Controls.Add(this.panelImage);
             this.Controls.Add(this.btnAcercaDe);
             this.DoubleBuffered = true;
             this.Name = "HistoriaEscuela";
@@ -55,11 +70,13 @@
             this.Text = "HistoriaEscuela";
             this.Load += new System.EventHandler(this.HistoriaEscuela_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button btnAcercaDe;
+        private System.Windows.Forms.Panel panelImage;
     }
 }

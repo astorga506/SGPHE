@@ -119,9 +119,7 @@
   </resheader>
   <data name="label1.Text" xml:space="preserve">
     <value>Un ítem es una pregunta, que en conjunto con otras dan forma a una prueba, pueden ser de distintos tipos y clases de 
-acuerdo con lo que se pretende medir. Existen dos tipos de ítems: objetivos y subjetivos. Entre los tipos de ítems objetivos están: 
-selección  única, respuesta corta, correspondencia o apareamiento e identificación.Los ítems de desarrollo son: respuesta 
-restringida, resolución de problemas, resolución de casos y ensayo.</value>
+acuerdo con lo que se pretende medir. Existen dos tipos de ítems: objetivos y subjetivos. </value>
   </data>
   <metadata name="Indice.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

@@ -1,2 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<RecursosDidacticos Index="1" />
+<RecursosDidacticos Index="6">
+  <Recurso>
+    <Indice>1</Indice>
+    <Nombre>www.mep.go.cr</Nombre>
+  </Recurso>
+  <Recurso>
+    <Indice>6</Indice>
+    <Nombre>jkjk</Nombre>
+  </Recurso>
+</RecursosDidacticos>
