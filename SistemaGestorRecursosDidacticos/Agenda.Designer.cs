@@ -54,8 +54,11 @@
             // 
             this.dgvAgenda.AllowUserToAddRows = false;
             this.dgvAgenda.AllowUserToDeleteRows = false;
+            this.dgvAgenda.AllowUserToResizeColumns = false;
             this.dgvAgenda.AllowUserToResizeRows = false;
-            this.dgvAgenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAgenda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAgenda.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgvAgenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvAgenda.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Titulo,
             this.Descripcion,
@@ -64,19 +67,20 @@
             this.FechaFin,
             this.btnEliminar,
             this.btnModificar});
-            this.dgvAgenda.Location = new System.Drawing.Point(97, 147);
+            this.dgvAgenda.Location = new System.Drawing.Point(59, 151);
             this.dgvAgenda.MultiSelect = false;
             this.dgvAgenda.Name = "dgvAgenda";
             this.dgvAgenda.ReadOnly = true;
+            this.dgvAgenda.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvAgenda.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAgenda.Size = new System.Drawing.Size(744, 343);
+            this.dgvAgenda.Size = new System.Drawing.Size(898, 363);
             this.dgvAgenda.TabIndex = 1;
             this.dgvAgenda.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAgenda_CellContentClick);
             // 
             // Titulo
             // 
             this.Titulo.DataPropertyName = "Titulo";
-            this.Titulo.HeaderText = "Título";
+            this.Titulo.HeaderText = "Titulo";
             this.Titulo.Name = "Titulo";
             this.Titulo.ReadOnly = true;
             // 
@@ -110,19 +114,23 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.HeaderText = "";
+            this.btnEliminar.HeaderText = "Eliminar";
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.ReadOnly = true;
+            this.btnEliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseColumnTextForButtonValue = true;
             // 
             // btnModificar
             // 
-            this.btnModificar.HeaderText = "";
+            this.btnModificar.HeaderText = "Modificar";
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.ReadOnly = true;
+            this.btnModificar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseColumnTextForButtonValue = true;
             // 
-            // Recordatorio
+            // Agenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -132,7 +140,7 @@
             this.Controls.Add(this.dgvAgenda);
             this.Controls.Add(this.btnNuevoRecor);
             this.DoubleBuffered = true;
-            this.Name = "Recordatorio";
+            this.Name = "Agenda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agenda";
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgenda)).EndInit();

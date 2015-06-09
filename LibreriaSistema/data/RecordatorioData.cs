@@ -138,19 +138,24 @@ namespace LibreriaSistema.data
             if (File.Exists(path))
             {
                 document = XDocument.Load(path);
-                foreach (XElement elm in document.Root.Elements())
+
+                if (document.Root.HasElements)
                 {
-                    Recordatorio recordatorio = new Recordatorio();
+                    foreach (XElement elm in document.Root.Elements())
+                    {
+                        Recordatorio recordatorio = new Recordatorio();
 
-                    recordatorio.Codigo = Int32.Parse(elm.Element("Codigo").Value);
-                    recordatorio.Titulo = elm.Element("Titulo").Value;
-                    recordatorio.Descripcion = elm.Element("Descripcion").Value;
-                    recordatorio.Lugar = elm.Element("Lugar").Value;
-                    recordatorio.FechaInicio = DateTime.Parse(elm.Element("FechaInicio").Value);
-                    recordatorio.FechaFin = DateTime.Parse(elm.Element("FechaFin").Value);
-                    recordatorios.Add(recordatorio);
+                        recordatorio.Codigo = Int32.Parse(elm.Element("Codigo").Value);
+                        recordatorio.Titulo = elm.Element("Titulo").Value;
+                        recordatorio.Descripcion = elm.Element("Descripcion").Value;
+                        recordatorio.Lugar = elm.Element("Lugar").Value;
+                        recordatorio.FechaInicio = DateTime.Parse(elm.Element("FechaInicio").Value);
+                        recordatorio.FechaFin = DateTime.Parse(elm.Element("FechaFin").Value);
+                        recordatorios.Add(recordatorio);
 
+                    }
                 }
+                else { throw new Exception(); }
 
             }
 

@@ -23,11 +23,14 @@ namespace SistemaGestorRecursosDidacticos
             InitializeComponent();
             Inicializar();
             nuevo = false;
+
             txtTitulo.Text = recordatorio.Titulo;
             txtDescrip.Text = recordatorio.Descripcion;
             txtLugar.Text = recordatorio.Lugar;
-            calendarInicio.SetDate(recordatorio.FechaInicio);
-            calendarFin.SetDate(recordatorio.FechaFin);
+            dtpDiaInicio.Value = recordatorio.FechaInicio.Date;
+            dtpHoraInicio.Value = DateTime.Parse(recordatorio.FechaInicio.ToShortTimeString());
+            dtpDiaFin.Value = recordatorio.FechaFin.Date;
+            dtpHoraFin.Value = DateTime.Parse(recordatorio.FechaFin.ToShortTimeString());
 
             this.recordatorio = recordatorio;
             this.agenda = agenda;
@@ -48,9 +51,10 @@ namespace SistemaGestorRecursosDidacticos
             recordatorio.Titulo = txtTitulo.Text;
             recordatorio.Descripcion = txtDescrip.Text;
             recordatorio.Lugar = txtLugar.Text;
+            recordatorio.FechaInicio = dtpDiaInicio.Value.Date + dtpHoraInicio.Value.TimeOfDay;
+            recordatorio.FechaFin = dtpDiaFin.Value.Date + dtpHoraFin.Value.TimeOfDay;
             //TODO
             //Validar entradas *calendarios* (importante)
-
             if (nuevo)
             {
                 rb.InsertarRecordatorio(recordatorio);
@@ -67,22 +71,17 @@ namespace SistemaGestorRecursosDidacticos
 
         private void Inicializar()
         {
-            calendarInicio.MinDate = DateTime.Today;
-            calendarInicio.MaxDate = DateTime.Today.AddYears(5);
-            calendarFin.MinDate = DateTime.Today;
-            calendarFin.MaxDate = DateTime.Today.AddYears(5);    
+            dtpDiaInicio.MinDate = DateTime.Today.AddYears(-5);
+            dtpDiaInicio.MaxDate = DateTime.Today.AddYears(5);
+            dtpDiaFin.MinDate = DateTime.Today.AddYears(-5);
+            dtpDiaFin.MaxDate = DateTime.Today.AddYears(5);    
 
         }
 
-        private void calendarInicio_DateChanged(object sender, DateRangeEventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
-            recordatorio.FechaInicio = e.Start;            
+            this.Dispose();
         }
-
-        private void calendarFin_DateChanged(object sender, DateRangeEventArgs e)
-        {
-            recordatorio.FechaFin = e.Start;
-        }
-    
+        
     }
 }
