@@ -32,9 +32,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,6 +65,11 @@
     </Compile>
     <Compile Include="Agenda.Designer.cs">
       <DependentUpon>Agenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DSHorario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSHorario.xsd</DependentUpon>
     </Compile>
     <Compile Include="Horario.cs">
       <SubType>Form</SubType>
@@ -125,6 +139,18 @@
     <Compile Include="RecursosDidacticos.Designer.cs">
       <DependentUpon>RecursosDidacticos.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReporteHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteHorario.Designer.cs">
+      <DependentUpon>ReporteHorario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteHorarioReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteHorarioReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +212,13 @@
     <EmbeddedResource Include="RecursosDidacticos.resx">
       <DependentUpon>RecursosDidacticos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReporteHorario.resx">
+      <DependentUpon>ReporteHorario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteHorarioReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteHorarioReport.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,6 +227,17 @@
     </EmbeddedResource>
     <None Include="Archivos.config">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="DSHorario.xsc">
+      <DependentUpon>DSHorario.xsd</DependentUpon>
+    </None>
+    <None Include="DSHorario.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSHorario.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSHorario.xss">
+      <DependentUpon>DSHorario.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\LibreriaSistema.domain.Horario.datasource" />
     <None Include="Properties\Settings.settings">
@@ -286,6 +330,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Report\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
