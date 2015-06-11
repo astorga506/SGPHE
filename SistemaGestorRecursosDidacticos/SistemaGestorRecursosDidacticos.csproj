@@ -71,6 +71,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DSHorario.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Galeria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Galeria.Designer.cs">
+      <DependentUpon>Galeria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Horario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Agenda.resx">
       <DependentUpon>Agenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Galeria.resx">
+      <DependentUpon>Galeria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Horario.resx">
       <DependentUpon>Horario.cs</DependentUpon>
@@ -287,6 +296,9 @@
     <None Include="Resources\salir.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Gakuseisean-Aire-Images.ico" />
+    <Content Include="Resources\Itzikgur-My-Seven-Pictures-Canon.ico" />
+    <Content Include="Resources\Saki-NuoveXT-Mimetypes-schedule.ico" />
     <None Include="Resources\Oxygen-Icons.org-Oxygen-Actions-contact-new.ico" />
     <None Include="Resources\Aha-Soft-Large-Calendar-Calendar.ico" />
     <Content Include="bin\Debug\prueba.xml" />
