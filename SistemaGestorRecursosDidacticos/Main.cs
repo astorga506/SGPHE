@@ -520,9 +520,22 @@ namespace SistemaGestorRecursosDidacticos
             buttonToolTip.SetToolTip(btnAgenda, "Ingresar a la agenda");
         }
 
-        private void Main_Load(object sender, EventArgs e)
-        {
+       
 
+        private void btnHorario_MouseHover(object sender, EventArgs e)
+        {
+            buttonToolTip.ToolTipTitle = "Horario";
+            buttonToolTip.UseFading = true;
+            buttonToolTip.UseAnimation = true;
+            buttonToolTip.IsBalloon = true;
+
+            buttonToolTip.ShowAlways = true;
+
+            buttonToolTip.AutoPopDelay = 5000;
+            buttonToolTip.InitialDelay = 1000;
+            buttonToolTip.ReshowDelay = 500;
+
+            buttonToolTip.SetToolTip(btnHorario, "Ingresar Horario");
         }
 
         private void btnHorario_Click(object sender, EventArgs e)
@@ -539,6 +552,47 @@ namespace SistemaGestorRecursosDidacticos
             Horario f8 = new SistemaGestorRecursosDidacticos.Horario();
             f8.Show();
         }
+
+        private void btnGaleria_MouseHover(object sender, EventArgs e)
+        {
+            buttonToolTip.ToolTipTitle = "Galeria";
+            buttonToolTip.UseFading = true;
+            buttonToolTip.UseAnimation = true;
+            buttonToolTip.IsBalloon = true;
+
+            buttonToolTip.ShowAlways = true;
+
+            buttonToolTip.AutoPopDelay = 5000;
+            buttonToolTip.InitialDelay = 1000;
+            buttonToolTip.ReshowDelay = 500;
+
+            buttonToolTip.SetToolTip(btnGaleria, "Ingresar a la Galería");
+        }
+
+
+        private void btnGaleria_Click(object sender, EventArgs e)
+        {
+
+            //this.Hide();
+            foreach (Form frm in Application.OpenForms)
+            {
+                if (frm is Galeria)
+                {
+                    frm.Show();
+                    return;
+                }
+            }
+            Galeria f8 = new SistemaGestorRecursosDidacticos.Galeria();
+            f8.Show();
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+
+        }
+
+      
+       
        
     }
 }
