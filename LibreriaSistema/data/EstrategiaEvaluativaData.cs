@@ -66,7 +66,7 @@ namespace LibreriaSistema.data
             if (ExisteEstategia(estrategia))
             {
                 document = XDocument.Load(path);
-                var itemDel = document.Root.Descendants("Item");
+                var itemDel = document.Root.Descendants("Estrategia");
                 foreach (var itm in itemDel)
                 {
                     int tmp = Convert.ToInt32(itm.Element("Indice").Value);

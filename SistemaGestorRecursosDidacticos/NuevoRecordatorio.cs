@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LibreriaSistema.business;
+using LibreriaSistema.domain;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,17 +14,74 @@ namespace SistemaGestorRecursosDidacticos
 {
     public partial class NuevoRecordatorio : Form
     {
-        public NuevoRecordatorio()
+        private Recordatorio recordatorio;
+        private Agenda agenda;
+        private Boolean nuevo;
+
+        public NuevoRecordatorio(Agenda agenda, Recordatorio recordatorio)
         {
             InitializeComponent();
+            Inicializar();
+            nuevo = false;
+
+            txtTitulo.Text = recordatorio.Titulo;
+            txtDescrip.Text = recordatorio.Descripcion;
+            txtLugar.Text = recordatorio.Lugar;
+            dtpDiaInicio.Value = recordatorio.FechaInicio.Date;
+            dtpHoraInicio.Value = DateTime.Parse(recordatorio.FechaInicio.ToShortTimeString());
+            dtpDiaFin.Value = recordatorio.FechaFin.Date;
+            dtpHoraFin.Value = DateTime.Parse(recordatorio.FechaFin.ToShortTimeString());
+
+            this.recordatorio = recordatorio;
+            this.agenda = agenda;
+        }
+
+        public NuevoRecordatorio(Agenda agenda)
+        {
+            InitializeComponent();
+            Inicializar();
+            nuevo = true;
+            recordatorio = new Recordatorio();            
+            this.agenda = agenda;
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            Recordatorio recordatorio = new Recordatorio();
-            recordatorio.Show();
+            RecordatorioBusiness rb = new RecordatorioBusiness(Agenda.FILE);
+            recordatorio.Titulo = txtTitulo.Text;
+            recordatorio.Descripcion = txtDescrip.Text;
+            recordatorio.Lugar = txtLugar.Text;
+            recordatorio.FechaInicio = dtpDiaInicio.Value.Date + dtpHoraInicio.Value.TimeOfDay;
+            recordatorio.FechaFin = dtpDiaFin.Value.Date + dtpHoraFin.Value.TimeOfDay;
+            //TODO
+            //Validar entradas *calendarios* (importante)
+            if (nuevo)
+            {
+                rb.InsertarRecordatorio(recordatorio);
+            }
+            else 
+            {
+                rb.EditarRecordatorio(recordatorio);
+            }
+
+            agenda.Focus();
+            agenda.Cargar();
+            this.Dispose();
         }
 
-    
+        private void Inicializar()
+        {
+            dtpDiaInicio.MinDate = DateTime.Today.AddYears(-5);
+            dtpDiaInicio.MaxDate = DateTime.Today.AddYears(5);
+            dtpDiaFin.MinDate = DateTime.Today.AddYears(-5);
+            dtpDiaFin.MaxDate = DateTime.Today.AddYears(5);    
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+        
     }
 }

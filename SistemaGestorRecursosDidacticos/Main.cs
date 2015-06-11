@@ -489,13 +489,13 @@ namespace SistemaGestorRecursosDidacticos
             //this.Hide();
             foreach (Form frm in Application.OpenForms)
             {
-                if (frm is Recordatorio)
+                if (frm is Agenda)
                 {
                     frm.Show();
                     return;
                 }
             }
-            Recordatorio f9 = new SistemaGestorRecursosDidacticos.Recordatorio();
+            Agenda f9 = new SistemaGestorRecursosDidacticos.Agenda();
             f9.Show();
         }
 

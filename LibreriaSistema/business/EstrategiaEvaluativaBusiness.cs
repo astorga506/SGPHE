@@ -9,40 +9,40 @@ using System.Threading.Tasks;
 
 namespace LibreriaSistema.business
 {
-
     public class EstrategiaEvaluativaBusiness
     {
-        private EstrategiaEvaluativaData edData;
+        private EstrategiaEvaluativaData eeData;
+        //
 
         public EstrategiaEvaluativaBusiness(String path)
         {
-            edData = new EstrategiaEvaluativaData(path);
-
+            eeData = new EstrategiaEvaluativaData(path);
         }
 
         public DataSet GetEstrategias()
         {
-            return edData.GetEstrategias();
+            return eeData.GetEstrategias();
         }
 
         public void InsertarEstrategia(EstrategiaEvaluativa estrategia)
         {
-            edData.InsertarEstrategia(estrategia);
+            eeData.InsertarEstrategia(estrategia);
         }
 
         public void EliminarEstrategia(EstrategiaEvaluativa estrategia)
         {
-            edData.EliminarEstrategia(estrategia);
+            eeData.EliminarEstrategia(estrategia);
         }
 
         public int ObtenerIndice()
         {
-            return edData.ObtenerIndice();
+            return eeData.ObtenerIndice();
         }
 
         public void ActualizarEstrategia(EstrategiaEvaluativa estrategia)
         {
-            edData.ActualizarEstrategia(estrategia);
+            eeData.ActualizarEstrategia(estrategia);
         }
     }
+    
 }
