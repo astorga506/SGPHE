@@ -43,16 +43,19 @@
   <ItemGroup>
     <Compile Include="business\EstrategiaDidacticaBusiness.cs" />
     <Compile Include="business\EstrategiaEvaluativaBusiness.cs" />
+    <Compile Include="business\HorarioBusiness.cs" />
     <Compile Include="business\ItemPruebaBusiness.cs" />
     <Compile Include="business\RecursoDidacticoBusiness.cs" />
     <Compile Include="business\TecnicaDidacticaBusiness.cs" />
     <Compile Include="data\EstrategiaDidacticaData.cs" />
     <Compile Include="data\EstrategiaEvaluativaData.cs" />
+    <Compile Include="data\HorarioData.cs" />
     <Compile Include="data\ItemPruebaData.cs" />
     <Compile Include="data\RecursoDidacticoData.cs" />
     <Compile Include="data\TecnicaDidacticaData.cs" />
     <Compile Include="domain\EstrategiaDidactica.cs" />
     <Compile Include="domain\EstrategiaEvaluativa.cs" />
+    <Compile Include="domain\Horario.cs" />
     <Compile Include="domain\ItemPrueba.cs" />
     <Compile Include="domain\RecursoDidactico.cs" />
     <Compile Include="domain\TecnicaDidactica.cs" />

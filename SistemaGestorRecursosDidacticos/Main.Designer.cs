@@ -40,6 +40,7 @@
             this.btnEstratEva = new System.Windows.Forms.Button();
             this.btnDistObj = new System.Windows.Forms.Button();
             this.btnEstratDid = new System.Windows.Forms.Button();
+            this.btnHorario = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnExit
@@ -262,6 +263,16 @@
             this.btnEstratDid.Click += new System.EventHandler(this.btnEstratDid_Click);
             this.btnEstratDid.MouseHover += new System.EventHandler(this.btnEstratDid_MouseHover);
             // 
+            // btnHorario
+            // 
+            this.btnHorario.ForeColor = System.Drawing.Color.Transparent;
+            this.btnHorario.Location = new System.Drawing.Point(1106, 101);
+            this.btnHorario.Name = "btnHorario";
+            this.btnHorario.Size = new System.Drawing.Size(32, 38);
+            this.btnHorario.TabIndex = 11;
+            this.btnHorario.UseVisualStyleBackColor = false;
+            this.btnHorario.Click += new System.EventHandler(this.btnHorario_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -270,6 +281,7 @@
             this.BackgroundImage = global::SistemaGestorRecursosDidacticos.Properties.Resources.fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1354, 733);
+            this.Controls.Add(this.btnHorario);
             this.Controls.Add(this.btnEstratDid);
             this.Controls.Add(this.btnDistObj);
             this.Controls.Add(this.btnEstratEva);
@@ -305,6 +317,7 @@
         private System.Windows.Forms.Button btnEstratEva;
         private System.Windows.Forms.Button btnDistObj;
         private System.Windows.Forms.Button btnEstratDid;
+        private System.Windows.Forms.Button btnHorario;
     }
 }
 

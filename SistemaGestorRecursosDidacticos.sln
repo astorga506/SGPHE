@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaGestorRecursosDidacticos", "SistemaGestorRecursosDidacticos\SistemaGestorRecursosDidacticos.csproj", "{20E1495D-E5F6-4892-ADD1-3D2F1AC04156}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C973613F-F6EC-4FCE-8487-8E45D732E9FE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibreriaSistema", "LibreriaSistema\LibreriaSistema.csproj", "{8E223287-372A-43AA-AC27-93102C9F43D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "UnitTestProject\UnitTestProject.csproj", "{C98B26D8-A006-4E5A-BCE8-F084FE7C6FDC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +25,10 @@ Global
 		{8E223287-372A-43AA-AC27-93102C9F43D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E223287-372A-43AA-AC27-93102C9F43D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E223287-372A-43AA-AC27-93102C9F43D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C98B26D8-A006-4E5A-BCE8-F084FE7C6FDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C98B26D8-A006-4E5A-BCE8-F084FE7C6FDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C98B26D8-A006-4E5A-BCE8-F084FE7C6FDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C98B26D8-A006-4E5A-BCE8-F084FE7C6FDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

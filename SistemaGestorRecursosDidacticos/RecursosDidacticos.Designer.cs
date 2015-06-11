@@ -31,7 +31,7 @@
             this.gridViewRecDidacticos = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.Indice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Enlace = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Enlace = new System.Windows.Forms.DataGridViewLinkColumn();
             this.btnGuardar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnEliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewRecDidacticos)).BeginInit();
@@ -85,6 +85,7 @@
             this.Enlace.HeaderText = "Enlace";
             this.Enlace.Name = "Enlace";
             this.Enlace.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Enlace.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Enlace.Width = 400;
             // 
             // btnGuardar
@@ -123,7 +124,7 @@
         private System.Windows.Forms.DataGridView gridViewRecDidacticos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Indice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Enlace;
+        private System.Windows.Forms.DataGridViewLinkColumn Enlace;
         private System.Windows.Forms.DataGridViewButtonColumn btnGuardar;
         private System.Windows.Forms.DataGridViewButtonColumn btnEliminar;
 

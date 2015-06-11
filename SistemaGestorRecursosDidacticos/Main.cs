@@ -525,14 +525,20 @@ namespace SistemaGestorRecursosDidacticos
 
         }
 
-
-      
-
-        
-
-       
-
-    
+        private void btnHorario_Click(object sender, EventArgs e)
+        {
+            //this.Hide();
+            foreach (Form frm in Application.OpenForms)
+            {
+                if (frm is Horario)
+                {
+                    frm.Show();
+                    return;
+                }
+            }
+            Horario f8 = new SistemaGestorRecursosDidacticos.Horario();
+            f8.Show();
+        }
        
     }
 }
