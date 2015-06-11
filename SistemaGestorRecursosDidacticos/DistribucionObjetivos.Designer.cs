@@ -41,6 +41,7 @@
             this.Name = "DistribucionObjetivos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DistribucionObjetivos";
+            this.Load += new System.EventHandler(this.DistribucionObjetivos_Load);
             this.ResumeLayout(false);
 
         }

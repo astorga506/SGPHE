@@ -55,7 +55,7 @@ namespace SistemaGestorRecursosDidacticos
 
             this.Load += (s, e) =>
             {
-                rutaImagenes = Directory.GetFiles(@"E:\Documentos\Visual Studio 2013\Projects\Photos\Photos\bin\Debug\FotosProyecto", "*.jpg", SearchOption.AllDirectories);
+                rutaImagenes = Directory.GetFiles(Application.StartupPath, "*.jpg");
 
                 if (rutaImagenes.Length == 0)
                 {

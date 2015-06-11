@@ -16,5 +16,10 @@ namespace SistemaGestorRecursosDidacticos
         {
             InitializeComponent();
         }
+
+        private void DistribucionObjetivos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

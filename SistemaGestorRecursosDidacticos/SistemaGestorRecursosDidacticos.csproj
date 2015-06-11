@@ -139,6 +139,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="RecursosDidacticos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,14 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="RecursosDidacticos.resx">
       <DependentUpon>RecursosDidacticos.cs</DependentUpon>
     </EmbeddedResource>
@@ -296,6 +296,33 @@
     <None Include="Resources\salir.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\1.jpg" />
+    <Content Include="bin\Debug\10.jpg" />
+    <Content Include="bin\Debug\11.jpg" />
+    <Content Include="bin\Debug\12.jpg" />
+    <Content Include="bin\Debug\13.jpg" />
+    <Content Include="bin\Debug\14.jpg" />
+    <Content Include="bin\Debug\15.jpg" />
+    <Content Include="bin\Debug\16.jpg" />
+    <Content Include="bin\Debug\17.jpg" />
+    <Content Include="bin\Debug\18.jpg" />
+    <Content Include="bin\Debug\19.jpg" />
+    <Content Include="bin\Debug\2.jpg" />
+    <Content Include="bin\Debug\20.jpg" />
+    <Content Include="bin\Debug\21.jpg" />
+    <Content Include="bin\Debug\22.jpg" />
+    <Content Include="bin\Debug\23.jpg" />
+    <Content Include="bin\Debug\24.jpg" />
+    <Content Include="bin\Debug\25.jpg" />
+    <Content Include="bin\Debug\26.jpg" />
+    <Content Include="bin\Debug\27.jpg" />
+    <Content Include="bin\Debug\3.jpg" />
+    <Content Include="bin\Debug\4.jpg" />
+    <Content Include="bin\Debug\5.jpg" />
+    <Content Include="bin\Debug\6.jpg" />
+    <Content Include="bin\Debug\7.jpg" />
+    <Content Include="bin\Debug\8.jpg" />
+    <Content Include="bin\Debug\9.jpg" />
     <Content Include="Resources\Gakuseisean-Aire-Images.ico" />
     <Content Include="Resources\Itzikgur-My-Seven-Pictures-Canon.ico" />
     <Content Include="Resources\Saki-NuoveXT-Mimetypes-schedule.ico" />
@@ -312,33 +339,6 @@
     <None Include="Resources\Graphicloads-100-Flat-Close.ico" />
     <None Include="Resources\Escudo 2.jpg" />
     <None Include="Resources\icono-información-general-blanco-azul.png" />
-    <Content Include="Resources\Galeria\1.jpg" />
-    <Content Include="Resources\Galeria\10.jpg" />
-    <Content Include="Resources\Galeria\11.jpg" />
-    <Content Include="Resources\Galeria\12.jpg" />
-    <Content Include="Resources\Galeria\13.jpg" />
-    <Content Include="Resources\Galeria\14.jpg" />
-    <Content Include="Resources\Galeria\15.jpg" />
-    <Content Include="Resources\Galeria\16.jpg" />
-    <Content Include="Resources\Galeria\17.jpg" />
-    <Content Include="Resources\Galeria\18.jpg" />
-    <Content Include="Resources\Galeria\19.jpg" />
-    <Content Include="Resources\Galeria\2.jpg" />
-    <Content Include="Resources\Galeria\20.jpg" />
-    <Content Include="Resources\Galeria\21.jpg" />
-    <Content Include="Resources\Galeria\22.jpg" />
-    <Content Include="Resources\Galeria\23.jpg" />
-    <Content Include="Resources\Galeria\24.jpg" />
-    <Content Include="Resources\Galeria\25.jpg" />
-    <Content Include="Resources\Galeria\26.jpg" />
-    <Content Include="Resources\Galeria\27.jpg" />
-    <Content Include="Resources\Galeria\3.jpg" />
-    <Content Include="Resources\Galeria\4.jpg" />
-    <Content Include="Resources\Galeria\5.jpg" />
-    <Content Include="Resources\Galeria\6.jpg" />
-    <Content Include="Resources\Galeria\7.jpg" />
-    <Content Include="Resources\Galeria\8.jpg" />
-    <Content Include="Resources\Galeria\9.jpg" />
     <Content Include="Resources\interfaz.png" />
     <Content Include="Resources\interfaz1.png" />
   </ItemGroup>
