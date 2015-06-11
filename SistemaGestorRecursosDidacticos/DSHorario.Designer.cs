@@ -279,6 +279,8 @@ namespace SistemaGestorRecursosDidacticos {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class DataTable1DataTable : global::System.Data.TypedTableBase<DataTable1Row> {
             
+            private global::System.Data.DataColumn columnHora;
+            
             private global::System.Data.DataColumn columnLunes;
             
             private global::System.Data.DataColumn columnMartes;
@@ -320,6 +322,14 @@ namespace SistemaGestorRecursosDidacticos {
             protected DataTable1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn HoraColumn {
+                get {
+                    return this.columnHora;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -399,9 +409,10 @@ namespace SistemaGestorRecursosDidacticos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DataTable1Row AddDataTable1Row(string Lunes, string Martes, string Miercoles, string Jueves, string Viernes) {
+            public DataTable1Row AddDataTable1Row(string Hora, string Lunes, string Martes, string Miercoles, string Jueves, string Viernes) {
                 DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        Hora,
                         Lunes,
                         Martes,
                         Miercoles,
@@ -429,6 +440,7 @@ namespace SistemaGestorRecursosDidacticos {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
+                this.columnHora = base.Columns["Hora"];
                 this.columnLunes = base.Columns["Lunes"];
                 this.columnMartes = base.Columns["Martes"];
                 this.columnMiercoles = base.Columns["Miercoles"];
@@ -439,6 +451,8 @@ namespace SistemaGestorRecursosDidacticos {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
+                this.columnHora = new global::System.Data.DataColumn("Hora", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHora);
                 this.columnLunes = new global::System.Data.DataColumn("Lunes", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLunes);
                 this.columnMartes = new global::System.Data.DataColumn("Martes", typeof(string), null, global::System.Data.MappingType.Element);
@@ -591,6 +605,22 @@ namespace SistemaGestorRecursosDidacticos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Hora {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.HoraColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Hora\' in table \'DataTable1\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.HoraColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Lunes {
                 get {
                     try {
@@ -667,6 +697,18 @@ namespace SistemaGestorRecursosDidacticos {
                 set {
                     this[this.tableDataTable1.ViernesColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsHoraNull() {
+                return this.IsNull(this.tableDataTable1.HoraColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetHoraNull() {
+                this[this.tableDataTable1.HoraColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
