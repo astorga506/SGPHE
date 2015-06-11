@@ -118,14 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Gakuseisean-Aire-Images" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gakuseisean-Aire-Images.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Circle1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Circle1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fondo_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondo_2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="splash_verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\splash_pintura2_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icono-información-general-blanco-azul" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icono-información-general-blanco-azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Circle11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Circle1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,14 +139,8 @@
   <data name="splash_rojo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\splash_pintura2_rojo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="splash_negro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\splash_pintura2_negro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="splash_celeste" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\splash_pintura2_celeste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Circle2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Circle2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Dapino-Summer-Blue-Holiday-Diary-Book" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dapino-Summer-Blue-Holiday-Diary-Book.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,8 +148,14 @@
   <data name="Escudo 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Escudo 2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="splash_morado" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\splash_pintura2_morado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondo_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="splash_asd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\splash_pintura2_asd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Graphicloads-Filetype-Pdf" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Graphicloads-Filetype-Pdf.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,22 +172,28 @@
   <data name="splash_amarillo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\splash_pintura2_amarillo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icono-información-general-blanco-azul" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icono-información-general-blanco-azul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Saki-NuoveXT-Mimetypes-schedule" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Saki-NuoveXT-Mimetypes-schedule.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Oxygen-Icons.org-Oxygen-Actions-contact-new" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Oxygen-Icons.org-Oxygen-Actions-contact-new.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Circle2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Circle2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="splash_blanco" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\splash_pintura2_blanco.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="splash_morado" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\splash_pintura2_morado.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="splash_asd" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\splash_pintura2_asd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="2587191_orig" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2587191_orig.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="splash_verde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\splash_pintura2_verde.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="splash_negro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\splash_pintura2_negro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Itzikgur-My-Seven-Pictures-Canon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Itzikgur-My-Seven-Pictures-Canon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

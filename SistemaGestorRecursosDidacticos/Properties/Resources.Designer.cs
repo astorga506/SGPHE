@@ -153,6 +153,16 @@ namespace SistemaGestorRecursosDidacticos.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Gakuseisean_Aire_Images {
+            get {
+                object obj = ResourceManager.GetObject("Gakuseisean-Aire-Images", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Graphicloads_100_Flat_Close {
             get {
                 object obj = ResourceManager.GetObject("Graphicloads-100-Flat-Close", resourceCulture);
@@ -193,9 +203,29 @@ namespace SistemaGestorRecursosDidacticos.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Itzikgur_My_Seven_Pictures_Canon {
+            get {
+                object obj = ResourceManager.GetObject("Itzikgur-My-Seven-Pictures-Canon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Oxygen_Icons_org_Oxygen_Actions_contact_new {
             get {
                 object obj = ResourceManager.GetObject("Oxygen-Icons.org-Oxygen-Actions-contact-new", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Saki_NuoveXT_Mimetypes_schedule {
+            get {
+                object obj = ResourceManager.GetObject("Saki-NuoveXT-Mimetypes-schedule", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
