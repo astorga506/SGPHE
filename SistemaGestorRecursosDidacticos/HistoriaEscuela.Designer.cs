@@ -50,9 +50,9 @@
             this.panelImage.AutoSize = true;
             this.panelImage.BackgroundImage = global::SistemaGestorRecursosDidacticos.Properties.Resources._2587191_orig;
             this.panelImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelImage.Location = new System.Drawing.Point(136, 110);
+            this.panelImage.Location = new System.Drawing.Point(552, 100);
             this.panelImage.Name = "panelImage";
-            this.panelImage.Size = new System.Drawing.Size(472, 300);
+            this.panelImage.Size = new System.Drawing.Size(257, 156);
             this.panelImage.TabIndex = 1;
             // 
             // HistoriaEscuela
