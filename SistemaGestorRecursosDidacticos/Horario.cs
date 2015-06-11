@@ -44,5 +44,19 @@ namespace SistemaGestorRecursosDidacticos
                 }
             
         }
+
+        private void btnGenerarReporte_Click(object sender, EventArgs e)
+        {
+            foreach (Form frm in Application.OpenForms)
+            {
+                if (frm is ReporteHorario)
+                {
+                    frm.Show();
+                    return;
+                }
+            }
+            ReporteHorario f1 = new SistemaGestorRecursosDidacticos.ReporteHorario();
+            f1.Show();
+        }
     }
 }

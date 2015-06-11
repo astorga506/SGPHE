@@ -30,6 +30,7 @@
         {
             this.dgvHorarios = new System.Windows.Forms.DataGridView();
             this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnGenerarReporte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHorarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,6 +54,16 @@
             this.btnActualizar.UseVisualStyleBackColor = true;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
+            // btnGenerarReporte
+            // 
+            this.btnGenerarReporte.Location = new System.Drawing.Point(712, 546);
+            this.btnGenerarReporte.Name = "btnGenerarReporte";
+            this.btnGenerarReporte.Size = new System.Drawing.Size(134, 23);
+            this.btnGenerarReporte.TabIndex = 2;
+            this.btnGenerarReporte.Text = "Generar Reporte";
+            this.btnGenerarReporte.UseVisualStyleBackColor = true;
+            this.btnGenerarReporte.Click += new System.EventHandler(this.btnGenerarReporte_Click);
+            // 
             // Horario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -60,6 +71,7 @@
             this.BackgroundImage = global::SistemaGestorRecursosDidacticos.Properties.Resources.fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1021, 581);
+            this.Controls.Add(this.btnGenerarReporte);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.dgvHorarios);
             this.DoubleBuffered = true;
@@ -75,5 +87,6 @@
 
         private System.Windows.Forms.DataGridView dgvHorarios;
         private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button btnGenerarReporte;
     }
 }
