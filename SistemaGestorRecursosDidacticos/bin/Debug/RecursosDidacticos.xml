@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<RecursosDidacticos Index="6">
+<RecursosDidacticos Index="7">
   <Recurso>
     <Indice>1</Indice>
     <Nombre>www.mep.go.cr</Nombre>
@@ -7,5 +7,9 @@
   <Recurso>
     <Indice>6</Indice>
     <Nombre>jkjk</Nombre>
+  </Recurso>
+  <Recurso>
+    <Indice>7</Indice>
+    <Nombre>hjhjhkj</Nombre>
   </Recurso>
 </RecursosDidacticos>
