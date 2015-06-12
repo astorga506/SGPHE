@@ -36,9 +36,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -121,15 +121,14 @@
             this.panel4.Size = new System.Drawing.Size(546, 268);
             this.panel4.TabIndex = 3;
             // 
-            // label2
+            // label4
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 85);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(466, 48);
-            this.label2.TabIndex = 0;
-            this.label2.Text = resources.GetString("label2.Text");
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 140);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(540, 112);
+            this.label4.TabIndex = 2;
+            this.label4.Text = resources.GetString("label4.Text");
             // 
             // label3
             // 
@@ -141,14 +140,15 @@
             this.label3.TabIndex = 1;
             this.label3.Text = resources.GetString("label3.Text");
             // 
-            // label4
+            // label2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 140);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(540, 112);
-            this.label4.TabIndex = 2;
-            this.label4.Text = resources.GetString("label4.Text");
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(3, 85);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(466, 48);
+            this.label2.TabIndex = 0;
+            this.label2.Text = resources.GetString("label2.Text");
             // 
             // HistoriaEscuela
             // 
@@ -166,7 +166,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HistoriaEscuela";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "HistoriaEscuela";
+            this.Text = "Historia de la Escuela";
             this.Load += new System.EventHandler(this.HistoriaEscuela_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

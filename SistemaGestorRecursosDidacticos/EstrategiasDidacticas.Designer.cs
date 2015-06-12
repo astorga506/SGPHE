@@ -105,7 +105,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EstrategiasDidacticas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "EstrategiasDidacticas";
+            this.Text = "Estrategias Didacticas";
             this.Load += new System.EventHandler(this.EstrategiasDidacticas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstrategias)).EndInit();
             this.ResumeLayout(false);

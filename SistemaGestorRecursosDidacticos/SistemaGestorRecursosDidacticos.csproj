@@ -95,12 +95,6 @@
     <Compile Include="Contactos.Designer.cs">
       <DependentUpon>Contactos.cs</DependentUpon>
     </Compile>
-    <Compile Include="DistribucionObjetivos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DistribucionObjetivos.Designer.cs">
-      <DependentUpon>DistribucionObjetivos.cs</DependentUpon>
-    </Compile>
     <Compile Include="EstrategiasDidacticas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,9 +191,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Contactos.resx">
       <DependentUpon>Contactos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DistribucionObjetivos.resx">
-      <DependentUpon>DistribucionObjetivos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EstrategiasDidacticas.resx">
       <DependentUpon>EstrategiasDidacticas.cs</DependentUpon>
@@ -341,7 +332,10 @@
     <None Include="Resources\bandera costa rica.png" />
     <None Include="Resources\banner2.jpg" />
     <None Include="Resources\banner3.jpg" />
+    <None Include="Resources\diarioicon.png" />
     <Content Include="Resources\Gakuseisean-Aire-Images.ico" />
+    <None Include="Resources\Galeria.ico" />
+    <None Include="Resources\galeryIcon.png" />
     <Content Include="Resources\Itzikgur-My-Seven-Pictures-Canon.ico" />
     <None Include="Resources\logo.jpg" />
     <None Include="Resources\panel.png" />

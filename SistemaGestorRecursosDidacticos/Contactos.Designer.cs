@@ -205,7 +205,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Contactos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Contacto";
+            this.Text = "Contactos";
             this.ResumeLayout(false);
             this.PerformLayout();
 

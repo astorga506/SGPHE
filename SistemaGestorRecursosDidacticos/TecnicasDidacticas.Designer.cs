@@ -103,7 +103,7 @@
             this.DoubleBuffered = true;
             this.Name = "TecnicasDidacticas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TecnicasDidacticas";
+            this.Text = "Técnicas Didacticas";
             this.Load += new System.EventHandler(this.TecnicasDidacticas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTecDidactica)).EndInit();
             this.ResumeLayout(false);

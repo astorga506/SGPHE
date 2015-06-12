@@ -209,7 +209,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "ObjetivosContenidos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ObjetivosContenidos";
+            this.Text = "Objetivos y Contenidos";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).EndInit();
