@@ -24,30 +24,6 @@ namespace SistemaGestorRecursosDidacticos
             InitializeComponent();
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
-            EstrategiaDidacticaData estrategia = new EstrategiaDidacticaData(Application.StartupPath+"\\prueba.xml");
-            EstrategiaDidactica nuevaEst= new EstrategiaDidactica();
-            try {
-                //nuevaEst.setIndice(1);
-                //nuevaEst.setNombre("Brincar");
-                //estrategia.insertarEstrategia(nuevaEst);
-                //nuevaEst.setIndice(2);
-                //nuevaEst.setNombre("Saltar");
-                //estrategia.insertarEstrategia(nuevaEst);
-                //nuevaEst.setIndice(3);
-                //nuevaEst.setNombre("Bailar");
-                //estrategia.insertarEstrategia(nuevaEst);
-                //nuevaEst.setIndice(4);
-                //nuevaEst.setNombre("Leer");
-                //estrategia.insertarEstrategia(nuevaEst);
-                //nuevaEst.setIndice(5);
-                //nuevaEst.setNombre("Modificacion");
-                //estrategia.actualizarEstrategiaDidactica(nuevaEst);
-                //nuevaEst.setIndice(5);
-                //nuevaEst.setNombre("Leer");
-                //estrategia.eliminarEstrategiaDidactica(nuevaEst);
-            }catch(FormatException ex){
-                MessageBox.Show("La estrategia a insertar ya existe");
-            }
 
         }
 
@@ -367,13 +343,13 @@ namespace SistemaGestorRecursosDidacticos
             //this.Hide();
             foreach (Form frm in Application.OpenForms)
             {
-                if (frm is DistribucionObjetivos)
+                if (frm is Planeamiento)
                 {
                     frm.Show();
                     return;
                 }
             }
-            DistribucionObjetivos f7 = new SistemaGestorRecursosDidacticos.DistribucionObjetivos();
+            Planeamiento f7 = new SistemaGestorRecursosDidacticos.Planeamiento();
             f7.Show();
         }
 
