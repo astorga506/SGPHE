@@ -341,6 +341,7 @@
     <None Include="Resources\bandera costa rica.png" />
     <None Include="Resources\banner2.jpg" />
     <None Include="Resources\banner3.jpg" />
+    <None Include="Resources\escudo.png" />
     <Content Include="Resources\Gakuseisean-Aire-Images.ico" />
     <Content Include="Resources\Itzikgur-My-Seven-Pictures-Canon.ico" />
     <None Include="Resources\logo.jpg" />
@@ -358,7 +359,6 @@
     <Content Include="Resources\download_blue.ico" />
     <None Include="Resources\Graphicloads-Filetype-Pdf.ico" />
     <None Include="Resources\Graphicloads-100-Flat-Close.ico" />
-    <None Include="Resources\Escudo 2.jpg" />
     <None Include="Resources\icono-información-general-blanco-azul.png" />
     <Content Include="Resources\interfaz.png" />
     <Content Include="Resources\interfaz1.png" />
