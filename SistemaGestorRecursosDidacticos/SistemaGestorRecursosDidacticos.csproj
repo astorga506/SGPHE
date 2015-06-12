@@ -333,6 +333,7 @@
     <None Include="Resources\banner2.jpg" />
     <None Include="Resources\banner3.jpg" />
     <None Include="Resources\diarioicon.png" />
+    <None Include="Resources\Escudo_2.png" />
     <Content Include="Resources\Gakuseisean-Aire-Images.ico" />
     <None Include="Resources\Galeria.ico" />
     <None Include="Resources\galeryIcon.png" />
