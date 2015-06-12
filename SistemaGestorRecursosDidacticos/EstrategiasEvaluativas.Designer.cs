@@ -103,7 +103,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EstrategiasEvaluativas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "EstrategiasEvaluativas";
+            this.Text = "Estrategias Evaluativas";
             this.Load += new System.EventHandler(this.EstrategiasEvaluativas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstrategias)).EndInit();
             this.ResumeLayout(false);

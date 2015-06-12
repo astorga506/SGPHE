@@ -54,7 +54,7 @@
             this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.Color.Transparent;
-            this.btnExit.Location = new System.Drawing.Point(1309, 93);
+            this.btnExit.Location = new System.Drawing.Point(1307, 101);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(43, 38);
             this.btnExit.TabIndex = 9;
@@ -74,7 +74,7 @@
             this.btnCalendar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.btnCalendar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCalendar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCalendar.Location = new System.Drawing.Point(1242, 93);
+            this.btnCalendar.Location = new System.Drawing.Point(1242, 101);
             this.btnCalendar.Name = "btnCalendar";
             this.btnCalendar.Size = new System.Drawing.Size(43, 38);
             this.btnCalendar.TabIndex = 10;
@@ -87,16 +87,16 @@
             this.btnAgenda.AccessibleDescription = "";
             this.btnAgenda.AccessibleName = "";
             this.btnAgenda.BackColor = System.Drawing.Color.Transparent;
-            this.btnAgenda.BackgroundImage = global::SistemaGestorRecursosDidacticos.Properties.Resources.Dapino_Summer_Blue_Holiday_Diary_Book;
-            this.btnAgenda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnAgenda.BackgroundImage = global::SistemaGestorRecursosDidacticos.Properties.Resources.diarioicon;
+            this.btnAgenda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAgenda.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgenda.FlatAppearance.BorderSize = 0;
             this.btnAgenda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.btnAgenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgenda.ForeColor = System.Drawing.Color.Transparent;
-            this.btnAgenda.Location = new System.Drawing.Point(1172, 93);
+            this.btnAgenda.Location = new System.Drawing.Point(1172, 101);
             this.btnAgenda.Name = "btnAgenda";
-            this.btnAgenda.Size = new System.Drawing.Size(32, 38);
+            this.btnAgenda.Size = new System.Drawing.Size(45, 46);
             this.btnAgenda.TabIndex = 11;
             this.btnAgenda.Tag = "";
             this.btnAgenda.Text = "\r\n";
@@ -273,7 +273,7 @@
             this.btnHorario.FlatAppearance.BorderSize = 0;
             this.btnHorario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHorario.ForeColor = System.Drawing.Color.Transparent;
-            this.btnHorario.Location = new System.Drawing.Point(1106, 93);
+            this.btnHorario.Location = new System.Drawing.Point(1106, 101);
             this.btnHorario.Name = "btnHorario";
             this.btnHorario.Size = new System.Drawing.Size(43, 38);
             this.btnHorario.TabIndex = 11;
@@ -284,14 +284,15 @@
             // btnGaleria
             // 
             this.btnGaleria.BackColor = System.Drawing.Color.Transparent;
-            this.btnGaleria.BackgroundImage = global::SistemaGestorRecursosDidacticos.Properties.Resources.Itzikgur_My_Seven_Pictures_Canon;
+            this.btnGaleria.BackgroundImage = global::SistemaGestorRecursosDidacticos.Properties.Resources.galeryIcon;
+            this.btnGaleria.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnGaleria.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGaleria.FlatAppearance.BorderSize = 0;
             this.btnGaleria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGaleria.ForeColor = System.Drawing.Color.Transparent;
             this.btnGaleria.Location = new System.Drawing.Point(1038, 101);
             this.btnGaleria.Name = "btnGaleria";
-            this.btnGaleria.Size = new System.Drawing.Size(34, 30);
+            this.btnGaleria.Size = new System.Drawing.Size(42, 38);
             this.btnGaleria.TabIndex = 20;
             this.btnGaleria.UseVisualStyleBackColor = false;
             this.btnGaleria.Click += new System.EventHandler(this.btnGaleria_Click);

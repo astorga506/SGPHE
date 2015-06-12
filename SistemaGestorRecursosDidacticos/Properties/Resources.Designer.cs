@@ -183,6 +183,16 @@ namespace SistemaGestorRecursosDidacticos.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap diarioicon {
+            get {
+                object obj = ResourceManager.GetObject("diarioicon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Escudo_2 {
             get {
                 object obj = ResourceManager.GetObject("Escudo_2", resourceCulture);
@@ -246,6 +256,26 @@ namespace SistemaGestorRecursosDidacticos.Properties {
         internal static System.Drawing.Bitmap Gakuseisean_Aire_Images {
             get {
                 object obj = ResourceManager.GetObject("Gakuseisean-Aire-Images", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Galeria {
+            get {
+                object obj = ResourceManager.GetObject("Galeria", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap galeryIcon {
+            get {
+                object obj = ResourceManager.GetObject("galeryIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
