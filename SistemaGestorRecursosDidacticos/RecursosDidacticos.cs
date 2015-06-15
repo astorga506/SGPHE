@@ -88,6 +88,7 @@ namespace SistemaGestorRecursosDidacticos
                         }
                     }
                 }
+
                 if (columna.Name.Equals("btnGuardar"))
                 {
                     DataGridViewRow fila = (DataGridViewRow)senderGrid.Rows[e.RowIndex];
