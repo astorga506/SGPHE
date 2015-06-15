@@ -27,42 +27,49 @@ namespace SistemaGestorRecursosDidacticos
             recordatorio.Show();
         }
 
-        private void dgvAgenda_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //TODO 
-            //Acomodar las columnas y el arreglar el comportamiento de la tabla
-            var senderGrid = (DataGridView)sender;
-            DataGridViewButtonColumn columna = (DataGridViewButtonColumn)senderGrid.Columns[e.ColumnIndex];
-            DataGridViewRow fila = (DataGridViewRow)senderGrid.Rows[e.RowIndex];
-            int cod = Int32.Parse(fila.Cells["Codigo"].Value.ToString());
-            RecordatorioBusiness rb = new RecordatorioBusiness(FILE);
-
-            if (columna.Name.Equals("btnEliminar"))
-            {
-                rb.EliminarRecordatorio(cod);
-                Cargar();
-            }
-
-            if (columna.Name.Equals("btnModificar"))
-            {
-                
-                NuevoRecordatorio recordatorio = new NuevoRecordatorio(this, rb.GetRecordatorio(cod));
-                recordatorio.Show();
-
-                Cargar();
-            }
-        }
-
         public void Cargar()
-        {
+        {          
+            
             try
             {
                 RecordatorioBusiness rb = new RecordatorioBusiness(FILE);
                 dgvAgenda.DataSource = rb.GetRecordatorios();
                 dgvAgenda.Columns["Codigo"].Visible = false;
-            }
-            catch (Exception e){ }
+                dgvAgenda.Columns["Titulo"].DisplayIndex = 0;
+                dgvAgenda.Columns["Descripcion"].DisplayIndex = 1;
+                dgvAgenda.Columns["Lugar"].DisplayIndex = 2;
+                dgvAgenda.Columns["FechaInicio"].DisplayIndex = 3;
+                dgvAgenda.Columns["FechaFin"].DisplayIndex = 4;
 
+            }
+            catch (Exception e)
+            {
+                dgvAgenda.DataSource = null;
+                dgvAgenda.Refresh();
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow fila = dgvAgenda.SelectedRows[0];
+            int cod = Int32.Parse(fila.Cells["codigo"].Value.ToString());
+            RecordatorioBusiness rb = new RecordatorioBusiness(FILE);
+
+            rb.EliminarRecordatorio(cod);
+            Cargar();
+
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow fila = dgvAgenda.SelectedRows[0];
+            int cod = Int32.Parse(fila.Cells["codigo"].Value.ToString());
+            RecordatorioBusiness rb = new RecordatorioBusiness(FILE);
+
+            NuevoRecordatorio recordatorio = new NuevoRecordatorio(this, rb.GetRecordatorio(cod));
+            recordatorio.Show();
+
+            Cargar();
         }
 
         

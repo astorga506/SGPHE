@@ -31,19 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agenda));
             this.btnNuevoRecor = new System.Windows.Forms.Button();
             this.dgvAgenda = new System.Windows.Forms.DataGridView();
-            this.Titulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Lugar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnEliminar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnModificar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgenda)).BeginInit();
             this.SuspendLayout();
             // 
             // btnNuevoRecor
             // 
-            this.btnNuevoRecor.Location = new System.Drawing.Point(865, 104);
+            this.btnNuevoRecor.Location = new System.Drawing.Point(685, 111);
             this.btnNuevoRecor.Name = "btnNuevoRecor";
             this.btnNuevoRecor.Size = new System.Drawing.Size(92, 23);
             this.btnNuevoRecor.TabIndex = 0;
@@ -60,15 +55,7 @@
             this.dgvAgenda.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAgenda.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvAgenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvAgenda.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Titulo,
-            this.Descripcion,
-            this.Lugar,
-            this.FechaInicio,
-            this.FechaFin,
-            this.btnEliminar,
-            this.btnModificar});
-            this.dgvAgenda.Location = new System.Drawing.Point(59, 151);
+            this.dgvAgenda.Location = new System.Drawing.Point(59, 140);
             this.dgvAgenda.MultiSelect = false;
             this.dgvAgenda.Name = "dgvAgenda";
             this.dgvAgenda.ReadOnly = true;
@@ -76,60 +63,26 @@
             this.dgvAgenda.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAgenda.Size = new System.Drawing.Size(898, 363);
             this.dgvAgenda.TabIndex = 1;
-            this.dgvAgenda.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAgenda_CellContentClick);
-            // 
-            // Titulo
-            // 
-            this.Titulo.DataPropertyName = "Titulo";
-            this.Titulo.HeaderText = "Titulo";
-            this.Titulo.Name = "Titulo";
-            this.Titulo.ReadOnly = true;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.DataPropertyName = "Descripcion";
-            this.Descripcion.HeaderText = "Descripción";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            // 
-            // Lugar
-            // 
-            this.Lugar.DataPropertyName = "Lugar";
-            this.Lugar.HeaderText = "Lugar";
-            this.Lugar.Name = "Lugar";
-            this.Lugar.ReadOnly = true;
-            // 
-            // FechaInicio
-            // 
-            this.FechaInicio.DataPropertyName = "FechaInicio";
-            this.FechaInicio.HeaderText = "Fecha Inicio";
-            this.FechaInicio.Name = "FechaInicio";
-            this.FechaInicio.ReadOnly = true;
-            // 
-            // FechaFin
-            // 
-            this.FechaFin.DataPropertyName = "FechaFin";
-            this.FechaFin.HeaderText = "Fecha Fin";
-            this.FechaFin.Name = "FechaFin";
-            this.FechaFin.ReadOnly = true;
             // 
             // btnEliminar
             // 
-            this.btnEliminar.HeaderText = "Eliminar";
+            this.btnEliminar.Location = new System.Drawing.Point(783, 111);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.ReadOnly = true;
-            this.btnEliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 2;
             this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseColumnTextForButtonValue = true;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnModificar
             // 
-            this.btnModificar.HeaderText = "Modificar";
+            this.btnModificar.Location = new System.Drawing.Point(864, 111);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.ReadOnly = true;
-            this.btnModificar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.TabIndex = 3;
             this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseColumnTextForButtonValue = true;
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // Agenda
             // 
@@ -138,6 +91,8 @@
             this.BackgroundImage = global::SistemaGestorRecursosDidacticos.Properties.Resources.fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1021, 581);
+            this.Controls.Add(this.btnModificar);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.dgvAgenda);
             this.Controls.Add(this.btnNuevoRecor);
             this.DoubleBuffered = true;
@@ -154,12 +109,7 @@
 
         private System.Windows.Forms.Button btnNuevoRecor;
         private System.Windows.Forms.DataGridView dgvAgenda;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Titulo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Lugar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaInicio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaFin;
-        private System.Windows.Forms.DataGridViewButtonColumn btnEliminar;
-        private System.Windows.Forms.DataGridViewButtonColumn btnModificar;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnModificar;
     }
 }
