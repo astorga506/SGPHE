@@ -40,6 +40,8 @@
             this.btnEstratEva = new System.Windows.Forms.Button();
             this.btnDistObj = new System.Windows.Forms.Button();
             this.btnEstratDid = new System.Windows.Forms.Button();
+            this.btnHorario = new System.Windows.Forms.Button();
+            this.btnGaleria = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnExit
@@ -52,7 +54,7 @@
             this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.Color.Transparent;
-            this.btnExit.Location = new System.Drawing.Point(1309, 93);
+            this.btnExit.Location = new System.Drawing.Point(1307, 101);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(43, 38);
             this.btnExit.TabIndex = 9;
@@ -72,7 +74,7 @@
             this.btnCalendar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.btnCalendar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCalendar.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCalendar.Location = new System.Drawing.Point(1246, 93);
+            this.btnCalendar.Location = new System.Drawing.Point(1242, 101);
             this.btnCalendar.Name = "btnCalendar";
             this.btnCalendar.Size = new System.Drawing.Size(43, 38);
             this.btnCalendar.TabIndex = 10;
@@ -85,16 +87,16 @@
             this.btnAgenda.AccessibleDescription = "";
             this.btnAgenda.AccessibleName = "";
             this.btnAgenda.BackColor = System.Drawing.Color.Transparent;
-            this.btnAgenda.BackgroundImage = global::SistemaGestorRecursosDidacticos.Properties.Resources.Dapino_Summer_Blue_Holiday_Diary_Book;
-            this.btnAgenda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnAgenda.BackgroundImage = global::SistemaGestorRecursosDidacticos.Properties.Resources.diarioicon;
+            this.btnAgenda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAgenda.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAgenda.FlatAppearance.BorderSize = 0;
             this.btnAgenda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
             this.btnAgenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgenda.ForeColor = System.Drawing.Color.Transparent;
-            this.btnAgenda.Location = new System.Drawing.Point(1187, 93);
+            this.btnAgenda.Location = new System.Drawing.Point(1172, 101);
             this.btnAgenda.Name = "btnAgenda";
-            this.btnAgenda.Size = new System.Drawing.Size(32, 38);
+            this.btnAgenda.Size = new System.Drawing.Size(45, 46);
             this.btnAgenda.TabIndex = 11;
             this.btnAgenda.Tag = "";
             this.btnAgenda.Text = "\r\n";
@@ -137,7 +139,7 @@
             this.btnTecnicasDid.Name = "btnTecnicasDid";
             this.btnTecnicasDid.Size = new System.Drawing.Size(337, 309);
             this.btnTecnicasDid.TabIndex = 13;
-            this.btnTecnicasDid.Text = "\r\n Técnicas \r\n Didácticos";
+            this.btnTecnicasDid.Text = "\r\n Técnicas \r\n Didácticas";
             this.btnTecnicasDid.UseVisualStyleBackColor = false;
             this.btnTecnicasDid.Click += new System.EventHandler(this.btnTecnicasDid_Click);
             this.btnTecnicasDid.MouseHover += new System.EventHandler(this.btnTecnicasDid_MouseHover);
@@ -177,7 +179,7 @@
             this.btnPruebaEscr.Name = "btnPruebaEscr";
             this.btnPruebaEscr.Size = new System.Drawing.Size(337, 301);
             this.btnPruebaEscr.TabIndex = 15;
-            this.btnPruebaEscr.Text = " \r\nItems de\r\n Prueba \r\n Escrita";
+            this.btnPruebaEscr.Text = " \r\nÍtems de\r\n Prueba \r\n Escrita";
             this.btnPruebaEscr.UseVisualStyleBackColor = false;
             this.btnPruebaEscr.Click += new System.EventHandler(this.btnPruebaEscr_Click);
             this.btnPruebaEscr.MouseHover += new System.EventHandler(this.btnPruebaEscr_MouseHover);
@@ -217,7 +219,7 @@
             this.btnEstratEva.Name = "btnEstratEva";
             this.btnEstratEva.Size = new System.Drawing.Size(327, 309);
             this.btnEstratEva.TabIndex = 17;
-            this.btnEstratEva.Text = "\r\n      Estratégias \r\n      Evaluativas\r\n";
+            this.btnEstratEva.Text = "\r\n      Estrategias \r\n      Evaluativas\r\n";
             this.btnEstratEva.UseVisualStyleBackColor = false;
             this.btnEstratEva.Click += new System.EventHandler(this.btnEstratEva_Click);
             this.btnEstratEva.MouseHover += new System.EventHandler(this.btnEstratEva_MouseHover);
@@ -257,10 +259,44 @@
             this.btnEstratDid.Name = "btnEstratDid";
             this.btnEstratDid.Size = new System.Drawing.Size(327, 309);
             this.btnEstratDid.TabIndex = 19;
-            this.btnEstratDid.Text = "\r\n      \r\n     Estrátegias \r\n     Didácticas\r\n\r\n";
+            this.btnEstratDid.Text = "\r\n      \r\n     Estrategias \r\n     Didácticas\r\n\r\n";
             this.btnEstratDid.UseVisualStyleBackColor = false;
             this.btnEstratDid.Click += new System.EventHandler(this.btnEstratDid_Click);
             this.btnEstratDid.MouseHover += new System.EventHandler(this.btnEstratDid_MouseHover);
+            // 
+            // btnHorario
+            // 
+            this.btnHorario.BackColor = System.Drawing.Color.Transparent;
+            this.btnHorario.BackgroundImage = global::SistemaGestorRecursosDidacticos.Properties.Resources.Saki_NuoveXT_Mimetypes_schedule;
+            this.btnHorario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnHorario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHorario.FlatAppearance.BorderSize = 0;
+            this.btnHorario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHorario.ForeColor = System.Drawing.Color.Transparent;
+            this.btnHorario.Location = new System.Drawing.Point(1106, 101);
+            this.btnHorario.Name = "btnHorario";
+            this.btnHorario.Size = new System.Drawing.Size(43, 38);
+            this.btnHorario.TabIndex = 11;
+            this.btnHorario.UseVisualStyleBackColor = false;
+            this.btnHorario.Click += new System.EventHandler(this.btnHorario_Click);
+            this.btnHorario.MouseHover += new System.EventHandler(this.btnHorario_MouseHover);
+            // 
+            // btnGaleria
+            // 
+            this.btnGaleria.BackColor = System.Drawing.Color.Transparent;
+            this.btnGaleria.BackgroundImage = global::SistemaGestorRecursosDidacticos.Properties.Resources.galeryIcon;
+            this.btnGaleria.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGaleria.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGaleria.FlatAppearance.BorderSize = 0;
+            this.btnGaleria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGaleria.ForeColor = System.Drawing.Color.Transparent;
+            this.btnGaleria.Location = new System.Drawing.Point(1038, 101);
+            this.btnGaleria.Name = "btnGaleria";
+            this.btnGaleria.Size = new System.Drawing.Size(42, 38);
+            this.btnGaleria.TabIndex = 20;
+            this.btnGaleria.UseVisualStyleBackColor = false;
+            this.btnGaleria.Click += new System.EventHandler(this.btnGaleria_Click);
+            this.btnGaleria.MouseHover += new System.EventHandler(this.btnGaleria_MouseHover);
             // 
             // Main
             // 
@@ -269,7 +305,9 @@
             this.AutoSize = true;
             this.BackgroundImage = global::SistemaGestorRecursosDidacticos.Properties.Resources.fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1362, 741);
+            this.ClientSize = new System.Drawing.Size(1354, 733);
+            this.Controls.Add(this.btnGaleria);
+            this.Controls.Add(this.btnHorario);
             this.Controls.Add(this.btnEstratDid);
             this.Controls.Add(this.btnDistObj);
             this.Controls.Add(this.btnEstratEva);
@@ -305,6 +343,8 @@
         private System.Windows.Forms.Button btnEstratEva;
         private System.Windows.Forms.Button btnDistObj;
         private System.Windows.Forms.Button btnEstratDid;
+        private System.Windows.Forms.Button btnHorario;
+        private System.Windows.Forms.Button btnGaleria;
     }
 }
 

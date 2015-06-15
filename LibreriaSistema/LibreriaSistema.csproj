@@ -44,6 +44,7 @@
     <Compile Include="business\ContactoBusiness.cs" />
     <Compile Include="business\EstrategiaDidacticaBusiness.cs" />
     <Compile Include="business\EstrategiaEvaluativaBusiness.cs" />
+    <Compile Include="business\HorarioBusiness.cs" />
     <Compile Include="business\ItemPruebaBusiness.cs" />
     <Compile Include="business\RecordatorioBusiness.cs" />
     <Compile Include="business\RecursoDidacticoBusiness.cs" />
@@ -51,6 +52,7 @@
     <Compile Include="data\ContactoData.cs" />
     <Compile Include="data\EstrategiaDidacticaData.cs" />
     <Compile Include="data\EstrategiaEvaluativaData.cs" />
+    <Compile Include="data\HorarioData.cs" />
     <Compile Include="data\ItemPruebaData.cs" />
     <Compile Include="data\RecordatorioData.cs" />
     <Compile Include="data\RecursoDidacticoData.cs" />
@@ -58,6 +60,7 @@
     <Compile Include="domain\Contacto.cs" />
     <Compile Include="domain\EstrategiaDidactica.cs" />
     <Compile Include="domain\EstrategiaEvaluativa.cs" />
+    <Compile Include="domain\Horario.cs" />
     <Compile Include="domain\ItemPrueba.cs" />
     <Compile Include="domain\Recordatorio.cs" />
     <Compile Include="domain\RecursoDidactico.cs" />

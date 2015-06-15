@@ -32,18 +32,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AxInterop.AcroPDFLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\AxInterop.AcroPDFLib.dll</HintPath>
-    </Reference>
-    <Reference Include="Interop.AcroPDFLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-      <HintPath>bin\Debug\Interop.AcroPDFLib.dll</HintPath>
-    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -60,6 +60,29 @@
     <Compile Include="AcercaDe.Designer.cs">
       <DependentUpon>AcercaDe.cs</DependentUpon>
     </Compile>
+    <Compile Include="Agenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agenda.Designer.cs">
+      <DependentUpon>Agenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DSHorario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSHorario.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Galeria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Galeria.Designer.cs">
+      <DependentUpon>Galeria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Horario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Horario.Designer.cs">
+      <DependentUpon>Horario.cs</DependentUpon>
+    </Compile>
     <Compile Include="NuevoRecordatorio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,12 +94,6 @@
     </Compile>
     <Compile Include="Contactos.Designer.cs">
       <DependentUpon>Contactos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DistribucionObjetivos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DistribucionObjetivos.Designer.cs">
-      <DependentUpon>DistribucionObjetivos.cs</DependentUpon>
     </Compile>
     <Compile Include="EstrategiasDidacticas.cs">
       <SubType>Form</SubType>
@@ -114,19 +131,36 @@
     <Compile Include="ObjetivosContenidos.Designer.cs">
       <DependentUpon>ObjetivosContenidos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Agenda.cs">
+    <Compile Include="Planeamiento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Agenda.Designer.cs">
-      <DependentUpon>Agenda.cs</DependentUpon>
+    <Compile Include="Planeamiento.Designer.cs">
+      <DependentUpon>Planeamiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="RecursosDidacticos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RecursosDidacticos.Designer.cs">
       <DependentUpon>RecursosDidacticos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReporteHorario.Designer.cs">
+      <DependentUpon>ReporteHorario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteHorarioReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteHorarioReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="SplashScreen.cs">
       <SubType>Form</SubType>
@@ -143,14 +177,20 @@
     <EmbeddedResource Include="AcercaDe.resx">
       <DependentUpon>AcercaDe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Agenda.resx">
+      <DependentUpon>Agenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Galeria.resx">
+      <DependentUpon>Galeria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Horario.resx">
+      <DependentUpon>Horario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NuevoRecordatorio.resx">
       <DependentUpon>NuevoRecordatorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Contactos.resx">
       <DependentUpon>Contactos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DistribucionObjetivos.resx">
-      <DependentUpon>DistribucionObjetivos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EstrategiasDidacticas.resx">
       <DependentUpon>EstrategiasDidacticas.cs</DependentUpon>
@@ -170,21 +210,23 @@
     <EmbeddedResource Include="ObjetivosContenidos.resx">
       <DependentUpon>ObjetivosContenidos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Planeamiento.resx">
+      <DependentUpon>Planeamiento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <EmbeddedResource Include="Agenda.resx">
-      <DependentUpon>Agenda.cs</DependentUpon>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="RecursosDidacticos.resx">
       <DependentUpon>RecursosDidacticos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteHorario.resx">
+      <DependentUpon>ReporteHorario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteHorarioReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteHorarioReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
@@ -195,6 +237,18 @@
     <None Include="Archivos.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="DSHorario.xsc">
+      <DependentUpon>DSHorario.xsd</DependentUpon>
+    </None>
+    <None Include="DSHorario.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSHorario.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSHorario.xss">
+      <DependentUpon>DSHorario.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\LibreriaSistema.domain.Horario.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -242,10 +296,57 @@
     <None Include="Resources\salir.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\1.jpg" />
+    <Content Include="bin\Debug\10.jpg" />
+    <Content Include="bin\Debug\11.jpg" />
+    <Content Include="bin\Debug\12.jpg" />
+    <Content Include="bin\Debug\13.jpg" />
+    <Content Include="bin\Debug\14.jpg" />
+    <Content Include="bin\Debug\15.jpg" />
+    <Content Include="bin\Debug\16.jpg" />
+    <Content Include="bin\Debug\17.jpg" />
+    <Content Include="bin\Debug\18.jpg" />
+    <Content Include="bin\Debug\19.jpg" />
+    <Content Include="bin\Debug\2.jpg" />
+    <Content Include="bin\Debug\20.jpg" />
+    <Content Include="bin\Debug\21.jpg" />
+    <Content Include="bin\Debug\22.jpg" />
+    <Content Include="bin\Debug\23.jpg" />
+    <Content Include="bin\Debug\24.jpg" />
+    <Content Include="bin\Debug\25.jpg" />
+    <Content Include="bin\Debug\26.jpg" />
+    <Content Include="bin\Debug\27.jpg" />
+    <Content Include="bin\Debug\3.jpg" />
+    <Content Include="bin\Debug\4.jpg" />
+    <Content Include="bin\Debug\5.jpg" />
+    <Content Include="bin\Debug\6.jpg" />
+    <Content Include="bin\Debug\7.jpg" />
+    <Content Include="bin\Debug\8.jpg" />
+    <Content Include="bin\Debug\9.jpg" />
+    <None Include="Resources\escudoTrans.gif" />
+    <None Include="Resources\firma-ucr-ico.png" />
+    <None Include="Resources\fondo-contenido1.jpg" />
+    <None Include="Resources\banerHistoria.jpg" />
+    <None Include="Resources\baner1.png" />
+    <None Include="Resources\banderaFrancia.gif" />
+    <None Include="Resources\bandera costa rica.png" />
+    <None Include="Resources\banner2.jpg" />
+    <None Include="Resources\banner3.jpg" />
+    <None Include="Resources\diarioicon.png" />
+    <None Include="Resources\Escudo_2.png" />
+    <Content Include="Resources\Gakuseisean-Aire-Images.ico" />
+    <None Include="Resources\Galeria.ico" />
+    <None Include="Resources\galeryIcon.png" />
+    <Content Include="Resources\Itzikgur-My-Seven-Pictures-Canon.ico" />
+    <None Include="Resources\logo.jpg" />
+    <None Include="Resources\panel.png" />
+    <None Include="Resources\panel2.jpg" />
+    <Content Include="Resources\Saki-NuoveXT-Mimetypes-schedule.ico" />
     <None Include="Resources\Oxygen-Icons.org-Oxygen-Actions-contact-new.ico" />
     <None Include="Resources\Aha-Soft-Large-Calendar-Calendar.ico" />
     <Content Include="bin\Debug\prueba.xml" />
     <Content Include="bin\Debug\RecursosDidacticos.xml" />
+    <None Include="Resources\2587191_orig.jpg" />
     <Content Include="Resources\Circle1.png" />
     <Content Include="Resources\Circle2.png" />
     <None Include="Resources\Dapino-Summer-Blue-Holiday-Diary-Book.ico" />
@@ -258,13 +359,35 @@
     <Content Include="Resources\interfaz1.png" />
   </ItemGroup>
   <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\LibreriaSistema\LibreriaSistema.csproj">
       <Project>{8e223287-372a-43aa-ac27-93102c9f43d5}</Project>
       <Name>LibreriaSistema</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
+    <Folder Include="Report\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

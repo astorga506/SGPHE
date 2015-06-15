@@ -44,10 +44,11 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(93, 123);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(762, 32);
+            this.label1.Size = new System.Drawing.Size(846, 32);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Las técnicas se consideran como procedimientos didácticos que se prestan a ayudar" +
-    " a realizar una parte del\r\n aprendizaje que se persigue con la estrategia. ";
+            this.label1.Text = "Las Técnicas Didácticas se consideran como procedimientos didácticos que se prest" +
+    "an a ayudar a realizar una parte del\r\n aprendizaje que se persigue con la estrat" +
+    "egia. ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dgvTecDidactica
@@ -102,7 +103,7 @@
             this.DoubleBuffered = true;
             this.Name = "TecnicasDidacticas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TecnicasDidacticas";
+            this.Text = "Técnicas Didacticas";
             this.Load += new System.EventHandler(this.TecnicasDidacticas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTecDidactica)).EndInit();
             this.ResumeLayout(false);

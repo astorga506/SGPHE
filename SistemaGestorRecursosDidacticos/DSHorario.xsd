@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSHorario" targetNamespace="http://tempuri.org/DSHorario.xsd" xmlns:mstns="http://tempuri.org/DSHorario.xsd" xmlns="http://tempuri.org/DSHorario.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSHorario" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSHorario" msprop:Generator_UserDSName="DSHorario">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Hora" msprop:Generator_ColumnVarNameInTable="columnHora" msprop:Generator_ColumnPropNameInRow="Hora" msprop:Generator_ColumnPropNameInTable="HoraColumn" msprop:Generator_UserColumnName="Hora" type="xs:string" minOccurs="0" />
+              <xs:element name="Lunes" msprop:Generator_ColumnVarNameInTable="columnLunes" msprop:Generator_ColumnPropNameInRow="Lunes" msprop:Generator_ColumnPropNameInTable="LunesColumn" msprop:Generator_UserColumnName="Lunes" type="xs:string" minOccurs="0" />
+              <xs:element name="Martes" msprop:Generator_ColumnVarNameInTable="columnMartes" msprop:Generator_ColumnPropNameInRow="Martes" msprop:Generator_ColumnPropNameInTable="MartesColumn" msprop:Generator_UserColumnName="Martes" type="xs:string" minOccurs="0" />
+              <xs:element name="Miercoles" msprop:Generator_ColumnVarNameInTable="columnMiercoles" msprop:Generator_ColumnPropNameInRow="Miercoles" msprop:Generator_ColumnPropNameInTable="MiercolesColumn" msprop:Generator_UserColumnName="Miercoles" type="xs:string" minOccurs="0" />
+              <xs:element name="Jueves" msprop:Generator_ColumnVarNameInTable="columnJueves" msprop:Generator_ColumnPropNameInRow="Jueves" msprop:Generator_ColumnPropNameInTable="JuevesColumn" msprop:Generator_UserColumnName="Jueves" type="xs:string" minOccurs="0" />
+              <xs:element name="Viernes" msprop:Generator_ColumnVarNameInTable="columnViernes" msprop:Generator_ColumnPropNameInRow="Viernes" msprop:Generator_ColumnPropNameInTable="ViernesColumn" msprop:Generator_UserColumnName="Viernes" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -43,9 +43,9 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(56, 80);
+            this.label1.Location = new System.Drawing.Point(58, 93);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(907, 64);
+            this.label1.Size = new System.Drawing.Size(824, 32);
             this.label1.TabIndex = 6;
             this.label1.Text = resources.GetString("label1.Text");
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -100,9 +100,10 @@
             this.Controls.Add(this.dgvItems);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ItemsPruebaEscrita";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ItemsPruebaEscrita";
+            this.Text = "Items dePrueba Escrita";
             this.Load += new System.EventHandler(this.ItemsPruebaEscrita_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).EndInit();
             this.ResumeLayout(false);

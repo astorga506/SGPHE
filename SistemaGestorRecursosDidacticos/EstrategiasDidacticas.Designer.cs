@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EstrategiasDidacticas));
             this.label1 = new System.Windows.Forms.Label();
             this.dgvEstrategias = new System.Windows.Forms.DataGridView();
             this.Indice = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,10 +45,10 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(165, 89);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(698, 32);
+            this.label1.Size = new System.Drawing.Size(701, 32);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Las estrategias didácticas son el conjunto de procedimientos, apoyados en técnica" +
-    "s de enseñanza \r\nque tiene por objeto alcanzar los objetivos de aprendizaje. ";
+            this.label1.Text = "Las Estrategias Didácticas son el conjunto de procedimientos, apoyados en técnica" +
+    "s de enseñanza \r\nque tiene por objeto alcanzar los objetivos de aprendizaje. \r\n";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dgvEstrategias
@@ -101,9 +102,10 @@
             this.Controls.Add(this.dgvEstrategias);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EstrategiasDidacticas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "EstrategiasDidacticas";
+            this.Text = "Estrategias Didacticas";
             this.Load += new System.EventHandler(this.EstrategiasDidacticas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstrategias)).EndInit();
             this.ResumeLayout(false);

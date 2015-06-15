@@ -24,30 +24,6 @@ namespace SistemaGestorRecursosDidacticos
             InitializeComponent();
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
-            EstrategiaDidacticaData estrategia = new EstrategiaDidacticaData(Application.StartupPath+"\\prueba.xml");
-            EstrategiaDidactica nuevaEst= new EstrategiaDidactica();
-            try {
-                //nuevaEst.setIndice(1);
-                //nuevaEst.setNombre("Brincar");
-                //estrategia.insertarEstrategia(nuevaEst);
-                //nuevaEst.setIndice(2);
-                //nuevaEst.setNombre("Saltar");
-                //estrategia.insertarEstrategia(nuevaEst);
-                //nuevaEst.setIndice(3);
-                //nuevaEst.setNombre("Bailar");
-                //estrategia.insertarEstrategia(nuevaEst);
-                //nuevaEst.setIndice(4);
-                //nuevaEst.setNombre("Leer");
-                //estrategia.insertarEstrategia(nuevaEst);
-                //nuevaEst.setIndice(5);
-                //nuevaEst.setNombre("Modificacion");
-                //estrategia.actualizarEstrategiaDidactica(nuevaEst);
-                //nuevaEst.setIndice(5);
-                //nuevaEst.setNombre("Leer");
-                //estrategia.eliminarEstrategiaDidactica(nuevaEst);
-            }catch(FormatException ex){
-                MessageBox.Show("La estrategia a insertar ya existe");
-            }
 
         }
 
@@ -286,7 +262,7 @@ namespace SistemaGestorRecursosDidacticos
 
         private void btnPruebaEscr_MouseHover(object sender, EventArgs e)
         {
-            buttonToolTip.ToolTipTitle = "Items de Prueba Escrita";
+            buttonToolTip.ToolTipTitle = "Ítems de Prueba Escrita";
             buttonToolTip.UseFading = true;
             buttonToolTip.UseAnimation = true;
             buttonToolTip.IsBalloon = true;
@@ -297,7 +273,7 @@ namespace SistemaGestorRecursosDidacticos
             buttonToolTip.InitialDelay = 1000;
             buttonToolTip.ReshowDelay = 500;
 
-            buttonToolTip.SetToolTip(btnPruebaEscr, "Muestra los Items de Prueba Escrita");
+            buttonToolTip.SetToolTip(btnPruebaEscr, "Muestra los Ítems de Prueba Escrita");
         }
 
         private void btnHistoria_Click(object sender, EventArgs e)
@@ -367,13 +343,13 @@ namespace SistemaGestorRecursosDidacticos
             //this.Hide();
             foreach (Form frm in Application.OpenForms)
             {
-                if (frm is DistribucionObjetivos)
+                if (frm is Planeamiento)
                 {
                     frm.Show();
                     return;
                 }
             }
-            DistribucionObjetivos f7 = new SistemaGestorRecursosDidacticos.DistribucionObjetivos();
+            Planeamiento f7 = new SistemaGestorRecursosDidacticos.Planeamiento();
             f7.Show();
         }
 
@@ -447,7 +423,7 @@ namespace SistemaGestorRecursosDidacticos
             buttonToolTip.InitialDelay = 1000;
             buttonToolTip.ReshowDelay = 500;
 
-            buttonToolTip.SetToolTip(btnExit, "Salir de la Aplicacion");
+            buttonToolTip.SetToolTip(btnExit, "Salir de la Aplicación");
         }
 
         private void btnCalendar_Click(object sender, EventArgs e)
@@ -520,19 +496,79 @@ namespace SistemaGestorRecursosDidacticos
             buttonToolTip.SetToolTip(btnAgenda, "Ingresar a la agenda");
         }
 
+       
+
+        private void btnHorario_MouseHover(object sender, EventArgs e)
+        {
+            buttonToolTip.ToolTipTitle = "Horario";
+            buttonToolTip.UseFading = true;
+            buttonToolTip.UseAnimation = true;
+            buttonToolTip.IsBalloon = true;
+
+            buttonToolTip.ShowAlways = true;
+
+            buttonToolTip.AutoPopDelay = 5000;
+            buttonToolTip.InitialDelay = 1000;
+            buttonToolTip.ReshowDelay = 500;
+
+            buttonToolTip.SetToolTip(btnHorario, "Ingresar Horario");
+        }
+
+        private void btnHorario_Click(object sender, EventArgs e)
+        {
+            //this.Hide();
+            foreach (Form frm in Application.OpenForms)
+            {
+                if (frm is Horario)
+                {
+                    frm.Show();
+                    return;
+                }
+            }
+            Horario f8 = new SistemaGestorRecursosDidacticos.Horario();
+            f8.Show();
+        }
+
+        private void btnGaleria_MouseHover(object sender, EventArgs e)
+        {
+            buttonToolTip.ToolTipTitle = "Galeria";
+            buttonToolTip.UseFading = true;
+            buttonToolTip.UseAnimation = true;
+            buttonToolTip.IsBalloon = true;
+
+            buttonToolTip.ShowAlways = true;
+
+            buttonToolTip.AutoPopDelay = 5000;
+            buttonToolTip.InitialDelay = 1000;
+            buttonToolTip.ReshowDelay = 500;
+
+            buttonToolTip.SetToolTip(btnGaleria, "Ingresar a la Galería");
+        }
+
+
+        private void btnGaleria_Click(object sender, EventArgs e)
+        {
+
+            //this.Hide();
+            foreach (Form frm in Application.OpenForms)
+            {
+                if (frm is Galeria)
+                {
+                    frm.Show();
+                    return;
+                }
+            }
+            Galeria f8 = new SistemaGestorRecursosDidacticos.Galeria();
+            f8.Show();
+        }
+
         private void Main_Load(object sender, EventArgs e)
         {
 
         }
 
-
       
-
-        
-
        
-
-    
        
     }
 }
