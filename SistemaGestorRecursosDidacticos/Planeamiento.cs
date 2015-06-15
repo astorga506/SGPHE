@@ -12,104 +12,76 @@ namespace SistemaGestorRecursosDidacticos
 {
     public partial class Planeamiento : Form
     {
-        private readonly int _rowMargins;
+
         public Planeamiento()
         {
             InitializeComponent();
-           
+            ResizeListViewColumns(lvwEstrategiaEvaluacion);
+            lvwEstrategiaEvaluacion.View = View.Details;
+
+            // These are optional
+            lvwEstrategiaEvaluacion.GridLines = true;
+            lvwEstrategiaEvaluacion.FullRowSelect = true;
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Planeamiento_Load(object sender, EventArgs e)
         {
 
         }
-
+        public void ResizeListViewColumns(ListView lv)
+        {
+            foreach (ColumnHeader column in lv.Columns)
+            {
+                column.Width = -2;
+            }
+        }
         private void btnGenerarReporte_Click(object sender, EventArgs e)
         {
+            DSPlaneamiento dataSetPlaneamiento = new DSPlaneamiento();
+            DataRow rowPlaneamiento =  dataSetPlaneamiento.Tables["Planeamiento"].NewRow();
+            DataRow rowDetalle = dataSetPlaneamiento.Tables["ElementosPlaneamiento"].NewRow();
+           
+            rowPlaneamiento["Docente"]=tbxNombreProfesor.Text.ToString();
+            rowPlaneamiento["Asignatura"] = tbxAsignatura.Text.ToString();
+            rowPlaneamiento["Nivel"] = tbxNivel.Text.ToString();
+            rowPlaneamiento["Unidad"] = tbxUnidad.Text.ToString();
+            rowPlaneamiento["Id"] = ++Main.id_planeamiento;
+            rowPlaneamiento["Fecha_Inicio"] = calendarFechaInicio.SelectionEnd.ToString("dd-MM-yyyy");
+            rowPlaneamiento["Fecha_Fin"] = calendarFechaFin.SelectionEnd.ToString("dd-MM-yyyy");
+            rowPlaneamiento["Aprendizaje"] = tbxAprendizaje.Text.ToString();
+            rowPlaneamiento["Estrategia_Mediacion"] = tbxMediacion.Text.ToString();
 
+            foreach (ListViewItem item in lvwEstrategiaEvaluacion.Items)
+            {
+                rowDetalle["Id_Planeamiento"] = Main.id_planeamiento;
+                rowDetalle["EstrategiaEvaluacion"]=item.Name.ToString();
+            }
+            rowDetalle["Id_Planeamiento"] = Main.id_planeamiento;
+            rowDetalle["EstrategiaEvaluacion"] = tbxEstrategiaEvaluacion.Text.ToString();
+            
+            dataSetPlaneamiento.Tables["Planeamiento"].Rows.Add(rowPlaneamiento);
+            dataSetPlaneamiento.Tables["ElementosPlaneamiento"].Rows.Add(rowDetalle);
+
+            MostrarReportePlaneamiento reporter = new MostrarReportePlaneamiento(dataSetPlaneamiento);
+            reporter.Show();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void tbxUnidad_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblProfesor_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void lblUnidad_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblNombreCurso_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void GridView_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-
-        private void dataGridView1_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        {
-            
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnAgregarEstrategia_Click(object sender, EventArgs e)
+        {
+            SeleccionarEstrategiaEvaluativa select = new SeleccionarEstrategiaEvaluativa(this);
+            select.Show();
+            
+        }
+
+        private void label9_Click(object sender, EventArgs e)
         {
 
         }

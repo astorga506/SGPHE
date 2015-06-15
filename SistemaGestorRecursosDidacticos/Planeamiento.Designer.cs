@@ -33,37 +33,42 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.lblProfesor = new System.Windows.Forms.Label();
             this.lblNombreCurso = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbxNombreProfesor = new System.Windows.Forms.TextBox();
+            this.tbxAsignatura = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tbxUnidad = new System.Windows.Forms.TextBox();
             this.lblUnidad = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.tbxAprendizaje = new System.Windows.Forms.RichTextBox();
+            this.tbxMediacion = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.monthCalendar2 = new System.Windows.Forms.MonthCalendar();
+            this.calendarFechaInicio = new System.Windows.Forms.MonthCalendar();
+            this.calendarFechaFin = new System.Windows.Forms.MonthCalendar();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnAgregarEstrategia = new System.Windows.Forms.Button();
+            this.btnQuitarEstrategia = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.lvwEstrategiaEvaluacion = new System.Windows.Forms.ListView();
+            this.tbxEstrategiaEvaluacion = new System.Windows.Forms.RichTextBox();
+            this.tbxNivel = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.Estrategias = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnGenerarReporte
             // 
-            this.btnGenerarReporte.Location = new System.Drawing.Point(949, 108);
+            this.btnGenerarReporte.Location = new System.Drawing.Point(949, 97);
             this.btnGenerarReporte.Name = "btnGenerarReporte";
             this.btnGenerarReporte.Size = new System.Drawing.Size(106, 23);
             this.btnGenerarReporte.TabIndex = 1;
@@ -73,7 +78,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(949, 81);
+            this.btnSalir.Location = new System.Drawing.Point(949, 70);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(106, 23);
             this.btnSalir.TabIndex = 2;
@@ -84,68 +89,61 @@
             // lblProfesor
             // 
             this.lblProfesor.AutoSize = true;
-            this.lblProfesor.Location = new System.Drawing.Point(11, 82);
+            this.lblProfesor.Location = new System.Drawing.Point(11, 71);
             this.lblProfesor.Name = "lblProfesor";
             this.lblProfesor.Size = new System.Drawing.Size(106, 13);
             this.lblProfesor.TabIndex = 3;
             this.lblProfesor.Text = "Nombre del Profesor:";
-            this.lblProfesor.Click += new System.EventHandler(this.lblProfesor_Click);
             // 
             // lblNombreCurso
             // 
             this.lblNombreCurso.AutoSize = true;
-            this.lblNombreCurso.Location = new System.Drawing.Point(601, 85);
+            this.lblNombreCurso.Location = new System.Drawing.Point(601, 74);
             this.lblNombreCurso.Name = "lblNombreCurso";
             this.lblNombreCurso.Size = new System.Drawing.Size(60, 13);
             this.lblNombreCurso.TabIndex = 4;
             this.lblNombreCurso.Text = "Asignatura:";
-            this.lblNombreCurso.Click += new System.EventHandler(this.lblNombreCurso_Click);
             // 
-            // textBox1
+            // tbxNombreProfesor
             // 
-            this.textBox1.Location = new System.Drawing.Point(123, 79);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(278, 20);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.tbxNombreProfesor.Location = new System.Drawing.Point(123, 68);
+            this.tbxNombreProfesor.Name = "tbxNombreProfesor";
+            this.tbxNombreProfesor.Size = new System.Drawing.Size(278, 20);
+            this.tbxNombreProfesor.TabIndex = 5;
             // 
-            // textBox2
+            // tbxAsignatura
             // 
-            this.textBox2.Location = new System.Drawing.Point(667, 84);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(236, 20);
-            this.textBox2.TabIndex = 6;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.tbxAsignatura.Location = new System.Drawing.Point(667, 73);
+            this.tbxAsignatura.Name = "tbxAsignatura";
+            this.tbxAsignatura.Size = new System.Drawing.Size(236, 20);
+            this.tbxAsignatura.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(338, 23);
+            this.label1.Location = new System.Drawing.Point(363, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(282, 30);
             this.label1.TabIndex = 7;
             this.label1.Text = "Planeamiento Didáctico";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // tbxUnidad
             // 
-            this.tbxUnidad.Location = new System.Drawing.Point(123, 105);
+            this.tbxUnidad.Location = new System.Drawing.Point(123, 94);
             this.tbxUnidad.Name = "tbxUnidad";
             this.tbxUnidad.Size = new System.Drawing.Size(278, 20);
             this.tbxUnidad.TabIndex = 9;
-            this.tbxUnidad.TextChanged += new System.EventHandler(this.tbxUnidad_TextChanged);
             // 
             // lblUnidad
             // 
             this.lblUnidad.AutoSize = true;
-            this.lblUnidad.Location = new System.Drawing.Point(73, 108);
+            this.lblUnidad.Location = new System.Drawing.Point(73, 97);
             this.lblUnidad.Name = "lblUnidad";
             this.lblUnidad.Size = new System.Drawing.Size(44, 13);
             this.lblUnidad.TabIndex = 8;
             this.lblUnidad.Text = "Unidad:";
-            this.lblUnidad.Click += new System.EventHandler(this.lblUnidad_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -155,56 +153,48 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Controls.Add(this.richTextBox1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.richTextBox2, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.listView1, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tbxAprendizaje, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tbxMediacion, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label6, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.label5, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 2, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(14, 141);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 2, 1);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(14, 130);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.968641F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 93.03136F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1041, 427);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1041, 469);
             this.tableLayoutPanel1.TabIndex = 10;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
-            // richTextBox1
+            // tbxAprendizaje
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(3, 32);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(254, 392);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
+            this.tbxAprendizaje.Location = new System.Drawing.Point(3, 35);
+            this.tbxAprendizaje.Name = "tbxAprendizaje";
+            this.tbxAprendizaje.Size = new System.Drawing.Size(254, 424);
+            this.tbxAprendizaje.TabIndex = 1;
+            this.tbxAprendizaje.Text = "";
             // 
-            // richTextBox2
+            // tbxMediacion
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(263, 32);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(254, 392);
-            this.richTextBox2.TabIndex = 2;
-            this.richTextBox2.Text = "";
-            // 
-            // listView1
-            // 
-            this.listView1.Location = new System.Drawing.Point(523, 32);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(254, 392);
-            this.listView1.TabIndex = 3;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.tbxMediacion.Location = new System.Drawing.Point(263, 35);
+            this.tbxMediacion.Name = "tbxMediacion";
+            this.tbxMediacion.Size = new System.Drawing.Size(254, 424);
+            this.tbxMediacion.TabIndex = 2;
+            this.tbxMediacion.Text = "";
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.label4, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.monthCalendar1, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.monthCalendar2, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.calendarFechaInicio, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.calendarFechaFin, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.label3, 0, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(783, 32);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(783, 35);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 4;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.359606F));
@@ -223,17 +213,17 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Fecha de fin";
             // 
-            // monthCalendar1
+            // calendarFechaInicio
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(9, 27);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 0;
+            this.calendarFechaInicio.Location = new System.Drawing.Point(9, 27);
+            this.calendarFechaInicio.Name = "calendarFechaInicio";
+            this.calendarFechaInicio.TabIndex = 0;
             // 
-            // monthCalendar2
+            // calendarFechaFin
             // 
-            this.monthCalendar2.Location = new System.Drawing.Point(9, 231);
-            this.monthCalendar2.Name = "monthCalendar2";
-            this.monthCalendar2.TabIndex = 1;
+            this.calendarFechaFin.Location = new System.Drawing.Point(9, 231);
+            this.calendarFechaFin.Name = "calendarFechaFin";
+            this.calendarFechaFin.TabIndex = 1;
             // 
             // label3
             // 
@@ -273,16 +263,15 @@
             this.label5.Size = new System.Drawing.Size(180, 20);
             this.label5.TabIndex = 5;
             this.label5.Text = "Estrategia de Mediación";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85.64356F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.35644F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.tableLayoutPanel3.Controls.Add(this.button1, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button2, 2, 0);
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel3.Controls.Add(this.btnAgregarEstrategia, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btnQuitarEstrategia, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.label7, 0, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(523, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -291,66 +280,114 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(254, 23);
             this.tableLayoutPanel3.TabIndex = 12;
             // 
-            // button1
+            // btnAgregarEstrategia
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(189, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 17);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "+";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAgregarEstrategia.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarEstrategia.Location = new System.Drawing.Point(186, 3);
+            this.btnAgregarEstrategia.Name = "btnAgregarEstrategia";
+            this.btnAgregarEstrategia.Size = new System.Drawing.Size(24, 17);
+            this.btnAgregarEstrategia.TabIndex = 13;
+            this.btnAgregarEstrategia.Text = "+";
+            this.btnAgregarEstrategia.UseVisualStyleBackColor = true;
+            this.btnAgregarEstrategia.Click += new System.EventHandler(this.btnAgregarEstrategia_Click);
             // 
-            // button2
+            // btnQuitarEstrategia
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(220, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(25, 17);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "-";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnQuitarEstrategia.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuitarEstrategia.Location = new System.Drawing.Point(216, 3);
+            this.btnQuitarEstrategia.Name = "btnQuitarEstrategia";
+            this.btnQuitarEstrategia.Size = new System.Drawing.Size(25, 17);
+            this.btnQuitarEstrategia.TabIndex = 14;
+            this.btnQuitarEstrategia.Text = "-";
+            this.btnQuitarEstrategia.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(3, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(108, 23);
+            this.label7.Size = new System.Drawing.Size(165, 17);
             this.label7.TabIndex = 12;
             this.label7.Text = "Estrategia de Evaluación";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // textBox3
+            // tableLayoutPanel4
             // 
-            this.textBox3.Location = new System.Drawing.Point(667, 111);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(236, 20);
-            this.textBox3.TabIndex = 11;
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.lvwEstrategiaEvaluacion, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.tbxEstrategiaEvaluacion, 0, 2);
+            this.tableLayoutPanel4.Controls.Add(this.label9, 0, 1);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(523, 35);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 3;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88.1579F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.8421F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 213F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(254, 424);
+            this.tableLayoutPanel4.TabIndex = 13;
+            // 
+            // lvwEstrategiaEvaluacion
+            // 
+            this.lvwEstrategiaEvaluacion.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Estrategias});
+            this.lvwEstrategiaEvaluacion.Location = new System.Drawing.Point(3, 3);
+            this.lvwEstrategiaEvaluacion.Name = "lvwEstrategiaEvaluacion";
+            this.lvwEstrategiaEvaluacion.Size = new System.Drawing.Size(248, 180);
+            this.lvwEstrategiaEvaluacion.TabIndex = 4;
+            this.lvwEstrategiaEvaluacion.UseCompatibleStateImageBehavior = false;
+            // 
+            // tbxEstrategiaEvaluacion
+            // 
+            this.tbxEstrategiaEvaluacion.Location = new System.Drawing.Point(3, 213);
+            this.tbxEstrategiaEvaluacion.Name = "tbxEstrategiaEvaluacion";
+            this.tbxEstrategiaEvaluacion.Size = new System.Drawing.Size(248, 208);
+            this.tbxEstrategiaEvaluacion.TabIndex = 5;
+            this.tbxEstrategiaEvaluacion.Text = "";
+            // 
+            // tbxNivel
+            // 
+            this.tbxNivel.Location = new System.Drawing.Point(667, 100);
+            this.tbxNivel.Name = "tbxNivel";
+            this.tbxNivel.Size = new System.Drawing.Size(236, 20);
+            this.tbxNivel.TabIndex = 11;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(627, 115);
+            this.label8.Location = new System.Drawing.Point(627, 104);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(34, 13);
             this.label8.TabIndex = 12;
             this.label8.Text = "Nivel:";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(3, 186);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(81, 13);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Observaciones:";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // Estrategias
+            // 
+            this.Estrategias.Text = "Estrategias";
+            // 
             // Planeamiento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 580);
+            this.ClientSize = new System.Drawing.Size(1068, 601);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.tbxNivel);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.tbxUnidad);
             this.Controls.Add(this.lblUnidad);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbxAsignatura);
+            this.Controls.Add(this.tbxNombreProfesor);
             this.Controls.Add(this.lblNombreCurso);
             this.Controls.Add(this.lblProfesor);
             this.Controls.Add(this.btnSalir);
@@ -365,6 +402,8 @@
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -376,28 +415,32 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label lblProfesor;
         private System.Windows.Forms.Label lblNombreCurso;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbxNombreProfesor;
+        private System.Windows.Forms.TextBox tbxAsignatura;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbxUnidad;
         private System.Windows.Forms.Label lblUnidad;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.RichTextBox tbxAprendizaje;
+        private System.Windows.Forms.RichTextBox tbxMediacion;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.MonthCalendar monthCalendar2;
+        private System.Windows.Forms.MonthCalendar calendarFechaInicio;
+        private System.Windows.Forms.MonthCalendar calendarFechaFin;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbxNivel;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAgregarEstrategia;
+        private System.Windows.Forms.Button btnQuitarEstrategia;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.RichTextBox tbxEstrategiaEvaluacion;
+        private System.Windows.Forms.Label label9;
+        public System.Windows.Forms.ListView lvwEstrategiaEvaluacion;
+        private System.Windows.Forms.ColumnHeader Estrategias;
     }
 }

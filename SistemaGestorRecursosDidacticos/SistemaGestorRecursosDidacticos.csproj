@@ -71,6 +71,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DSHorario.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DSPlaneamiento.cs">
+      <DependentUpon>DSPlaneamiento.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DSPlaneamiento.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSPlaneamiento.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Galeria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +91,12 @@
     </Compile>
     <Compile Include="Horario.Designer.cs">
       <DependentUpon>Horario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarReportePlaneamiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MostrarReportePlaneamiento.Designer.cs">
+      <DependentUpon>MostrarReportePlaneamiento.cs</DependentUpon>
     </Compile>
     <Compile Include="NuevoRecordatorio.cs">
       <SubType>Form</SubType>
@@ -162,6 +177,18 @@
       <DependentUpon>ReporteHorarioReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ReportePlaneamientoReporte.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportePlaneamientoReporte.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SeleccionarEstrategiaEvaluativa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeleccionarEstrategiaEvaluativa.Designer.cs">
+      <DependentUpon>SeleccionarEstrategiaEvaluativa.cs</DependentUpon>
+    </Compile>
     <Compile Include="SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Horario.resx">
       <DependentUpon>Horario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostrarReportePlaneamiento.resx">
+      <DependentUpon>MostrarReportePlaneamiento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoRecordatorio.resx">
       <DependentUpon>NuevoRecordatorio.cs</DependentUpon>
@@ -228,6 +258,13 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReporteHorarioReport.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportePlaneamientoReporte.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportePlaneamientoReporte.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeleccionarEstrategiaEvaluativa.resx">
+      <DependentUpon>SeleccionarEstrategiaEvaluativa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -247,6 +284,17 @@
     </None>
     <None Include="DSHorario.xss">
       <DependentUpon>DSHorario.xsd</DependentUpon>
+    </None>
+    <None Include="DSPlaneamiento.xsc">
+      <DependentUpon>DSPlaneamiento.xsd</DependentUpon>
+    </None>
+    <None Include="DSPlaneamiento.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSPlaneamiento.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DSPlaneamiento.xss">
+      <DependentUpon>DSPlaneamiento.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\LibreriaSistema.domain.Horario.datasource" />
     <None Include="Properties\Settings.settings">
@@ -334,6 +382,7 @@
     <None Include="Resources\banner3.jpg" />
     <None Include="Resources\diarioicon.png" />
     <None Include="Resources\Escudo_2.png" />
+    <None Include="Resources\brand.gif" />
     <Content Include="Resources\Gakuseisean-Aire-Images.ico" />
     <None Include="Resources\Galeria.ico" />
     <None Include="Resources\galeryIcon.png" />

@@ -23,8 +23,8 @@ namespace SistemaGestorRecursosDidacticos
         {
             InitializeComponent();
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.WindowState = FormWindowState.Maximized;
-
+            //this.WindowState = FormWindowState.Maximized;
+            id_planeamiento = 0;
         }
 
         //private void panel1_Paint(object sender, PaintEventArgs e)
@@ -567,8 +567,10 @@ namespace SistemaGestorRecursosDidacticos
 
         }
 
-      
-       
-       
+
+
+
+
+        public static int id_planeamiento { get; set; }
     }
 }
