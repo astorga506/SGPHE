@@ -40,10 +40,14 @@ namespace SistemaGestorRecursosDidacticos
                 dgvAgenda.Columns["Lugar"].DisplayIndex = 2;
                 dgvAgenda.Columns["FechaInicio"].DisplayIndex = 3;
                 dgvAgenda.Columns["FechaFin"].DisplayIndex = 4;
+                btnEliminar.Enabled = true;
+                btnModificar.Enabled = true;
 
             }
             catch (Exception e)
             {
+                btnEliminar.Enabled = false;
+                btnModificar.Enabled = false;
                 dgvAgenda.DataSource = null;
                 dgvAgenda.Refresh();
             }
