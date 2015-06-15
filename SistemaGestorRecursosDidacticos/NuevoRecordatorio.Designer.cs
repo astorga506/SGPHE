@@ -59,7 +59,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(97, 170);
+            this.label2.Location = new System.Drawing.Point(97, 147);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 1;
@@ -69,7 +69,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(97, 253);
+            this.label3.Location = new System.Drawing.Point(98, 280);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 2;
@@ -97,7 +97,7 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(354, 524);
+            this.btnAceptar.Location = new System.Drawing.Point(210, 454);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 7;
@@ -107,7 +107,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(502, 524);
+            this.btnCancelar.Location = new System.Drawing.Point(335, 454);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 8;
@@ -117,24 +117,24 @@
             // 
             // txtTitulo
             // 
-            this.txtTitulo.Location = new System.Drawing.Point(242, 97);
+            this.txtTitulo.Location = new System.Drawing.Point(210, 97);
             this.txtTitulo.Name = "txtTitulo";
-            this.txtTitulo.Size = new System.Drawing.Size(168, 20);
+            this.txtTitulo.Size = new System.Drawing.Size(309, 20);
             this.txtTitulo.TabIndex = 9;
             // 
             // txtLugar
             // 
-            this.txtLugar.Location = new System.Drawing.Point(242, 250);
+            this.txtLugar.Location = new System.Drawing.Point(210, 280);
             this.txtLugar.Name = "txtLugar";
-            this.txtLugar.Size = new System.Drawing.Size(168, 20);
+            this.txtLugar.Size = new System.Drawing.Size(309, 20);
             this.txtLugar.TabIndex = 10;
             // 
             // txtDescrip
             // 
-            this.txtDescrip.Location = new System.Drawing.Point(242, 163);
+            this.txtDescrip.Location = new System.Drawing.Point(210, 147);
             this.txtDescrip.Multiline = true;
             this.txtDescrip.Name = "txtDescrip";
-            this.txtDescrip.Size = new System.Drawing.Size(168, 47);
+            this.txtDescrip.Size = new System.Drawing.Size(309, 93);
             this.txtDescrip.TabIndex = 11;
             // 
             // dtpDiaInicio
@@ -175,7 +175,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackgroundImage = global::SistemaGestorRecursosDidacticos.Properties.Resources.fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1021, 581);
+            this.ClientSize = new System.Drawing.Size(658, 583);
             this.Controls.Add(this.dtpHoraFin);
             this.Controls.Add(this.dtpHoraInicio);
             this.Controls.Add(this.dtpDiaFin);

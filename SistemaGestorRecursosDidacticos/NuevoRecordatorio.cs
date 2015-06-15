@@ -47,26 +47,43 @@ namespace SistemaGestorRecursosDidacticos
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            RecordatorioBusiness rb = new RecordatorioBusiness(Agenda.FILE);
-            recordatorio.Titulo = txtTitulo.Text;
-            recordatorio.Descripcion = txtDescrip.Text;
-            recordatorio.Lugar = txtLugar.Text;
-            recordatorio.FechaInicio = dtpDiaInicio.Value.Date + dtpHoraInicio.Value.TimeOfDay;
-            recordatorio.FechaFin = dtpDiaFin.Value.Date + dtpHoraFin.Value.TimeOfDay;
-            //TODO
-            //Validar entradas *calendarios* (importante)
-            if (nuevo)
+            if (completo())
             {
-                rb.InsertarRecordatorio(recordatorio);
+
+                    RecordatorioBusiness rb = new RecordatorioBusiness(Agenda.FILE);
+                    recordatorio.Titulo = txtTitulo.Text;
+                    recordatorio.Descripcion = txtDescrip.Text;
+                    recordatorio.Lugar = txtLugar.Text;
+                    recordatorio.FechaInicio = dtpDiaInicio.Value.Date + dtpHoraInicio.Value.TimeOfDay;
+                    recordatorio.FechaFin = dtpDiaFin.Value.Date + dtpHoraFin.Value.TimeOfDay;
+                    if (recordatorio.FechaInicio.CompareTo(recordatorio.FechaFin) <= 0)
+                    {
+                        //TODO
+                        //Validar entradas *calendarios* (importante)
+                        if (nuevo)
+                        {
+                            rb.InsertarRecordatorio(recordatorio);
+                        }
+                        else
+                        {
+                            rb.EditarRecordatorio(recordatorio);
+                        }
+
+                        agenda.Focus();
+                        agenda.Cargar();
+                        this.Dispose();
+                    }
+                    else
+                    {
+                        MessageBox.Show("La fecha de finalización debe ser posterior a la de inicio para la actividad.");
+                    }
+
             }
-            else 
+            else
             {
-                rb.EditarRecordatorio(recordatorio);
+                MessageBox.Show("Debe de proporcionar toda la información solicitada.");
             }
 
-            agenda.Focus();
-            agenda.Cargar();
-            this.Dispose();
         }
 
         private void Inicializar()
@@ -81,6 +98,17 @@ namespace SistemaGestorRecursosDidacticos
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private Boolean completo()
+        {
+            Boolean completo;
+
+            completo = txtTitulo.Text.Equals("")?  false :  true;
+            completo = txtDescrip.Text.Equals("") || !completo? false : true;
+            completo = txtLugar.Text.Equals("") || !completo? false : true;            
+
+            return completo;        
         }
         
     }

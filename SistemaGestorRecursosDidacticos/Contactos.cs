@@ -134,9 +134,9 @@ namespace SistemaGestorRecursosDidacticos
         {
             Boolean completo;
             completo = txtNombre.Text.Equals("")? false:true;
-            completo = txtTelefono.Text.Equals("") ? false : true;
-            completo = txtCorreo.Text.Equals("") ? false : true;
-            completo = txtDireccion.Text.Equals("") ? false : true;
+            completo = txtTelefono.Text.Equals("") || !completo? false : true;
+            completo = txtCorreo.Text.Equals("") || !completo? false : true;
+            completo = txtDireccion.Text.Equals("") || !completo? false : true;
 
             return completo;
         }
