@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SistemaGestorRecursosDidacticos.Properties {
+namespace LibreriaSistema.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -26,8 +26,9 @@ namespace SistemaGestorRecursosDidacticos.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\v11.0;AttachDbFilename=|DataDirectory|\\data\\DataPlaneamient" +
-            "o.mdf;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\v11.0;AttachDbFilename=C:\\Users\\fdoaguilar9\\Source\\Repos\\SG" +
+            "PHE\\SistemaGestorRecursosDidacticos\\data\\DataPlaneamiento.mdf;Integrated Securit" +
+            "y=True")]
         public string DataPlaneamientoConnectionString {
             get {
                 return ((string)(this["DataPlaneamientoConnectionString"]));

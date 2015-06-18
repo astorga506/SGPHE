@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -49,11 +50,17 @@
     <Compile Include="business\RecordatorioBusiness.cs" />
     <Compile Include="business\RecursoDidacticoBusiness.cs" />
     <Compile Include="business\TecnicaDidacticaBusiness.cs" />
+    <Compile Include="DataPlaneamientoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataPlaneamientoDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="data\ContactoData.cs" />
     <Compile Include="data\EstrategiaDidacticaData.cs" />
     <Compile Include="data\EstrategiaEvaluativaData.cs" />
     <Compile Include="data\HorarioData.cs" />
     <Compile Include="data\ItemPruebaData.cs" />
+    <Compile Include="data\PlaneamientoData.cs" />
     <Compile Include="data\RecordatorioData.cs" />
     <Compile Include="data\RecursoDidacticoData.cs" />
     <Compile Include="data\TecnicaDidacticaData.cs" />
@@ -65,7 +72,53 @@
     <Compile Include="domain\Recordatorio.cs" />
     <Compile Include="domain\RecursoDidactico.cs" />
     <Compile Include="domain\TecnicaDidactica.cs" />
+    <Compile Include="DSPlaneamiento.cs">
+      <DependentUpon>DSPlaneamiento.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DSPlaneamiento.Designer.cs">
+      <DependentUpon>DSPlaneamiento.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DataPlaneamientoDataSet.xsc">
+      <DependentUpon>DataPlaneamientoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataPlaneamientoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataPlaneamientoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataPlaneamientoDataSet.xss">
+      <DependentUpon>DataPlaneamientoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DSPlaneamiento.xsc">
+      <DependentUpon>DSPlaneamiento.xsd</DependentUpon>
+    </None>
+    <None Include="DSPlaneamiento.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSPlaneamiento.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSPlaneamiento.xss">
+      <DependentUpon>DSPlaneamiento.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSPlaneamiento" targetNamespace="http://tempuri.org/DSPlaneamiento.xsd" xmlns:mstns="http://tempuri.org/DSPlaneamiento.xsd" xmlns="http://tempuri.org/DSPlaneamiento.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSPlaneamiento" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DSPlaneamiento" msprop:Generator_UserDSName="DSPlaneamiento">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Planeamiento" msprop:Generator_TableClassName="PlaneamientoDataTable" msprop:Generator_TableVarName="tablePlaneamiento" msprop:Generator_TablePropName="Planeamiento" msprop:Generator_RowDeletingName="PlaneamientoRowDeleting" msprop:Generator_RowChangingName="PlaneamientoRowChanging" msprop:Generator_RowEvHandlerName="PlaneamientoRowChangeEventHandler" msprop:Generator_RowDeletedName="PlaneamientoRowDeleted" msprop:Generator_UserTableName="Planeamiento" msprop:Generator_RowChangedName="PlaneamientoRowChanged" msprop:Generator_RowEvArgName="PlaneamientoRowChangeEvent" msprop:Generator_RowClassName="PlaneamientoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Docente" msprop:Generator_ColumnVarNameInTable="columnDocente" msprop:Generator_ColumnPropNameInRow="Docente" msprop:Generator_ColumnPropNameInTable="DocenteColumn" msprop:Generator_UserColumnName="Docente" type="xs:string" minOccurs="0" />
+              <xs:element name="Asignatura" msprop:Generator_ColumnVarNameInTable="columnAsignatura" msprop:Generator_ColumnPropNameInRow="Asignatura" msprop:Generator_ColumnPropNameInTable="AsignaturaColumn" msprop:Generator_UserColumnName="Asignatura" type="xs:string" minOccurs="0" />
+              <xs:element name="Nivel" msprop:Generator_ColumnVarNameInTable="columnNivel" msprop:Generator_ColumnPropNameInRow="Nivel" msprop:Generator_ColumnPropNameInTable="NivelColumn" msprop:Generator_UserColumnName="Nivel" type="xs:string" minOccurs="0" />
+              <xs:element name="Unidad" msprop:Generator_ColumnVarNameInTable="columnUnidad" msprop:Generator_ColumnPropNameInRow="Unidad" msprop:Generator_ColumnPropNameInTable="UnidadColumn" msprop:Generator_UserColumnName="Unidad" type="xs:string" minOccurs="0" />
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:string" />
+              <xs:element name="Fecha_Inicio" msprop:Generator_ColumnVarNameInTable="columnFecha_Inicio" msprop:Generator_ColumnPropNameInRow="Fecha_Inicio" msprop:Generator_ColumnPropNameInTable="Fecha_InicioColumn" msprop:Generator_UserColumnName="Fecha_Inicio" type="xs:string" minOccurs="0" />
+              <xs:element name="Fecha_Fin" msprop:Generator_ColumnVarNameInTable="columnFecha_Fin" msprop:Generator_ColumnPropNameInRow="Fecha_Fin" msprop:Generator_ColumnPropNameInTable="Fecha_FinColumn" msprop:Generator_UserColumnName="Fecha_Fin" type="xs:string" minOccurs="0" />
+              <xs:element name="Aprendizaje" msprop:Generator_ColumnVarNameInTable="columnAprendizaje" msprop:Generator_ColumnPropNameInRow="Aprendizaje" msprop:Generator_ColumnPropNameInTable="AprendizajeColumn" msprop:Generator_UserColumnName="Aprendizaje" type="xs:string" minOccurs="0" />
+              <xs:element name="Estrategia_Mediacion" msprop:Generator_ColumnVarNameInTable="columnEstrategia_Mediacion" msprop:Generator_ColumnPropNameInRow="Estrategia_Mediacion" msprop:Generator_ColumnPropNameInTable="Estrategia_MediacionColumn" msprop:Generator_UserColumnName="Estrategia_Mediacion" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ElementosPlaneamiento" msprop:Generator_TableClassName="ElementosPlaneamientoDataTable" msprop:Generator_TableVarName="tableElementosPlaneamiento" msprop:Generator_TablePropName="ElementosPlaneamiento" msprop:Generator_RowDeletingName="ElementosPlaneamientoRowDeleting" msprop:Generator_RowChangingName="ElementosPlaneamientoRowChanging" msprop:Generator_RowEvHandlerName="ElementosPlaneamientoRowChangeEventHandler" msprop:Generator_RowDeletedName="ElementosPlaneamientoRowDeleted" msprop:Generator_UserTableName="ElementosPlaneamiento" msprop:Generator_RowChangedName="ElementosPlaneamientoRowChanged" msprop:Generator_RowEvArgName="ElementosPlaneamientoRowChangeEvent" msprop:Generator_RowClassName="ElementosPlaneamientoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id_Planeamiento" msprop:Generator_ColumnVarNameInTable="columnId_Planeamiento" msprop:Generator_ColumnPropNameInRow="Id_Planeamiento" msprop:Generator_ColumnPropNameInTable="Id_PlaneamientoColumn" msprop:Generator_UserColumnName="Id_Planeamiento" type="xs:string" minOccurs="0" />
+              <xs:element name="EstrategiaEvaluacion" msprop:Generator_ColumnVarNameInTable="columnEstrategiaEvaluacion" msprop:Generator_ColumnPropNameInRow="EstrategiaEvaluacion" msprop:Generator_ColumnPropNameInTable="EstrategiaEvaluacionColumn" msprop:Generator_UserColumnName="EstrategiaEvaluacion" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="PlaneamientoPrimaryKey" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Planeamiento" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="ElementosPlaneamiento_Planeamiento" msdata:parent="ElementosPlaneamiento" msdata:child="Planeamiento" msdata:parentkey="Id_Planeamiento" msdata:childkey="Id" msprop:Generator_UserChildTable="Planeamiento" msprop:Generator_ChildPropName="GetPlaneamientoRows" msprop:Generator_UserRelationName="ElementosPlaneamiento_Planeamiento" msprop:Generator_RelationVarName="relationElementosPlaneamiento_Planeamiento" msprop:Generator_UserParentTable="ElementosPlaneamiento" msprop:Generator_ParentPropName="ElementosPlaneamientoRow" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

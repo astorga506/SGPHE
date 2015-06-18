@@ -36,6 +36,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.XML" />
@@ -55,6 +56,15 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="DSPlaneamiento.cs">
+      <DependentUpon>DSPlaneamiento.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DSPlaneamiento.Designer.cs">
+      <DependentUpon>DSPlaneamiento.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -63,6 +73,20 @@
       <Project>{8e223287-372a-43aa-ac27-93102c9f43d5}</Project>
       <Name>LibreriaSistema</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="DSPlaneamiento.xsc">
+      <DependentUpon>DSPlaneamiento.xsd</DependentUpon>
+    </None>
+    <None Include="DSPlaneamiento.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSPlaneamiento.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSPlaneamiento.xss">
+      <DependentUpon>DSPlaneamiento.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

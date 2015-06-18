@@ -11,6 +11,21 @@
     <AssemblyName>SistemaGestorRecursosDidacticos</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -41,6 +56,7 @@
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
@@ -66,19 +82,21 @@
     <Compile Include="Agenda.Designer.cs">
       <DependentUpon>Agenda.cs</DependentUpon>
     </Compile>
+    <Compile Include="BitacoraReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BitacoraReportes.Designer.cs">
+      <DependentUpon>BitacoraReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataPlaneamientoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataPlaneamientoDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DSHorario.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DSHorario.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DSPlaneamiento.cs">
-      <DependentUpon>DSPlaneamiento.xsd</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="DSPlaneamiento.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DSPlaneamiento.xsd</DependentUpon>
     </Compile>
     <Compile Include="Galeria.cs">
       <SubType>Form</SubType>
@@ -91,6 +109,12 @@
     </Compile>
     <Compile Include="Horario.Designer.cs">
       <DependentUpon>Horario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MostrarReporteHistorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MostrarReporteHistorial.Designer.cs">
+      <DependentUpon>MostrarReporteHistorial.cs</DependentUpon>
     </Compile>
     <Compile Include="MostrarReportePlaneamiento.cs">
       <SubType>Form</SubType>
@@ -165,6 +189,12 @@
     <Compile Include="RecursosDidacticos.Designer.cs">
       <DependentUpon>RecursosDidacticos.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReporteHistorialReporte.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteHistorialReporte.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ReporteHorario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,11 +237,17 @@
     <EmbeddedResource Include="Agenda.resx">
       <DependentUpon>Agenda.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BitacoraReportes.resx">
+      <DependentUpon>BitacoraReportes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Galeria.resx">
       <DependentUpon>Galeria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Horario.resx">
       <DependentUpon>Horario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MostrarReporteHistorial.resx">
+      <DependentUpon>MostrarReporteHistorial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MostrarReportePlaneamiento.resx">
       <DependentUpon>MostrarReportePlaneamiento.cs</DependentUpon>
@@ -251,6 +287,10 @@
     <EmbeddedResource Include="RecursosDidacticos.resx">
       <DependentUpon>RecursosDidacticos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReporteHistorialReporte.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteHistorialReporte.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReporteHorario.resx">
       <DependentUpon>ReporteHorario.cs</DependentUpon>
     </EmbeddedResource>
@@ -274,6 +314,17 @@
     <None Include="Archivos.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="DataPlaneamientoDataSet.xsc">
+      <DependentUpon>DataPlaneamientoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataPlaneamientoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataPlaneamientoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataPlaneamientoDataSet.xss">
+      <DependentUpon>DataPlaneamientoDataSet.xsd</DependentUpon>
+    </None>
     <None Include="DSHorario.xsc">
       <DependentUpon>DSHorario.xsd</DependentUpon>
     </None>
@@ -284,17 +335,6 @@
     </None>
     <None Include="DSHorario.xss">
       <DependentUpon>DSHorario.xsd</DependentUpon>
-    </None>
-    <None Include="DSPlaneamiento.xsc">
-      <DependentUpon>DSPlaneamiento.xsd</DependentUpon>
-    </None>
-    <None Include="DSPlaneamiento.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DSPlaneamiento.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DSPlaneamiento.xss">
-      <DependentUpon>DSPlaneamiento.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\LibreriaSistema.domain.Horario.datasource" />
     <None Include="Properties\Settings.settings">
@@ -308,7 +348,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\fondo_2.jpg" />
@@ -383,6 +425,13 @@
     <None Include="Resources\diarioicon.png" />
     <None Include="Resources\Escudo_2.png" />
     <None Include="Resources\brand.gif" />
+    <Content Include="data\DataPlaneamiento.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\DataPlaneamiento_log.ldf">
+      <DependentUpon>DataPlaneamiento.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Gakuseisean-Aire-Images.ico" />
     <None Include="Resources\Galeria.ico" />
     <None Include="Resources\galeryIcon.png" />
@@ -437,6 +486,23 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
